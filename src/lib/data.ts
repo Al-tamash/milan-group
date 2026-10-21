@@ -1,6 +1,7 @@
 import productsJson from "@/data/products.json";
 import servicesJson from "@/data/services.json";
 import siteJson from "@/data/site.json";
+import type { DesignGroup } from "./designs";
 
 export type Variant = { name: string; swatch: string; images: string[] };
 export type Feature = { title: string; text: string };
@@ -11,6 +12,7 @@ export type CategorySlug = "chairs" | "sofas" | "tents";
 export type Product = {
   slug: string;
   category: CategorySlug;
+  group: DesignGroup;
   name: string;
   tagline: string;
   description: string;

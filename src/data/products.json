@@ -2,6 +2,7 @@
   {
     "slug": "ornate-chair",
     "category": "chairs",
+    "group": "designer-chairs",
     "name": "Ornate Chair",
     "tagline": "Hand-carved medallion back with luxury velvet seat",
     "description": "Our signature banquet chair with an oval, hand-carved filigree backrest on a Chiavari-style bamboo-joint frame. Available in five frame finishes, each paired with a plush velvet seat cushion.",
@@ -26,6 +27,7 @@
   {
     "slug": "cross-back-chair",
     "category": "chairs",
+    "group": "designer-chairs",
     "name": "Cross Back Chair",
     "tagline": "European beechwood with an iconic X-back",
     "description": "A timeless bistro-style chair in hand-selected European beechwood, finished in six colours with a deep-pile velvet seat. Popular for rustic, garden and boho-themed events.",
@@ -56,6 +58,7 @@
   {
     "slug": "luna-oval-chair",
     "category": "chairs",
+    "group": "designer-chairs",
     "name": "Luna Oval Chair",
     "tagline": "Classic elegance. Timeless comfort.",
     "description": "A dark solid-wood oval-back chair with fluted legs and a beige linen-weave seat. Understated and refined for formal dinners.",
@@ -72,6 +75,7 @@
   {
     "slug": "regal-flora-chair",
     "category": "chairs",
+    "group": "designer-chairs",
     "name": "Regal Flora Chair",
     "tagline": "Royal elegance. Timeless grace.",
     "description": "A baroque, hand-carved gold chair upholstered in luxury gold jacquard damask — ideal for the bride and groom, VIP seating and stage settings.",
@@ -88,6 +92,7 @@
   {
     "slug": "aurora-pure-clear-chair",
     "category": "chairs",
+    "group": "clear-chairs",
     "name": "Aurora Pure Clear Chair",
     "tagline": "Ultimate transparency, timeless design",
     "description": "A crystal-clear Chiavari chair in UV-stabilised resin with an exclusive bamboo-joint pattern and a detachable seat cushion.",
@@ -106,6 +111,7 @@
   {
     "slug": "imperia-chiavari-chair",
     "category": "chairs",
+    "group": "designer-chairs",
     "name": "Imperia Chiavari Chair",
     "tagline": "Timeless beauty. Supreme comfort.",
     "description": "The classic gold Chiavari chair — a powder-coated metal frame with a plain velvet seat in your choice of colour.",
@@ -123,6 +129,7 @@
   {
     "slug": "valerias-crown-chair",
     "category": "chairs",
+    "group": "designer-chairs",
     "name": "Valeria's Crown Chair",
     "tagline": "Elegance refined. Versatility embraced.",
     "description": "A one-piece resin chair from the Prestige Collection with a carved crown motif on the seat and an optional cushion. Available in many colours.",
@@ -141,6 +148,7 @@
   {
     "slug": "elvira-chair",
     "category": "chairs",
+    "group": "designer-chairs",
     "name": "Elvira Chair",
     "tagline": "Refined. Modern. Timeless.",
     "description": "A tall-back gold stainless-steel chair with vertical bars and a blue velvet seat — a statement piece for modern décor.",
@@ -158,6 +166,7 @@
   {
     "slug": "aurelia-oval-ghost-chair",
     "category": "chairs",
+    "group": "clear-chairs",
     "name": "Aurélia Oval Ghost Chair",
     "tagline": "Elegance for the most discerning spaces",
     "description": "A clear polycarbonate chair with a studded oval backrest and classic cabriole legs.",
@@ -176,6 +185,7 @@
   {
     "slug": "aurelian-gold-chiavari-chair",
     "category": "chairs",
+    "group": "designer-chairs",
     "name": "Aurelian Gold Chiavari Chair",
     "tagline": "Napoleon-style back, stackable and sturdy",
     "description": "A gold Chiavari chair with a wave-top Napoleon backrest and a tie-on cushion. Original brocade cushion or plain light colours.",
@@ -193,6 +203,7 @@
   {
     "slug": "lumina-acrylic-chair",
     "category": "chairs",
+    "group": "clear-chairs",
     "name": "Lumina Acrylic Chair",
     "tagline": "Transparent elegance. Timeless luxury.",
     "description": "A champagne-tinted acrylic chair with an oval back and plain velvet seat.",
@@ -210,6 +221,7 @@
   {
     "slug": "lucent-chair",
     "category": "chairs",
+    "group": "clear-chairs",
     "name": "Lucent Chair",
     "tagline": "Ultimate transparency, minimalist elegance",
     "description": "A clear baroque-style ghost chair with a carved shell crest. Use as-is or add a premium seat cushion.",
@@ -227,6 +239,7 @@
   {
     "slug": "tonate-chair",
     "category": "chairs",
+    "group": "wooden-chairs",
     "name": "Tonate Chair",
     "tagline": "Elegance. Comfort. Timeless.",
     "description": "A bentwood chair in natural solid wood with a handcrafted cane-weave seat.",
@@ -250,6 +263,7 @@
   {
     "slug": "acrylic-chair",
     "category": "chairs",
+    "group": "clear-chairs",
     "name": "Acrylic Chair",
     "tagline": "Elegance. Comfort. Timeless.",
     "description": "A transparent acrylic Chiavari-style chair with a cushioned, upholstered seat.",
@@ -274,6 +288,7 @@
   {
     "slug": "rattan-chair",
     "category": "chairs",
+    "group": "wooden-chairs",
     "name": "Rattan Chair",
     "tagline": "Elegance. Comfort. Timeless.",
     "description": "A carved natural-wood chair with a handwoven rattan backrest and a soft beige upholstered seat.",
@@ -298,6 +313,7 @@
   {
     "slug": "milan-elegance-sofa",
     "category": "sofas",
+    "group": "sofas",
     "name": "Premium Ivory Classic Sofa",
     "tagline": "Hand-carved frame with cane backrest",
     "description": "A French-style ivory sofa with a hand-carved wooden frame, cane backrest and velvet upholstery. Perfect for the wedding stage.",
@@ -323,6 +339,7 @@
   {
     "slug": "milan-blush-sofa",
     "category": "sofas",
+    "group": "sofas",
     "name": "Premium Dusty Pink Velvet Sofa",
     "tagline": "Soft blush velvet on golden legs",
     "description": "A channel-tufted dusty pink velvet sofa with golden metal legs — a favourite for engagements and bridal lounges.",
@@ -348,6 +365,7 @@
   {
     "slug": "milan-curve-sofa",
     "category": "sofas",
+    "group": "sofas",
     "name": "Premium Ivory Velvet Sofa – Curve",
     "tagline": "Curved silhouette with a gold base trim",
     "description": "A modern curved ivory velvet sofa with a gold base — elegant on stage or in a lounge set-up.",
@@ -373,6 +391,7 @@
   {
     "slug": "milan-heritage-sofa",
     "category": "sofas",
+    "group": "sofas",
     "name": "Premium Ivory Velvet Sofa – Heritage",
     "tagline": "Polished solid-wood arms, classic detailing",
     "description": "A classic ivory velvet sofa framed in polished dark solid wood.",
@@ -398,6 +417,7 @@
   {
     "slug": "premium-velvet-sofa",
     "category": "sofas",
+    "group": "sofas",
     "name": "Premium Velvet Sofa",
     "tagline": "Channel-tufted velvet in nine colours",
     "description": "A modern channel-tufted velvet sofa with tapered golden legs, available in nine rich colours to match any theme.",
@@ -425,6 +445,7 @@
   {
     "slug": "pagoda-tent-3x3",
     "category": "tents",
+    "group": "tents",
     "name": "Pagoda Tent 3m × 3m",
     "tagline": "Compact pagoda with clear panel windows",
     "description": "A compact peaked pagoda tent — ideal for entrances, food counters, registration desks and small stalls.",
@@ -441,6 +462,7 @@
   {
     "slug": "pagoda-tent-20x20",
     "category": "tents",
+    "group": "tents",
     "name": "Pagoda Tent 20ft × 20ft",
     "tagline": "Spacious pagoda with arched windows",
     "description": "A 20ft × 20ft pagoda tent with arched window panels and side curtains, for lounges, dining areas and VIP enclosures.",
@@ -457,6 +479,7 @@
   {
     "slug": "german-aluminium-pagoda",
     "category": "tents",
+    "group": "tents",
     "name": "Imported German Aluminium Pagoda",
     "tagline": "Premium 6061-T6 aluminium, quick modular set-up",
     "description": "An imported German aluminium pagoda with a UV-stabilised, fire-retardant PVC canopy and scalloped valance.",
@@ -475,6 +498,7 @@
   {
     "slug": "german-hanger-tent",
     "category": "tents",
+    "group": "tents",
     "name": "German Hanger Tent",
     "tagline": "Large-span hall with arched windows",
     "description": "A large German hanger (marquee) tent with a high-strength aluminium frame and premium arched window panels — a complete outdoor banquet hall.",
