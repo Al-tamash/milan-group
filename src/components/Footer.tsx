@@ -10,7 +10,7 @@ export function Footer() {
         <div>
           <Logo light />
           <p className="mt-4 text-sm leading-relaxed">
-            {site.promise} for weddings, receptions and every celebration in Hyderabad.
+            Tents, chairs, sound, lights and flowers for weddings and every other function in Hyderabad. Since {site.since}.
           </p>
           <p className="font-display mt-4 text-2xl text-gold">{site.motto}</p>
         </div>

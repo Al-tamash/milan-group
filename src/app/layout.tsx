@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     template: "%s | Milan Group Hyderabad",
   },
   description:
-    "Milan Group, Jubilee Hills: tents, designer chairs, stage sofas, sound, lighting, Calcutta and wedding flower decoration. The complete set-up solution, 24 hours.",
+    "Milan Group, Jubilee Hills: tents, designer chairs, stage sofas, sound, lighting, Calcutta and wedding flower decoration. We bring it, set it up and clear it after. Open 24 hours.",
   openGraph: { type: "website", siteName: site.name, locale: "en_IN", images: ["/images/home/stage.webp"] },
 };
 

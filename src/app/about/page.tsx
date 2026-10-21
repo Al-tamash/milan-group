@@ -6,7 +6,7 @@ import { CallButton, WhatsAppButton } from "@/components/ContactButtons";
 
 export const metadata: Metadata = {
   title: "About Us",
-  description: "Milan Group (Milan Supplying Company), Jubilee Hills, Hyderabad — event rentals and the complete set-up solution.",
+  description: "Milan Group (Milan Supplying Company), Jubilee Hills, Hyderabad — tents, chairs, sound, lights and flowers on rent since 1995.",
 };
 
 // D39: "since 1995" came from the developer; the event count in site.stats is an estimate for the customer

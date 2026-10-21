@@ -245,3 +245,73 @@ or write the correction. Photos marked *stock* are free Unsplash photos used unt
 - Real photos of: tables, lounge sets, carpets, crockery, buffet ware, freezers, sound/DJ set-ups, lighting, decorations, theme parties, coolers/ACs, garlands
 - Which furniture items you actually have (tables? lounge sets? stage platforms?)
 - Real number of events done since 1995
+
+## Rewritten copy (2026-10-21)
+
+The website was simplified (no separate catalog, no product pages) and the wording was rewritten in a plainer,
+local voice. Please mark each line **OK** or write the correction.
+
+| Where | Old | New | OK / Correction |
+|---|---|---|---|
+| Home – main heading | The complete set-up solution | Tents, chairs, lights, flowers. One call, we set it all up. | |
+| Home – intro | Tents, designer chairs, stage sofas… delivered and set up by one team. | Weddings, Nikahs, poojas, birthdays — tell us the date and the venue, and our team brings everything and puts it up before your guests arrive. | |
+| Home – services heading | Everything for your event, under one roof | What we supply · Need only chairs? Fine. Need the whole function done? We do that too. | |
+| Home – occasions | (list of event names) | What's the function? · 6 tiles: Wedding & reception, Nikah & walima, Haldi & mehendi, Pooja & griha pravesh, Birthday & get-together, Office & shop opening — each with "Usually: …" items | |
+| Home – contact | Plan your event with us | Come and see us, or just call · Open 24 hours. Ask for Amjad or Asiya Madam. | |
+| Hours (everywhere) | 24 Hours Services | Open 24 hours | |
+| How booking works – Planning | Tell us your date, venue and guest count. We suggest the right set-up. | Send your date, venue and guest count on WhatsApp. We suggest what you need. | |
+| How booking works – Set-up | Our team delivers and installs everything at your venue, on time. | Our team brings everything and sets it up before your guests arrive. | |
+| How booking works – Execution | Our crew stays on hand so everything runs smoothly. | Our boys stay at the venue till the function ends, in case anything is needed. | |
+| How booking works – Support | 24-hour support, and we clear up after the celebration. | Call any time, day or night. We clear everything up after. | |
+| Services page heading | The complete set-up solution | Everything we rent out | |
+| Services page – package | Planning the whole event? | Planning the whole function? · We'll work out tents, seating, vessels, lights, sound and décor, and give you one rate for all of it. | |
+| Service pages – sections | What you get / Perfect for / Good to know / Often booked together | What you get / People book this for / Questions people ask / Usually booked with this | |
+| Furniture page – designs | (separate catalog pages) | Chairs and sofas we have · Tap the ones you like, then send them to us on WhatsApp. | |
+| Tents page – designs | (separate catalog pages) | Tents we put up | |
+| Tents & Roofing – intro | Rain or shine, we cover your guests… | Rain or sun, your guests stay covered. A big German hanger hall with no poles in the middle, a pagoda for the entrance, or a regular pandal and shamiyana — our own crew puts it up. | |
+| Lighting – intro | Lighting sets the mood and power keeps the event running… | We do the lights and the power. Fairy lights and stage lights, LED screens for showing the ceremony live, and generators so nothing goes dark if the current goes. | |
+| Theme Functions – intro | Pick a theme and we'll bring it to life… | Tell us the theme — cartoon, colour, anything — and we put up the balloons, backdrop, cake table, seating, lights and sound. | |
+| About – vendors line | One call to us replaces a long list of vendors. | You don't have to run to five different vendors — we do it ourselves. | |
+| About – support line | …with support available 24 hours services. | …stays till the function ends, and clears up afterwards. You can call us any time, day or night. | |
+| Contact page | Talk to our team | Call or WhatsApp us · Any of these numbers works, day or night. For flowers, talk to Arif directly. | |
+| Footer | The Complete Set-up Solution for weddings, receptions and every celebration in Hyderabad. | Tents, chairs, sound, lights and flowers for weddings and every other function in Hyderabad. Since 1995. | |
+| WhatsApp message (designs) | — | Hi Milan Group, I liked these: <designs>. Date: · Venue: · Guests: | |
+| Occasion photos | — | Stock photos, labelled "Some photos are representative" until we have your own | |
+
+### Product short lines (stored with each design for later use; one per design)
+
+The old lines came from the catalog PDF ("Elegance. Comfort. Timeless."). New lines say what the item is. Please check
+the facts (colours, materials) are right.
+
+| Design | New line | OK / Correction |
+|---|---|---|
+| Ornate Chair | Carved oval back, velvet seat, five frame colours | |
+| Cross Back Chair | Beechwood X-back chair, good for garden and haldi set-ups | |
+| Luna Oval Chair | Dark wood oval back with a beige seat, for formal dinners | |
+| Regal Flora Chair | Carved gold chair for the bride, groom and stage | |
+| Aurora Pure Clear Chair | Clear Chiavari chair with a removable cushion | |
+| Imperia Chiavari Chair | Gold Chiavari frame, velvet seat in your colour | |
+| Valeria's Crown Chair | One-piece resin chair with a crown on the seat | |
+| Elvira Chair | Tall gold back with a blue velvet seat, for head tables | |
+| Aurélia Oval Ghost Chair | Clear studded oval back on curved legs | |
+| Aurelian Gold Chiavari Chair | Gold Chiavari with a tie-on cushion, for big gatherings | |
+| Lumina Acrylic Chair | Champagne-tint acrylic with a velvet seat | |
+| Lucent Chair | Clear ghost chair with a carved shell top | |
+| Tonate Chair | Natural bentwood with a cane seat, for haldi and garden events | |
+| Acrylic Chair | Clear acrylic chair with a cushioned seat | |
+| Rattan Chair | Carved wood with a rattan back and beige seat | |
+| Ivory Classic Sofa | Carved wooden frame with a cane back, for the wedding stage | |
+| Dusty Pink Velvet Sofa | Dusty pink velvet on gold legs, for engagements and photo corners | |
+| Ivory Velvet Sofa – Curve | Curved ivory velvet with a gold base | |
+| Ivory Velvet Sofa – Heritage | Ivory velvet in a dark polished wood frame | |
+| Premium Velvet Sofa | Tufted velvet sofa in nine colours | |
+| Pagoda Tent 3m × 3m | Small pagoda for entrances, counters and stalls | |
+| Pagoda Tent 20ft × 20ft | 20 x 20 ft pagoda with windows, for dining and VIP areas | |
+| German Aluminium Pagoda | Imported aluminium pagoda, fire-retardant canopy | |
+| German Hanger Tent | Big aluminium hall for outdoor weddings, no centre poles | |
+
+### Design groups (how chairs are sorted on the Furniture page)
+
+Designer & banquet chairs (8): Ornate, Cross Back, Luna Oval, Regal Flora, Imperia Chiavari, Valeria's Crown, Elvira,
+Aurelian Gold Chiavari · Clear / acrylic chairs (5): Aurora, Aurélia, Lumina, Lucent, Acrylic · Wooden chairs (2):
+Tonate, Rattan · Stage sofas (5) · Tents (4). | OK / Correction: |

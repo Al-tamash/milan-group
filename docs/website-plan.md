@@ -105,6 +105,7 @@ Context: this build is a **preview for the customer to review**, not a live laun
 | D38 | Service enquiry | "Add to enquiry" for a whole service, same list as products |
 | D39 | Stats | Business running **since 1995** (from developer). Show 30+ years and an estimated event count — estimate flagged for customer confirmation before go-live |
 | D40 | Template | Same 9-section flow on all 10 services, sections hidden when empty. Re-audit every service's content, not just furniture |
+| D41 | Services-only site (2026-10-21) | Sales team brief: not e-commerce, few pages. **Supersedes D8a, D9, D14, D17, D20, D38** and the enquiry-list part of D32. No /catalog, no product pages, no enquiry list or form. Chairs, sofas and tents shown as grouped photo tiles inside Furniture & Seating and Tents & Roofing; tap to pick, one pre-filled WhatsApp message. Template patterns removed (no eyebrow labels, cards only for tappable tiles), copy rewritten in plain local voice (see content-review.md). Spec: docs/superpowers/specs/2026-10-21-services-only-simplification-design.md |
 
 **Built (2026-10-21):** 10 services rewritten (`src/data/services.json`), new 9-section template (`src/app/services/[slug]/page.tsx`), 48 stock item photos in `public/images/items/` + sharp stock heroes in `public/images/services/` (source links in `imageCredit`, full list in the scratchpad picks), stats strip on Home/About/Services, whole-service "Add to enquiry". Customer review sheet: `docs/content-review.md`.
 
