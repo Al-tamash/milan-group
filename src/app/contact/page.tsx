@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Clock, MapPin, MessageCircle, Phone } from "lucide-react";
-import { formatPhone, site, whatsappLink } from "@/lib/data";
+import { site, whatsappLink } from "@/lib/data";
 import { PageHero, RatingBadge } from "@/components/ui";
 
 export const metadata: Metadata = {
@@ -23,10 +23,10 @@ export default function ContactPage() {
               <li key={c.name} className="py-5">
                 <p className="font-display text-2xl text-emerald">{c.name}</p>
                 <p className="text-sm text-muted">{c.role}</p>
-                {c.phones.map((p) => (
+                {c.phones.map((p, i) => (
                   <div key={p} className="mt-3 flex flex-wrap gap-2">
                     <a href={`tel:+91${p}`} className="inline-flex min-h-11 items-center gap-1.5 rounded-full border border-emerald px-4 text-sm font-semibold text-emerald hover:bg-emerald hover:text-ivory">
-                      <Phone className="h-3.5 w-3.5" /> {formatPhone(p)}
+                      <Phone className="h-3.5 w-3.5" /> {i === 0 ? "Call" : "Call other number"}
                     </a>
                     <a href={whatsappLink("Hi Milan Group, I would like to enquire about an event.", `91${p}`)} target="_blank" rel="noopener" aria-label={`WhatsApp ${c.name}`} className="inline-flex min-h-11 items-center gap-1.5 rounded-full bg-whatsapp px-4 text-sm font-semibold text-white">
                       <MessageCircle className="h-3.5 w-3.5" /> WhatsApp

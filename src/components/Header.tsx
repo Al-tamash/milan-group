@@ -36,7 +36,7 @@ export function Header() {
             onClick={() => track("call_click", { location: "topbar" })}
             className="flex items-center gap-1.5 hover:text-gold"
           >
-            <Phone className="h-3.5 w-3.5" /> +91 {site.contacts[0].phones[0]}
+            <Phone className="h-3.5 w-3.5" /> Call us
           </a>
         </div>
       </div>

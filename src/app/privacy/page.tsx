@@ -31,7 +31,7 @@ export default function PrivacyPage() {
           <h2 className="font-display text-3xl text-emerald">Contact</h2>
           <p className="mt-2">
             For any question about your information, contact {site.name}, {site.address.line1}, {site.address.line2}, or
-            call +91 {site.contacts[0].phones[0]}.
+            call or WhatsApp us using the buttons on this site.
           </p>
         </div>
       </section>

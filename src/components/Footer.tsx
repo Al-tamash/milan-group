@@ -1,12 +1,12 @@
 import Link from "next/link";
 import { Clock, MapPin, Phone } from "lucide-react";
 import { Logo } from "./Logo";
-import { formatPhone, services, site } from "@/lib/data";
+import { services, site } from "@/lib/data";
 
 export function Footer() {
   return (
     <footer className="bg-forest text-ivory/85">
-      <div className="mx-auto grid max-w-7xl gap-10 px-4 py-14 sm:px-6 md:grid-cols-2 lg:grid-cols-4">
+      <div className="mx-auto grid max-w-7xl gap-10 px-4 py-14 sm:px-6 md:grid-cols-2 lg:grid-cols-[1.1fr_1.9fr_1fr_1.2fr] lg:gap-12">
         <div>
           <Logo light />
           <p className="mt-4 text-sm leading-relaxed">
@@ -16,7 +16,7 @@ export function Footer() {
         </div>
         <div>
           <h2 className="text-sm font-semibold text-gold">Services</h2>
-          <ul className="mt-3 text-sm [&_a]:inline-flex [&_a]:min-h-11 [&_a]:items-center">
+          <ul className="mt-3 grid grid-cols-2 gap-x-4 text-sm sm:gap-x-6 [&_a]:inline-flex [&_a]:min-h-11 [&_a]:items-center lg:[&_a]:min-h-9">
             {services.map((s) => (
               <li key={s.slug}>
                 <Link href={`/services/${s.slug}/`} className="hover:text-gold">
@@ -28,7 +28,7 @@ export function Footer() {
         </div>
         <div>
           <h2 className="text-sm font-semibold text-gold">Designs & more</h2>
-          <ul className="mt-3 text-sm [&_a]:inline-flex [&_a]:min-h-11 [&_a]:items-center">
+          <ul className="mt-3 text-sm [&_a]:inline-flex [&_a]:min-h-11 [&_a]:items-center lg:[&_a]:min-h-9">
             <li><Link href="/services/furniture-and-seating/#designs" className="hover:text-gold">Chairs & sofas</Link></li>
             <li><Link href="/services/tents-and-roofing/#designs" className="hover:text-gold">Tents</Link></li>
             <li><Link href="/gallery/" className="hover:text-gold">Gallery</Link></li>
@@ -37,7 +37,7 @@ export function Footer() {
         </div>
         <div>
           <h2 className="text-sm font-semibold text-gold">Contact</h2>
-          <ul className="mt-3 space-y-1 text-sm [&_a]:inline-flex [&_a]:min-h-11 [&_a]:items-center">
+          <ul className="mt-3 space-y-1 text-sm [&_a]:inline-flex [&_a]:min-h-11 [&_a]:items-center lg:[&_a]:min-h-9">
             <li className="flex gap-2">
               <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-gold" />
               <span>{site.address.line1},<br />{site.address.line2}</span>
@@ -49,7 +49,7 @@ export function Footer() {
               <li key={c.name} className="flex gap-2">
                 <Phone className="mt-0.5 h-4 w-4 shrink-0 text-gold" />
                 <a href={`tel:+91${c.phones[0]}`} className="hover:text-gold">
-                  {c.name}: {formatPhone(c.phones[0])}
+                  Call {c.name}
                 </a>
               </li>
             ))}

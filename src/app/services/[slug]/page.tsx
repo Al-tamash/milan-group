@@ -34,7 +34,6 @@ export default async function ServicePage({ params }: Params) {
   const message = `Hi Milan Group, I would like to enquire about ${service.name}.`;
   const related = service.related.map(getService).filter((s) => s !== undefined);
   const faqs = [...service.faqs, ...site.faqs.slice(0, 5 - Math.min(service.faqs.length, 3))];
-  const hasStock = service.items.some((i) => i.stock);
 
   const faqJsonLd = {
     "@context": "https://schema.org",
@@ -71,9 +70,6 @@ export default async function ServicePage({ params }: Params) {
             </ul>
           </div>
         </div>
-        {service.imagePlaceholder && (
-          <span className="absolute bottom-3 right-3 rounded-full bg-black/55 px-2.5 py-1 text-[11px] tracking-wide text-white">Representative photo</span>
-        )}
       </section>
 
       {/* 2. What you get */}
@@ -109,7 +105,6 @@ export default async function ServicePage({ params }: Params) {
             );
           })}
         </ul>
-        {hasStock && <p className="mt-4 text-xs text-muted">Some photos are representative. Ask us on WhatsApp for photos of our actual stock.</p>}
       </section>
 
       {/* 3. Designs we have (catalog-backed services only) */}
@@ -151,7 +146,7 @@ export default async function ServicePage({ params }: Params) {
             <h2 className="font-display text-3xl sm:text-4xl">Need {service.name.toLowerCase()} for your event?</h2>
             <p className="mt-2 text-sm text-ivory/80">
               {flowerContact
-                ? `Talk to ${flowerContact.name}: ${flowerContact.phones.join(" / ")}`
+                ? `Our flower work is handled by ${flowerContact.name}. Call or WhatsApp him directly.`
                 : "Send us your date and venue — we'll reply with availability and a quote."}
             </p>
           </div>

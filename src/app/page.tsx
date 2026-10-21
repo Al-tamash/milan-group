@@ -4,7 +4,7 @@ import { ArrowRight } from "lucide-react";
 import { site } from "@/lib/data";
 import gallery from "@/data/gallery.json";
 import { CallButton, WhatsAppButton } from "@/components/ContactButtons";
-import { HowItWorks, StatsLine } from "@/components/sections";
+import { FaqList, HowItWorks, StatsLine } from "@/components/sections";
 import { RatingBadge } from "@/components/ui";
 import { ServiceList } from "@/components/ServiceList";
 import { OccasionTiles } from "@/components/OccasionTiles";
@@ -49,19 +49,6 @@ export default function Home() {
         <div className="mt-10">
           <ServiceList />
         </div>
-        <p className="mt-4 text-xs text-muted">Service photos are representative until we add pictures of our own stock.</p>
-      </section>
-
-      {/* Occasions */}
-      <section className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20">
-        <div className="max-w-2xl">
-          <h2 className="font-display text-4xl text-emerald sm:text-5xl">What&rsquo;s the function?</h2>
-          <p className="mt-3 text-muted">Pick yours and we&rsquo;ll start the chat on WhatsApp. Not sure what you need? We&rsquo;ll suggest.</p>
-        </div>
-        <div className="mt-8">
-          <OccasionTiles />
-        </div>
-        <p className="mt-4 text-xs text-muted">Some photos are representative until we add pictures of our own set-ups.</p>
       </section>
 
       {/* Gallery */}
@@ -89,7 +76,27 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Occasions */}
+      <section className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20">
+        <div className="max-w-2xl">
+          <h2 className="font-display text-4xl text-emerald sm:text-5xl">What&rsquo;s the function?</h2>
+          <p className="mt-3 text-muted">Pick yours and we&rsquo;ll start the chat on WhatsApp. Not sure what you need? We&rsquo;ll suggest.</p>
+        </div>
+        <div className="mt-8">
+          <OccasionTiles />
+        </div>
+      </section>
+
       <HowItWorks />
+
+      {/* FAQ */}
+      <section className="mx-auto grid max-w-7xl gap-8 px-4 py-16 sm:px-6 lg:grid-cols-[1fr_1.6fr] lg:gap-12">
+        <div>
+          <h2 className="font-display text-4xl text-emerald sm:text-5xl">Before you call</h2>
+          <p className="mt-3 text-muted">The things people usually ask us first.</p>
+        </div>
+        <FaqList faqs={site.faqs} />
+      </section>
 
       {/* Contact */}
       <section className="bg-champagne/40">
