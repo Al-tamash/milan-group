@@ -15,7 +15,7 @@ export function Footer() {
           <p className="font-display mt-4 text-2xl text-gold">{site.motto}</p>
         </div>
         <div>
-          <h3 className="text-sm font-semibold text-gold">Services</h3>
+          <h2 className="text-sm font-semibold text-gold">Services</h2>
           <ul className="mt-3 text-sm [&_a]:inline-flex [&_a]:min-h-11 [&_a]:items-center">
             {services.map((s) => (
               <li key={s.slug}>
@@ -27,7 +27,7 @@ export function Footer() {
           </ul>
         </div>
         <div>
-          <h3 className="text-sm font-semibold text-gold">Designs & more</h3>
+          <h2 className="text-sm font-semibold text-gold">Designs & more</h2>
           <ul className="mt-3 text-sm [&_a]:inline-flex [&_a]:min-h-11 [&_a]:items-center">
             <li><Link href="/services/furniture-and-seating/#designs" className="hover:text-gold">Chairs & sofas</Link></li>
             <li><Link href="/services/tents-and-roofing/#designs" className="hover:text-gold">Tents</Link></li>
@@ -36,7 +36,7 @@ export function Footer() {
           </ul>
         </div>
         <div>
-          <h3 className="text-sm font-semibold text-gold">Contact</h3>
+          <h2 className="text-sm font-semibold text-gold">Contact</h2>
           <ul className="mt-3 space-y-1 text-sm [&_a]:inline-flex [&_a]:min-h-11 [&_a]:items-center">
             <li className="flex gap-2">
               <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-gold" />

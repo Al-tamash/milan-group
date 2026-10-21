@@ -16,12 +16,12 @@ const EXTRA: Record<string, string> = {
   "tents-and-roofing": `${count(["tents"])} tent types`,
 };
 
-export function ServiceList({ withCounts = true }: { withCounts?: boolean }) {
+export function ServiceList({ withCounts = true, headingAs: Heading = "h3" }: { withCounts?: boolean; headingAs?: "h2" | "h3" }) {
   return (
     <div className="grid gap-x-12 gap-y-10 lg:grid-cols-3">
       {GROUPS.map((g) => (
         <div key={g.name}>
-          <h3 className="border-b border-line pb-3 text-sm font-semibold text-ink">{g.name}</h3>
+          <Heading className="border-b border-line pb-3 text-sm font-semibold text-ink">{g.name}</Heading>
           <ul>
             {g.slugs.map(getService).filter((s) => s !== undefined).map((s) => (
               <li key={s.slug} className="border-b border-line/70">

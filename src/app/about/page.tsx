@@ -15,7 +15,6 @@ export default function AboutPage() {
   return (
     <>
       <PageHero
-        eyebrow="About us"
         title="We deliver, you celebrate"
         crumbs={[{ href: "/", label: "Home" }, { href: "/about/", label: "About" }]}
       />
@@ -28,11 +27,11 @@ export default function AboutPage() {
           <p>
             We bring together everything an event needs: waterproof tents and pandals, designer chairs and stage sofas,
             cutlery and crockery, sound and DJ, lighting and generators, Calcutta decoration and fresh wedding flower work.
-            One call to us replaces a long list of vendors.
+            You don&rsquo;t have to run to five different vendors &mdash; we do it ourselves.
           </p>
           <p>
-            Our team plans with you, delivers and sets up at your venue, stays on hand through the event, and clears up
-            afterwards — with support available {site.hours.toLowerCase()}.
+            Our team plans with you, brings everything and sets it up at your venue, stays till the function ends, and
+            clears up afterwards. You can call us any time, day or night.
           </p>
           <div className="flex flex-col gap-3 pt-2 sm:flex-row">
             <WhatsAppButton location="about" />
@@ -40,7 +39,7 @@ export default function AboutPage() {
           </div>
           <RatingBadge />
         </div>
-        <div className="relative aspect-[4/5] overflow-hidden rounded-t-[999px] rounded-b-2xl border border-gold/50">
+        <div className="relative aspect-[4/5] overflow-hidden rounded-xl">
           <Image src="/images/home/stage.webp" alt="Stage set-up by Milan Group" fill sizes="(max-width: 1024px) 100vw, 50vw" className="object-cover" />
         </div>
       </section>

@@ -2,12 +2,12 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { ArrowRight, Clock, Star, Truck } from "lucide-react";
+import { ArrowRight, Truck } from "lucide-react";
 import { getService, services, site } from "@/lib/data";
 import { CallButton, WhatsAppButton } from "@/components/ContactButtons";
 import { DesignsSection } from "@/components/designs/DesignsSection";
 import { FaqList, HowItWorks } from "@/components/sections";
-import { ServiceCard, ServiceIcon } from "@/components/ui";
+import { ServiceIcon } from "@/components/ui";
 
 type Params = { params: Promise<{ slug: string }> };
 
@@ -59,19 +59,14 @@ export default async function ServicePage({ params }: Params) {
             <span className="text-ivory">{service.name}</span>
           </nav>
           <div className="mt-10 max-w-2xl sm:mt-16">
-            <p className="eyebrow flex items-center gap-2 !text-gold">
-              <ServiceIcon name={service.icon} className="h-4 w-4" /> {service.name}
-            </p>
-            <h1 className="font-display mt-3 text-4xl leading-[1.08] sm:text-6xl">{service.heroTitle}</h1>
+            <h1 className="font-display text-4xl leading-[1.08] sm:text-6xl">{service.heroTitle}</h1>
             <p className="mt-5 text-base leading-relaxed text-ivory/85 sm:text-lg">{service.promise}</p>
             <div className="mt-7 flex flex-col gap-3 sm:flex-row">
               <WhatsAppButton location={`service-hero-${service.slug}`} number={whatsappNumber} message={message} />
               <CallButton location={`service-hero-${service.slug}`} callNumber={flowerContact?.phones[0]} tone="dark" />
             </div>
             <ul className="mt-7 flex flex-wrap gap-2 text-xs">
-              <li className="flex items-center gap-1.5 rounded-full border border-gold/40 bg-forest/50 px-3 py-1.5"><Clock className="h-3.5 w-3.5 text-gold" /> {site.hours}</li>
               <li className="flex items-center gap-1.5 rounded-full border border-gold/40 bg-forest/50 px-3 py-1.5"><Truck className="h-3.5 w-3.5 text-gold" /> Delivery & set-up</li>
-              <li className="flex items-center gap-1.5 rounded-full border border-gold/40 bg-forest/50 px-3 py-1.5"><Star className="h-3.5 w-3.5 text-gold" fill="currentColor" /> {site.rating.value} on Google</li>
               <li className="rounded-full border border-gold/40 bg-forest/50 px-3 py-1.5">Since {site.since}</li>
             </ul>
           </div>
@@ -84,32 +79,31 @@ export default async function ServicePage({ params }: Params) {
       {/* 2. What you get */}
       <section className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20">
         <div className="max-w-2xl">
-          <p className="eyebrow">What you get</p>
-          <h2 className="font-display mt-2 text-4xl text-emerald sm:text-5xl">Everything in {service.name}</h2>
+          <h2 className="font-display text-4xl text-emerald sm:text-5xl">What you get</h2>
           <p className="mt-4 leading-relaxed text-muted">{service.description}</p>
         </div>
         <ul className="mt-10 grid grid-cols-2 gap-4 sm:gap-6 lg:grid-cols-3 max-lg:[&>li:last-child:nth-child(odd)]:col-span-2">
           {service.items.map((item) => {
             const body = (
               <>
-                <div className="relative aspect-[4/3] overflow-hidden bg-[#f6f1e7]">
+                <div className="relative aspect-[4/3] overflow-hidden rounded-lg bg-[#f6f1e7]">
                   <Image
                     src={`/images/${item.image}.webp`}
                     alt={item.name}
                     fill
                     sizes="(max-width: 1024px) 50vw, 33vw"
-                    className={`${item.image.startsWith("products/") ? "object-contain p-3" : "object-cover"} transition-transform duration-500 group-hover:scale-105`}
+                    className={item.image.startsWith("products/") ? "object-contain p-3" : "object-cover"}
                   />
                 </div>
-                <div className="p-4 sm:p-5">
+                <div className="pt-3">
                   <h3 className="font-display text-xl leading-tight text-emerald sm:text-2xl">{item.name}</h3>
                   <p className="mt-1.5 text-xs leading-relaxed text-muted sm:text-sm">{item.text}</p>
-                  {item.href && <span className="mt-2 inline-flex items-center gap-1 text-xs font-semibold text-emerald group-hover:text-gold-700">See designs <ArrowRight className="h-3.5 w-3.5" /></span>}
+                  {item.href && <span className="mt-2 inline-flex items-center gap-1 text-xs font-semibold text-emerald group-hover:text-gold-700">See the designs <ArrowRight className="h-3.5 w-3.5" /></span>}
                 </div>
               </>
             );
             return (
-              <li key={item.name} className="group overflow-hidden rounded-2xl border border-line bg-white transition-shadow hover:shadow-xl hover:shadow-emerald/10">
+              <li key={item.name} className="group">
                 {item.href ? <Link href={item.href} className="block h-full">{body}</Link> : body}
               </li>
             );
@@ -130,13 +124,10 @@ export default async function ServicePage({ params }: Params) {
       )}
 
       {/* 4. Perfect for */}
-      <section className="mx-auto max-w-7xl px-4 py-14 text-center sm:px-6">
-        <p className="eyebrow">Perfect for</p>
-        <ul className="mx-auto mt-5 flex max-w-3xl flex-wrap justify-center gap-3">
-          {service.perfectFor.map((e) => (
-            <li key={e} className="rounded-full border border-line bg-white px-5 py-2 text-sm">{e}</li>
-          ))}
-        </ul>
+      <section className="mx-auto max-w-7xl px-4 pb-14 sm:px-6">
+        <p className="max-w-3xl text-lg leading-relaxed text-ink">
+          <span className="font-semibold text-emerald">People book this for:</span> {service.perfectFor.join(", ")}.
+        </p>
       </section>
 
       {/* 5. How it works */}
@@ -147,8 +138,7 @@ export default async function ServicePage({ params }: Params) {
       {/* 7. FAQ */}
       <section className="mx-auto grid max-w-7xl gap-10 px-4 py-16 sm:px-6 lg:grid-cols-[1fr_1.4fr]">
         <div>
-          <p className="eyebrow">Questions</p>
-          <h2 className="font-display mt-2 text-4xl text-emerald sm:text-5xl">Good to know</h2>
+          <h2 className="font-display text-4xl text-emerald sm:text-5xl">Questions people ask</h2>
           <p className="mt-4 text-muted">Can&rsquo;t find your answer? Ask us on WhatsApp — we reply quickly.</p>
         </div>
         <FaqList faqs={faqs} />
@@ -176,11 +166,16 @@ export default async function ServicePage({ params }: Params) {
       {related.length > 0 && (
         <section className="border-t border-line bg-champagne/45 py-16">
           <div className="mx-auto max-w-7xl px-4 sm:px-6">
-            <p className="eyebrow">Plan the full event</p>
-            <h2 className="font-display mt-2 text-4xl text-emerald">Often booked together</h2>
-            <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-              {related.map((s) => <ServiceCard key={s.slug} service={s} />)}
-            </div>
+            <h2 className="font-display text-3xl text-emerald">Usually booked with this</h2>
+            <ul className="mt-5 flex flex-col gap-1 sm:flex-row sm:flex-wrap sm:gap-x-10">
+              {related.map((s) => (
+                <li key={s.slug}>
+                  <Link href={`/services/${s.slug}/`} className="inline-flex min-h-11 items-center gap-2 font-semibold text-emerald hover:text-gold-700">
+                    <ServiceIcon name={s.icon} className="h-5 w-5 text-gold-700" /> {s.name} <ArrowRight className="h-4 w-4" />
+                  </Link>
+                </li>
+              ))}
+            </ul>
           </div>
         </section>
       )}
