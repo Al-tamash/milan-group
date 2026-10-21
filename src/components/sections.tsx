@@ -33,7 +33,7 @@ export function HowItWorks() {
 export function StatsLine({ dark = false }: { dark?: boolean }) {
   return (
     <p className={`text-sm ${dark ? "text-ivory/80" : "text-muted"}`}>
-      Since {site.since} · Jubilee Hills, Hyderabad · Open 24 hours · {site.rating.value}★ on Google
+      Since {site.since} · Jubilee Hills, Hyderabad · Open 24 hours
     </p>
   );
 }

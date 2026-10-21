@@ -1,106 +1,115 @@
 import Image from "next/image";
 import Link from "next/link";
-import { services, site } from "@/lib/data";
+import { ArrowRight } from "lucide-react";
+import { productImage, products, site } from "@/lib/data";
 import { CallButton, WhatsAppButton } from "@/components/ContactButtons";
 import { HowItWorks, StatsLine } from "@/components/sections";
-import { RatingBadge, SectionHeading, ServiceCard } from "@/components/ui";
+import { RatingBadge } from "@/components/ui";
+import { ServiceList } from "@/components/ServiceList";
+import { OccasionTiles } from "@/components/OccasionTiles";
 
-const EVENTS = ["Weddings", "Receptions", "Engagements", "Nikah", "Haldi & Mehendi", "Birthdays", "Get-togethers", "Inaugurations", "Pooja & festivals", "Corporate events"];
-
-const HERO_TILES = [
-  { src: "/images/home/tents.webp", label: "Tents" },
+const COLLAGE = [
   { src: "/images/home/stage.webp", label: "Stage" },
-  { src: "/images/home/tables.webp", label: "Tables & Chairs" },
-  { src: "/images/home/decor.webp", label: "Décor & Lighting" },
+  { src: "/images/home/tents.webp", label: "Tents" },
+  { src: "/images/home/tables.webp", label: "Tables & chairs" },
 ];
 
 export default function Home() {
+  const strip = products.filter((p) => p.featured && p.category !== "tents").slice(0, 8);
+
   return (
     <>
       {/* Hero */}
-      <section className="relative overflow-hidden bg-forest text-ivory">
-        <div className="absolute inset-0 opacity-25">
-          <Image src="/images/home/decor.webp" alt="" fill priority sizes="100vw" className="object-cover" />
-        </div>
-        <div className="absolute inset-0 bg-gradient-to-r from-forest via-forest/90 to-forest/40" />
-        <div className="relative mx-auto grid max-w-7xl items-center gap-12 px-4 py-16 sm:px-6 md:py-24 lg:grid-cols-[1.15fr_1fr]">
+      <section className="bg-forest text-ivory">
+        <div className="mx-auto grid max-w-7xl items-center gap-10 px-4 py-14 sm:px-6 md:py-20 lg:grid-cols-[1.1fr_1fr]">
           <div>
-            <p className="eyebrow !text-gold">Event rentals since {site.since} · Jubilee Hills, Hyderabad</p>
-            <h1 className="font-display mt-4 text-5xl leading-[1.05] sm:text-7xl">
-              The complete <span className="text-gold">set-up</span> solution
+            <h1 className="font-display text-5xl leading-[1.05] sm:text-6xl lg:text-7xl">
+              Tents, chairs, lights, flowers. <span className="text-gold">One call</span>, we set it all up.
             </h1>
             <p className="mt-6 max-w-xl text-base leading-relaxed text-ivory/80 sm:text-lg">
-              Tents, designer chairs, stage sofas, sound, lighting and flower décor — everything for your wedding or
-              celebration, delivered and set up by one team.
+              Weddings, Nikahs, poojas, birthdays — tell us the date and the venue, and our team brings everything and
+              puts it up before your guests arrive.
             </p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
               <WhatsAppButton location="hero" />
               <CallButton location="hero" tone="dark" />
             </div>
-            <div className="mt-8 flex flex-wrap items-center gap-4">
+            <div className="mt-8 flex flex-col items-start gap-3">
               <RatingBadge dark />
-              <span className="text-sm text-gold">{site.hours}</span>
+              <StatsLine dark />
             </div>
           </div>
-          <div className="grid grid-cols-2 gap-3">
-            {HERO_TILES.map((t, i) => (
-              <figure key={t.label} className={`relative overflow-hidden rounded-t-[999px] rounded-b-xl border border-gold/40 ${i % 2 ? "mt-8" : ""}`}>
-                <div className="relative aspect-[3/4]">
-                  <Image src={t.src} alt={t.label} fill sizes="(max-width: 1024px) 50vw, 22vw" className="object-cover" />
+          <div className="grid grid-cols-2 grid-rows-2 gap-3">
+            {COLLAGE.map((c, i) => (
+              <figure key={c.label} className={`relative overflow-hidden rounded-lg ${i === 0 ? "row-span-2" : ""}`}>
+                <div className={`relative h-full ${i === 0 ? "min-h-72" : "min-h-36"}`}>
+                  <Image src={c.src} alt={c.label} fill priority={i === 0} sizes="(max-width: 1024px) 50vw, 25vw" className="object-cover" />
                 </div>
-                <figcaption className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/70 to-transparent p-3 text-center text-xs font-semibold uppercase tracking-[0.2em]">
-                  {t.label}
-                </figcaption>
+                <figcaption className="absolute bottom-2 left-2 rounded bg-forest/80 px-2 py-0.5 text-xs text-ivory">{c.label}</figcaption>
               </figure>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Stats (D39) */}
-      <section className="mx-auto -mt-px max-w-7xl px-4 pt-10 sm:px-6">
-        <StatsLine />
+      {/* What we supply */}
+      <section className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20">
+        <h2 className="font-display text-4xl text-emerald sm:text-5xl">What we supply</h2>
+        <p className="mt-3 max-w-xl text-muted">Need only chairs? Fine. Need the whole function done? We do that too.</p>
+        <div className="mt-10">
+          <ServiceList />
+        </div>
       </section>
 
-      {/* Services */}
-      <section className="mx-auto max-w-7xl px-4 py-20 sm:px-6">
-        <SectionHeading
-          eyebrow="What we do"
-          title="Everything for your event, under one roof"
-          intro="From the first tent pole to the last flower garland — choose a service to see everything it includes."
-        />
-        <div className="mt-12 grid grid-cols-2 gap-4 sm:gap-5 lg:grid-cols-5">
-          {services.map((s) => <ServiceCard key={s.slug} service={s} compact />)}
+      {/* Chairs & sofas strip */}
+      <section className="bg-champagne/40 py-14">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6">
+          <div className="flex flex-wrap items-end justify-between gap-4">
+            <h2 className="font-display text-4xl text-emerald">Our chairs and sofas</h2>
+            <Link
+              href="/services/furniture-and-seating/#designs"
+              className="inline-flex min-h-11 items-center gap-1.5 text-sm font-semibold text-emerald hover:text-gold-700"
+            >
+              See all designs and colours <ArrowRight className="h-4 w-4" />
+            </Link>
+          </div>
+          <Link href="/services/furniture-and-seating/#designs" className="mt-6 grid grid-cols-4 gap-2 sm:grid-cols-8 sm:gap-3">
+            {strip.map((p) => (
+              <span key={p.slug} className="relative block aspect-[3/4] overflow-hidden rounded-lg bg-[#f6f1e7]">
+                <Image src={productImage(p.variants[0].images[0])} alt={p.name} fill sizes="(max-width: 640px) 25vw, 12vw" className="object-contain p-1.5" />
+              </span>
+            ))}
+          </Link>
         </div>
+      </section>
+
+      {/* Occasions */}
+      <section className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20">
+        <div className="max-w-2xl">
+          <h2 className="font-display text-4xl text-emerald sm:text-5xl">What&rsquo;s the function?</h2>
+          <p className="mt-3 text-muted">Pick yours and we&rsquo;ll start the chat on WhatsApp. Not sure what you need? We&rsquo;ll suggest.</p>
+        </div>
+        <div className="mt-8">
+          <OccasionTiles />
+        </div>
+        <p className="mt-4 text-xs text-muted">Some photos are representative until we add pictures of our own set-ups.</p>
       </section>
 
       <HowItWorks />
 
-      {/* Events */}
-      <section className="mx-auto max-w-7xl px-4 py-20 sm:px-6">
-        <SectionHeading eyebrow="Occasions" title="Every celebration we set up" />
-        <ul className="mx-auto mt-10 flex max-w-4xl flex-wrap justify-center gap-3">
-          {EVENTS.map((e) => (
-            <li key={e} className="rounded-full border border-line bg-white px-5 py-2 text-sm text-ink">{e}</li>
-          ))}
-        </ul>
-      </section>
-
-      {/* Contact strip */}
-      <section className="border-t border-line bg-champagne/45">
+      {/* Contact */}
+      <section className="bg-champagne/40">
         <div className="mx-auto grid max-w-7xl gap-10 px-4 py-16 sm:px-6 lg:grid-cols-2">
           <div>
-            <p className="eyebrow">Visit or call</p>
-            <h2 className="font-display mt-2 text-4xl text-emerald sm:text-5xl">Plan your event with us</h2>
+            <h2 className="font-display text-4xl text-emerald sm:text-5xl">Come and see us, or just call</h2>
             <p className="mt-4 text-muted">{site.address.line1}, {site.address.line2}</p>
-            <p className="mt-1 font-semibold text-emerald">{site.hours}</p>
+            <p className="mt-1 text-muted">Open 24 hours. Ask for Amjad or Asiya Madam.</p>
             <div className="mt-6 flex flex-col gap-3 sm:flex-row">
               <WhatsAppButton location="home-contact" />
               <CallButton location="home-contact" />
             </div>
-            <div className="mt-6"><RatingBadge /></div>
           </div>
-          <div className="overflow-hidden rounded-2xl border border-line">
+          <div className="overflow-hidden rounded-xl border border-line">
             <iframe
               title="Milan Group on Google Maps"
               src={site.mapEmbed}

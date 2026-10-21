@@ -1,0 +1,44 @@
+[
+  {
+    "slug": "wedding",
+    "name": "Wedding & reception",
+    "includes": "Tent or hall, stage with sofa, chairs, lights, flowers, sound",
+    "image": "items/w-stage",
+    "message": "Hi Milan Group, I need a set-up for a wedding / reception."
+  },
+  {
+    "slug": "nikah",
+    "name": "Nikah & walima",
+    "includes": "Shamiyana, stage sofa, chairs, flower stage, sound, catering supplies",
+    "image": "home/decor",
+    "message": "Hi Milan Group, I need a set-up for a Nikah / walima."
+  },
+  {
+    "slug": "haldi-mehendi",
+    "name": "Haldi & mehendi",
+    "includes": "Marigold decoration, low seating, colourful drapes, music",
+    "image": "items/w-haldi",
+    "message": "Hi Milan Group, I need a set-up for a haldi / mehendi."
+  },
+  {
+    "slug": "pooja",
+    "name": "Pooja & griha pravesh",
+    "includes": "Pandal, Calcutta decoration, chairs, vessels, fans or coolers",
+    "image": "items/k-pooja",
+    "message": "Hi Milan Group, I need a set-up for a pooja / griha pravesh."
+  },
+  {
+    "slug": "birthday",
+    "name": "Birthday & get-together",
+    "includes": "Theme backdrop, balloons, chairs and tables, lights, music",
+    "image": "items/th-kids",
+    "message": "Hi Milan Group, I need a set-up for a birthday / get-together."
+  },
+  {
+    "slug": "corporate",
+    "name": "Office & shop opening",
+    "includes": "Stage, chairs, sound and mic, lighting, ribbon and flowers",
+    "image": "items/th-inauguration",
+    "message": "Hi Milan Group, I need a set-up for an office event / shop opening."
+  }
+]
