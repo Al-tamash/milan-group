@@ -41,7 +41,7 @@ export function Header() {
         </div>
       </div>
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6">
-        <Link href="/" aria-label="Milan Group home">
+        <Link href="/" aria-label="Milan Group home" className="flex min-h-11 items-center">
           <Logo />
         </Link>
         <nav className="hidden items-center gap-7 lg:flex" aria-label="Main">

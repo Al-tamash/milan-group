@@ -57,7 +57,7 @@ export function RatingBadge({ dark = false }: { dark?: boolean }) {
       href={site.mapUrl}
       target="_blank"
       rel="noopener"
-      className={`inline-flex items-center gap-3 rounded-full border px-4 py-2 text-sm ${
+      className={`inline-flex min-h-11 items-center gap-3 rounded-full border px-4 py-2 text-sm ${
         dark ? "border-gold/40 text-ivory hover:bg-ivory/10" : "border-line bg-white text-ink hover:border-gold"
       }`}
     >

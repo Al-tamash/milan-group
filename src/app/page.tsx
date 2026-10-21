@@ -23,7 +23,7 @@ export default function Home() {
       <section className="bg-forest text-ivory">
         <div className="mx-auto grid max-w-7xl items-center gap-10 px-4 py-14 sm:px-6 md:py-20 lg:grid-cols-[1.1fr_1fr]">
           <div>
-            <h1 className="font-display text-5xl leading-[1.05] sm:text-6xl lg:text-7xl">
+            <h1 className="font-display text-[2.75rem] leading-[1.05] sm:text-6xl">
               Tents, chairs, lights, flowers. <span className="text-gold">One call</span>, we set it all up.
             </h1>
             <p className="mt-6 max-w-xl text-base leading-relaxed text-ivory/80 sm:text-lg">
