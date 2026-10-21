@@ -1,6 +1,7 @@
 [
   {
     "slug": "furniture-and-seating",
+    "designsHeading": "Chairs and sofas we have",
     "name": "Furniture & Seating",
     "icon": "chair",
     "heroTitle": "Furniture & Seating on Rent in Hyderabad",
@@ -11,8 +12,8 @@
     "imagePlaceholder": true,
     "imageCredit": "https://images.unsplash.com/photo-1763553113332-800519753e40",
     "items": [
-      { "name": "Banquet & designer chairs", "text": "Chiavari, ornate, cross-back, acrylic and wooden chairs in many colours.", "image": "products/imperia-front", "href": "/catalog/chairs/" },
-      { "name": "Stage & lounge sofas", "text": "Carved classic and velvet sofas for the wedding stage and VIP seating.", "image": "products/milan-curve", "href": "/catalog/sofas/" },
+      { "name": "Banquet & designer chairs", "text": "Chiavari, ornate, cross-back, acrylic and wooden chairs in many colours.", "image": "products/imperia-front", "href": "#designs" },
+      { "name": "Stage & lounge sofas", "text": "Carved classic and velvet sofas for the wedding stage and VIP seating.", "image": "products/milan-curve", "href": "#designs" },
       { "name": "Round banquet tables", "text": "Dining tables with linen for receptions and wedding lunches.", "image": "items/f-round-tables", "stock": true },
       { "name": "Long banquet & buffet tables", "text": "Rectangular tables for buffet counters, head tables and registration desks.", "image": "items/f-banquet-tables", "stock": true },
       { "name": "Lounge sets", "text": "Sofas with coffee tables for VIP areas, lobbies and photo corners.", "image": "items/f-lounge-sets", "stock": true },
@@ -56,6 +57,7 @@
   },
   {
     "slug": "tents-and-roofing",
+    "designsHeading": "Tents we put up",
     "name": "Tents & Roofing",
     "icon": "tent",
     "heroTitle": "Tents & Pandals on Rent in Hyderabad",
@@ -66,8 +68,8 @@
     "imagePlaceholder": true,
     "imageCredit": "https://images.unsplash.com/photo-1675376616537-c8aa9ddc9977",
     "items": [
-      { "name": "German hanger (super structure)", "text": "Large waterproof aluminium halls with no centre poles — a banquet hall anywhere.", "image": "products/german-hanger", "href": "/catalog/tents/german-hanger-tent/" },
-      { "name": "Pagoda tents", "text": "Peaked tents for entrances, food counters, lounges and stalls.", "image": "products/german-aluminium-pagoda", "href": "/catalog/tents/" },
+      { "name": "German hanger (super structure)", "text": "Large waterproof aluminium halls with no centre poles — a banquet hall anywhere.", "image": "products/german-hanger", "href": "#designs" },
+      { "name": "Pagoda tents", "text": "Peaked tents for entrances, food counters, lounges and stalls.", "image": "products/german-aluminium-pagoda", "href": "#designs" },
       { "name": "Pipe pandals", "text": "Classic pandals with a waterproof roof option, decorated with drapes.", "image": "items/t-pandal", "stock": true },
       { "name": "Shamiyana", "text": "Traditional colourful shamiyana for functions and poojas.", "image": "items/t-shamiyana", "stock": true },
       { "name": "Gazebo tents", "text": "Quick canopy tents for small gatherings and outdoor counters.", "image": "items/t-gazebo", "stock": true }

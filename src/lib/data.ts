@@ -56,6 +56,7 @@ export type Service = {
   faqs: Faq[];
   related: string[];
   catalog: CategorySlug[];
+  designsHeading?: string;
 };
 
 export const products = productsJson as Product[];

@@ -3,11 +3,11 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ArrowRight, Clock, Star, Truck } from "lucide-react";
-import { getCategory, getService, productsIn, services, site } from "@/lib/data";
+import { getService, services, site } from "@/lib/data";
 import { CallButton, WhatsAppButton } from "@/components/ContactButtons";
-import { AddServiceButton } from "@/components/enquiry/AddServiceButton";
+import { DesignsSection } from "@/components/designs/DesignsSection";
 import { FaqList, HowItWorks } from "@/components/sections";
-import { ProductCard, ServiceCard, ServiceIcon } from "@/components/ui";
+import { ServiceCard, ServiceIcon } from "@/components/ui";
 
 type Params = { params: Promise<{ slug: string }> };
 
@@ -66,7 +66,7 @@ export default async function ServicePage({ params }: Params) {
             <p className="mt-5 text-base leading-relaxed text-ivory/85 sm:text-lg">{service.promise}</p>
             <div className="mt-7 flex flex-col gap-3 sm:flex-row">
               <WhatsAppButton location={`service-hero-${service.slug}`} number={whatsappNumber} message={message} />
-              <AddServiceButton slug={service.slug} name={service.name} tone="dark" />
+              <CallButton location={`service-hero-${service.slug}`} callNumber={flowerContact?.phones[0]} tone="dark" />
             </div>
             <ul className="mt-7 flex flex-wrap gap-2 text-xs">
               <li className="flex items-center gap-1.5 rounded-full border border-gold/40 bg-forest/50 px-3 py-1.5"><Clock className="h-3.5 w-3.5 text-gold" /> {site.hours}</li>
@@ -118,23 +118,16 @@ export default async function ServicePage({ params }: Params) {
         {hasStock && <p className="mt-4 text-xs text-muted">Some photos are representative. Ask us on WhatsApp for photos of our actual stock.</p>}
       </section>
 
-      {/* 3. For rent (catalog-backed services only) */}
-      {service.catalog.map((cat) => (
-        <section key={cat} className="border-t border-line bg-champagne/45 py-16">
-          <div className="mx-auto max-w-7xl px-4 sm:px-6">
-            <div className="flex items-end justify-between gap-4">
-              <div>
-                <p className="eyebrow">Designs with colours & sizes</p>
-                <h2 className="font-display mt-2 text-4xl text-emerald">{getCategory(cat)?.name} for rent</h2>
-              </div>
-              <Link href={`/catalog/${cat}/`} className="shrink-0 text-sm font-semibold text-emerald hover:text-gold-600">View all {productsIn(cat).length} →</Link>
-            </div>
-            <div className="mt-8 grid grid-cols-2 gap-4 sm:gap-6 lg:grid-cols-4">
-              {productsIn(cat).slice(0, 4).map((p) => <ProductCard key={p.slug} product={p} />)}
-            </div>
-          </div>
-        </section>
-      ))}
+      {/* 3. Designs we have (catalog-backed services only) */}
+      {service.catalog.length > 0 && (
+        <DesignsSection
+          serviceSlug={service.slug}
+          serviceName={service.name}
+          categories={service.catalog}
+          heading={service.designsHeading ?? `${service.name} designs`}
+          whatsappNumber={whatsappNumber}
+        />
+      )}
 
       {/* 4. Perfect for */}
       <section className="mx-auto max-w-7xl px-4 py-14 text-center sm:px-6">
