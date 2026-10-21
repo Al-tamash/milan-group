@@ -3,16 +3,14 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
-import { ClipboardList, Menu, Phone, X } from "lucide-react";
+import { Menu, Phone, X } from "lucide-react";
 import { Logo } from "./Logo";
-import { useEnquiry } from "./enquiry/EnquiryContext";
 import { site } from "@/lib/data";
 import { track } from "@/lib/analytics";
 
 const NAV = [
   { href: "/", label: "Home" },
   { href: "/services/", label: "Services" },
-  { href: "/catalog/", label: "Catalog" },
   { href: "/gallery/", label: "Gallery" },
   { href: "/about/", label: "About" },
   { href: "/contact/", label: "Contact" },
@@ -21,7 +19,6 @@ const NAV = [
 export function Header() {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
-  const { count } = useEnquiry();
 
   useEffect(() => setOpen(false), [pathname]);
 
@@ -61,18 +58,6 @@ export function Header() {
           ))}
         </nav>
         <div className="flex items-center gap-2">
-          <Link
-            href="/enquiry/"
-            className="relative flex items-center gap-2 rounded-full bg-emerald px-4 py-2 text-sm font-semibold text-ivory hover:bg-emerald-700"
-          >
-            <ClipboardList className="h-4 w-4" />
-            <span className="hidden sm:inline">Enquiry</span>
-            {count > 0 && (
-              <span className="absolute -right-1.5 -top-1.5 flex h-5 min-w-5 items-center justify-center rounded-full bg-gold px-1 text-[11px] font-bold text-forest">
-                {count}
-              </span>
-            )}
-          </Link>
           <button
             type="button"
             className="rounded-md p-2 text-emerald lg:hidden"

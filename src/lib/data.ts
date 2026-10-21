@@ -63,20 +63,9 @@ export const products = productsJson as Product[];
 export const services = servicesJson as Service[];
 export const site = siteJson;
 
-export const categories: { slug: CategorySlug; name: string; blurb: string }[] = [
-  { slug: "chairs", name: "Chairs", blurb: "Designer banquet, Chiavari, acrylic and wooden chairs in many colours." },
-  { slug: "sofas", name: "Sofas", blurb: "Stage and lounge sofas in velvet, from classic carved to modern tufted." },
-  { slug: "tents", name: "Tents", blurb: "Pagodas and German hanger tents — waterproof and fire-retardant." },
-];
-
-export const getCategory = (slug: string) => categories.find((c) => c.slug === slug);
-export const getProduct = (category: string, slug: string) =>
-  products.find((p) => p.category === category && p.slug === slug);
 export const getService = (slug: string) => services.find((s) => s.slug === slug);
-export const productsIn = (category: CategorySlug) => products.filter((p) => p.category === category);
 
 export const productImage = (name: string) => `/images/products/${name}.webp`;
-export const productHref = (p: Pick<Product, "category" | "slug">) => `/catalog/${p.category}/${p.slug}/`;
 
 export const formatPhone = (n: string) => `${n.slice(0, 5)} ${n.slice(5)}`;
 

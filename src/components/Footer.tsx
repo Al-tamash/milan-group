@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { Clock, MapPin, Phone } from "lucide-react";
 import { Logo } from "./Logo";
-import { categories, formatPhone, services, site } from "@/lib/data";
+import { formatPhone, services, site } from "@/lib/data";
 
 export function Footer() {
   return (
@@ -27,18 +27,12 @@ export function Footer() {
           </ul>
         </div>
         <div>
-          <h3 className="eyebrow !text-gold">Catalog</h3>
+          <h3 className="eyebrow !text-gold">Designs</h3>
           <ul className="mt-4 space-y-2 text-sm">
-            {categories.map((c) => (
-              <li key={c.slug}>
-                <Link href={`/catalog/${c.slug}/`} className="hover:text-gold">
-                  {c.name}
-                </Link>
-              </li>
-            ))}
+            <li><Link href="/services/furniture-and-seating/#designs" className="hover:text-gold">Chairs & sofas</Link></li>
+            <li><Link href="/services/tents-and-roofing/#designs" className="hover:text-gold">Tents</Link></li>
             <li><Link href="/gallery/" className="hover:text-gold">Gallery</Link></li>
             <li><Link href="/about/" className="hover:text-gold">About us</Link></li>
-            <li><Link href="/enquiry/" className="hover:text-gold">Enquiry list</Link></li>
           </ul>
         </div>
         <div>

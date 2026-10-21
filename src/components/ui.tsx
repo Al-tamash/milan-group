@@ -3,7 +3,7 @@ import Link from "next/link";
 import {
   Armchair, Fan, Flower2, Gem, Lightbulb, PartyPopper, Speaker, Star, Tent, Heart, UtensilsCrossed, type LucideIcon,
 } from "lucide-react";
-import { productHref, productImage, site, type Product, type Service } from "@/lib/data";
+import { site, type Service } from "@/lib/data";
 
 const ICONS: Record<string, LucideIcon> = {
   chair: Armchair, tent: Tent, speaker: Speaker, bulb: Lightbulb, flower: Flower2,
@@ -45,38 +45,6 @@ export function PageHero({ eyebrow, title, intro, crumbs }: { eyebrow?: string; 
         {intro && <p className="mt-4 max-w-2xl text-base leading-relaxed text-muted">{intro}</p>}
       </div>
     </section>
-  );
-}
-
-export function ProductCard({ product }: { product: Product }) {
-  const first = product.variants[0];
-  return (
-    <Link
-      href={productHref(product)}
-      className="group flex flex-col overflow-hidden rounded-2xl border border-line bg-white transition-shadow hover:shadow-xl hover:shadow-emerald/10"
-    >
-      <div className="relative aspect-[4/5] overflow-hidden bg-[#f6f1e7]">
-        <Image
-          src={productImage(first.images[0])}
-          alt={`${product.name} – ${first.name}`}
-          fill
-          sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
-          className="object-contain p-3 transition-transform duration-500 group-hover:scale-105"
-        />
-      </div>
-      <div className="flex flex-1 flex-col p-4">
-        <h3 className="font-display text-2xl leading-tight text-emerald">{product.name}</h3>
-        <p className="mt-1 line-clamp-2 text-xs text-muted">{product.tagline}</p>
-        {product.variants.length > 1 && (
-          <div className="mt-auto flex items-center gap-1.5 pt-3">
-            {product.variants.slice(0, 7).map((v) => (
-              <span key={v.name} title={v.name} className="h-3.5 w-3.5 rounded-full border border-black/15" style={{ background: v.swatch }} />
-            ))}
-            <span className="ml-1 text-[11px] text-muted">{product.variants.length} colours</span>
-          </div>
-        )}
-      </div>
-    </Link>
   );
 }
 

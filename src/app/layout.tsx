@@ -5,7 +5,6 @@ import "./globals.css";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { FloatingWhatsApp } from "@/components/ContactButtons";
-import { EnquiryProvider } from "@/components/enquiry/EnquiryContext";
 import { site } from "@/lib/data";
 
 const cormorant = Cormorant_Garamond({
@@ -56,12 +55,12 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
     <html lang="en-IN" className={`${cormorant.variable} ${montserrat.variable}`}>
       <body>
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusiness) }} />
-        <EnquiryProvider>
+        
           <Header />
           <main>{children}</main>
           <Footer />
           <FloatingWhatsApp />
-        </EnquiryProvider>
+        
         {GA_ID && (
           <>
             <Script src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`} strategy="afterInteractive" />

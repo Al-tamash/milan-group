@@ -1,9 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
-import { categories, products, productsIn, productImage, services, site } from "@/lib/data";
+import { services, site } from "@/lib/data";
 import { CallButton, WhatsAppButton } from "@/components/ContactButtons";
 import { HowItWorks, StatsStrip } from "@/components/sections";
-import { ProductCard, RatingBadge, SectionHeading, ServiceCard } from "@/components/ui";
+import { RatingBadge, SectionHeading, ServiceCard } from "@/components/ui";
 
 const EVENTS = ["Weddings", "Receptions", "Engagements", "Nikah", "Haldi & Mehendi", "Birthdays", "Get-togethers", "Inaugurations", "Pooja & festivals", "Corporate events"];
 
@@ -15,8 +15,6 @@ const HERO_TILES = [
 ];
 
 export default function Home() {
-  const featured = products.filter((p) => p.featured).slice(0, 8);
-
   return (
     <>
       {/* Hero */}
@@ -73,43 +71,6 @@ export default function Home() {
         />
         <div className="mt-12 grid grid-cols-2 gap-4 sm:gap-5 lg:grid-cols-5">
           {services.map((s) => <ServiceCard key={s.slug} service={s} compact />)}
-        </div>
-      </section>
-
-      {/* Catalog categories */}
-      <section className="bg-champagne/45 py-20">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6">
-          <SectionHeading eyebrow="Rental catalog" title="Chairs, sofas & tents" intro="See every design with photos, colours and sizes, and add items to your enquiry list." />
-          <div className="mt-12 grid gap-6 md:grid-cols-3">
-            {categories.map((c) => {
-              const cover = productsIn(c.slug).find((p) => p.featured) ?? productsIn(c.slug)[0];
-              return (
-                <Link key={c.slug} href={`/catalog/${c.slug}/`} className="group overflow-hidden rounded-2xl border border-line bg-white">
-                  <div className="relative aspect-[4/3] bg-[#f6f1e7]">
-                    <Image src={productImage(cover.variants[0].images[0])} alt={c.name} fill sizes="(max-width: 768px) 100vw, 33vw" className="object-contain p-4 transition-transform duration-500 group-hover:scale-105" />
-                  </div>
-                  <div className="p-5">
-                    <h3 className="font-display text-3xl text-emerald">{c.name}</h3>
-                    <p className="mt-1 text-sm text-muted">{c.blurb}</p>
-                    <p className="mt-3 text-sm font-semibold text-emerald group-hover:text-gold-600">{productsIn(c.slug).length} designs →</p>
-                  </div>
-                </Link>
-              );
-            })}
-          </div>
-        </div>
-      </section>
-
-      {/* Featured products */}
-      <section className="mx-auto max-w-7xl px-4 py-20 sm:px-6">
-        <SectionHeading eyebrow="Most requested" title="Featured designs" />
-        <div className="mt-12 grid grid-cols-2 gap-4 sm:gap-6 lg:grid-cols-4">
-          {featured.map((p) => <ProductCard key={p.slug} product={p} />)}
-        </div>
-        <div className="mt-10 text-center">
-          <Link href="/catalog/" className="inline-block rounded-full border border-emerald px-6 py-3 text-sm font-semibold text-emerald hover:bg-emerald hover:text-ivory">
-            View full catalog
-          </Link>
         </div>
       </section>
 

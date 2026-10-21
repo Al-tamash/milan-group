@@ -14,9 +14,8 @@ export default function PrivacyPage() {
         <div>
           <h2 className="font-display text-3xl text-emerald">Enquiries</h2>
           <p className="mt-2">
-            This website does not store the details you type into the enquiry form. When you press &ldquo;Send enquiry on
-            WhatsApp&rdquo;, your details are placed into a WhatsApp message on your own device, and are shared with{" "}
-            {site.name} only if you choose to send that message. Your enquiry list is kept only in your own browser.
+            This website does not store anything you pick or type. When you press a WhatsApp button, a message is prepared on
+            your own device, and it reaches {site.name} only if you choose to send it.
           </p>
         </div>
         <div>
@@ -24,7 +23,7 @@ export default function PrivacyPage() {
           <p className="mt-2">
             We use Google Analytics to understand how visitors use this site — for example, which pages are viewed and how
             often the WhatsApp and call buttons are pressed. Google Analytics uses cookies and collects information such as
-            your approximate location, device and browser. It does not receive the details you type into the enquiry form.
+            your approximate location, device and browser.
             You can opt out using Google&rsquo;s browser add-on at tools.google.com/dlpage/gaoptout.
           </p>
         </div>
