@@ -77,7 +77,7 @@ export default async function ServicePage({ params }: Params) {
           </div>
         </div>
         {service.imagePlaceholder && (
-          <span className="absolute bottom-3 right-3 rounded-full bg-black/55 px-2.5 py-1 text-[10px] tracking-wide text-white">Representative photo</span>
+          <span className="absolute bottom-3 right-3 rounded-full bg-black/55 px-2.5 py-1 text-[11px] tracking-wide text-white">Representative photo</span>
         )}
       </section>
 
@@ -104,7 +104,7 @@ export default async function ServicePage({ params }: Params) {
                 <div className="p-4 sm:p-5">
                   <h3 className="font-display text-xl leading-tight text-emerald sm:text-2xl">{item.name}</h3>
                   <p className="mt-1.5 text-xs leading-relaxed text-muted sm:text-sm">{item.text}</p>
-                  {item.href && <span className="mt-2 inline-flex items-center gap-1 text-xs font-semibold text-emerald group-hover:text-gold-600">See designs <ArrowRight className="h-3.5 w-3.5" /></span>}
+                  {item.href && <span className="mt-2 inline-flex items-center gap-1 text-xs font-semibold text-emerald group-hover:text-gold-700">See designs <ArrowRight className="h-3.5 w-3.5" /></span>}
                 </div>
               </>
             );
@@ -140,7 +140,7 @@ export default async function ServicePage({ params }: Params) {
       </section>
 
       {/* 5. How it works */}
-      <HowItWorks compact />
+      <HowItWorks />
 
       {/* 6. Real set-up photos — Phase 2, once the customer sends them */}
 

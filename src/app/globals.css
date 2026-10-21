@@ -7,12 +7,15 @@
   --color-forest: #0e2e22;
   --color-gold: #c9a84c;
   --color-gold-600: #a88a35;
+  /* Text-safe gold: 4.9:1 on ivory, 4.6:1 on champagne. Use for gold text on light backgrounds. */
+  --color-gold-700: #86691f;
   --color-ivory: #fdf8f0;
   --color-champagne: #f5e6c8;
   --color-ink: #1f2a24;
   --color-muted: #5b665f;
   --color-line: #e8dcc2;
-  --color-whatsapp: #1fa855;
+  /* Darker than WhatsApp brand green so white button text passes AA (5:1). */
+  --color-whatsapp: #15803d;
 
   --font-display: var(--font-cormorant), "Times New Roman", serif;
   --font-sans: var(--font-montserrat), system-ui, sans-serif;
@@ -41,12 +44,17 @@ body {
   font-weight: 600;
   letter-spacing: 0.22em;
   text-transform: uppercase;
-  color: var(--color-gold-600);
+  color: var(--color-gold-700);
 }
 
 .gold-rule {
   height: 1px;
   background: linear-gradient(90deg, transparent, var(--color-gold), transparent);
+}
+
+::selection {
+  background: var(--color-champagne);
+  color: var(--color-forest);
 }
 
 :focus-visible {

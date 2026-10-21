@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { services, site } from "@/lib/data";
 import { CallButton, WhatsAppButton } from "@/components/ContactButtons";
-import { HowItWorks, StatsStrip } from "@/components/sections";
+import { HowItWorks, StatsLine } from "@/components/sections";
 import { RatingBadge, SectionHeading, ServiceCard } from "@/components/ui";
 
 const EVENTS = ["Weddings", "Receptions", "Engagements", "Nikah", "Haldi & Mehendi", "Birthdays", "Get-togethers", "Inaugurations", "Pooja & festivals", "Corporate events"];
@@ -59,7 +59,7 @@ export default function Home() {
 
       {/* Stats (D39) */}
       <section className="mx-auto -mt-px max-w-7xl px-4 pt-10 sm:px-6">
-        <StatsStrip />
+        <StatsLine />
       </section>
 
       {/* Services */}

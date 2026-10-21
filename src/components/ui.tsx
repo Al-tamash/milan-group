@@ -15,13 +15,17 @@ export function ServiceIcon({ name, className = "h-6 w-6" }: { name: string; cla
   return <Icon className={className} strokeWidth={1.5} />;
 }
 
-export function SectionHeading({ eyebrow, title, intro, center = true }: { eyebrow?: string; title: string; intro?: string; center?: boolean }) {
+type SectionHeadingProps = { eyebrow?: string; title: string; intro?: string; align?: "left" | "center"; rule?: boolean };
+
+// Plain heading by default: no label above it, no gold rule, left-aligned. Opt in only where a page needs it.
+export function SectionHeading({ eyebrow, title, intro, align = "left", rule = false }: SectionHeadingProps) {
+  const center = align === "center";
   return (
     <div className={center ? "mx-auto max-w-2xl text-center" : "max-w-2xl"}>
-      {eyebrow && <p className="eyebrow">{eyebrow}</p>}
-      <h2 className="font-display mt-2 text-4xl text-emerald sm:text-5xl">{title}</h2>
-      <div className={`gold-rule mt-4 w-32 ${center ? "mx-auto" : ""}`} />
-      {intro && <p className="mt-5 text-base leading-relaxed text-muted">{intro}</p>}
+      {eyebrow && <p className="eyebrow mb-2">{eyebrow}</p>}
+      <h2 className="font-display text-4xl text-emerald sm:text-5xl">{title}</h2>
+      {rule && <div className={`gold-rule mt-4 w-32 ${center ? "mx-auto" : ""}`} />}
+      {intro && <p className="mt-4 text-base leading-relaxed text-muted">{intro}</p>}
     </div>
   );
 }
@@ -61,7 +65,7 @@ export function ServiceImage({ service, className = "", label = true }: { servic
         />
         {/* Stock photo (D10): labelled so it isn't mistaken for Milan Group's own work. */}
         {label && service.imagePlaceholder && (
-          <span className="absolute bottom-2 right-2 rounded-full bg-black/55 px-2.5 py-1 text-[10px] tracking-wide text-white">
+          <span className="absolute bottom-2 right-2 rounded-full bg-black/55 px-2.5 py-1 text-[11px] tracking-wide text-white">
             Representative photo
           </span>
         )}
@@ -87,12 +91,12 @@ export function ServiceCard({ service, compact = false }: { service: Service; co
         <ServiceImage service={service} label={!compact} className="transition-transform duration-500 group-hover:scale-105" />
       </div>
       <div className={`flex flex-1 flex-col ${compact ? "p-4" : "p-5"}`}>
-        <div className="flex items-start gap-2 text-gold-600">
+        <div className="flex items-start gap-2 text-gold-700">
           <ServiceIcon name={service.icon} className="mt-1 h-5 w-5 shrink-0" />
           <h3 className={`font-display leading-tight text-emerald ${compact ? "text-xl" : "text-2xl"}`}>{service.name}</h3>
         </div>
         <p className={`mt-2 leading-relaxed text-muted ${compact ? "line-clamp-3 text-xs" : "text-sm"}`}>{service.summary}</p>
-        <span className="mt-auto pt-4 text-sm font-semibold text-emerald group-hover:text-gold-600">Explore →</span>
+        <span className="mt-auto pt-4 text-sm font-semibold text-emerald group-hover:text-gold-700">Explore →</span>
       </div>
     </Link>
   );

@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import { services, site } from "@/lib/data";
 import { PageHero, RatingBadge, ServiceIcon } from "@/components/ui";
-import { StatsStrip } from "@/components/sections";
 import { CallButton, WhatsAppButton } from "@/components/ContactButtons";
 
 export const metadata: Metadata = {
@@ -44,9 +43,6 @@ export default function AboutPage() {
         <div className="relative aspect-[4/5] overflow-hidden rounded-t-[999px] rounded-b-2xl border border-gold/50">
           <Image src="/images/home/stage.webp" alt="Stage set-up by Milan Group" fill sizes="(max-width: 1024px) 100vw, 50vw" className="object-cover" />
         </div>
-      </section>
-      <section className="mx-auto max-w-7xl px-4 pb-16 sm:px-6">
-        <StatsStrip />
       </section>
       <section className="bg-forest py-16 text-ivory">
         <div className="mx-auto max-w-7xl px-4 sm:px-6">

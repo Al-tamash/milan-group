@@ -23,7 +23,7 @@ export default function ContactPage() {
             {site.contacts.map((c) => (
               <li key={c.name} className={`rounded-2xl border bg-white p-5 ${c.primary ? "border-gold" : "border-line"}`}>
                 <p className="font-display text-2xl text-emerald">{c.name}</p>
-                <p className="text-xs uppercase tracking-[0.18em] text-gold-600">{c.role}</p>
+                <p className="text-xs uppercase tracking-[0.18em] text-gold-700">{c.role}</p>
                 {c.phones.map((p) => (
                   <div key={p} className="mt-3 flex flex-wrap gap-2">
                     <a href={`tel:+91${p}`} className="inline-flex items-center gap-1.5 rounded-full border border-emerald px-3 py-1.5 text-sm font-semibold text-emerald hover:bg-emerald hover:text-ivory">
@@ -38,8 +38,8 @@ export default function ContactPage() {
             ))}
           </ul>
           <div className="mt-8 space-y-3 rounded-2xl border border-line bg-champagne/45 p-6 text-sm">
-            <p className="flex gap-2"><MapPin className="h-5 w-5 shrink-0 text-gold-600" /> {site.address.line1}, {site.address.line2}</p>
-            <p className="flex gap-2"><Clock className="h-5 w-5 shrink-0 text-gold-600" /> {site.hours}</p>
+            <p className="flex gap-2"><MapPin className="h-5 w-5 shrink-0 text-gold-700" /> {site.address.line1}, {site.address.line2}</p>
+            <p className="flex gap-2"><Clock className="h-5 w-5 shrink-0 text-gold-700" /> {site.hours}</p>
             <a href={site.mapUrl} target="_blank" rel="noopener" className="inline-block font-semibold text-emerald underline decoration-gold underline-offset-4">
               Get directions on Google Maps
             </a>

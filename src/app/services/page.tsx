@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { services, site } from "@/lib/data";
 import { PageHero, ServiceCard } from "@/components/ui";
 import { CallButton, WhatsAppButton } from "@/components/ContactButtons";
-import { StatsStrip } from "@/components/sections";
 
 export const metadata: Metadata = {
   title: "Services",
@@ -32,7 +31,6 @@ export default function ServicesPage() {
             </div>
           </div>
         </div>
-        <div className="mt-14"><StatsStrip /></div>
       </section>
     </>
   );

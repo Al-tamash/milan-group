@@ -15,8 +15,8 @@ export function Footer() {
           <p className="font-display mt-4 text-2xl text-gold">{site.motto}</p>
         </div>
         <div>
-          <h3 className="eyebrow !text-gold">Services</h3>
-          <ul className="mt-4 space-y-2 text-sm">
+          <h3 className="text-sm font-semibold text-gold">Services</h3>
+          <ul className="mt-3 text-sm [&_a]:inline-flex [&_a]:min-h-11 [&_a]:items-center">
             {services.map((s) => (
               <li key={s.slug}>
                 <Link href={`/services/${s.slug}/`} className="hover:text-gold">
@@ -27,8 +27,8 @@ export function Footer() {
           </ul>
         </div>
         <div>
-          <h3 className="eyebrow !text-gold">Designs</h3>
-          <ul className="mt-4 space-y-2 text-sm">
+          <h3 className="text-sm font-semibold text-gold">Designs & more</h3>
+          <ul className="mt-3 text-sm [&_a]:inline-flex [&_a]:min-h-11 [&_a]:items-center">
             <li><Link href="/services/furniture-and-seating/#designs" className="hover:text-gold">Chairs & sofas</Link></li>
             <li><Link href="/services/tents-and-roofing/#designs" className="hover:text-gold">Tents</Link></li>
             <li><Link href="/gallery/" className="hover:text-gold">Gallery</Link></li>
@@ -36,8 +36,8 @@ export function Footer() {
           </ul>
         </div>
         <div>
-          <h3 className="eyebrow !text-gold">Contact</h3>
-          <ul className="mt-4 space-y-3 text-sm">
+          <h3 className="text-sm font-semibold text-gold">Contact</h3>
+          <ul className="mt-3 space-y-1 text-sm [&_a]:inline-flex [&_a]:min-h-11 [&_a]:items-center">
             <li className="flex gap-2">
               <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-gold" />
               <span>{site.address.line1},<br />{site.address.line2}</span>
@@ -54,7 +54,7 @@ export function Footer() {
               </li>
             ))}
             <li>
-              <a href={site.instagram} target="_blank" rel="noopener" className="hover:text-gold">
+              <a href={site.instagram} target="_blank" rel="noopener" className="break-all hover:text-gold">
                 Instagram: @{site.instagramHandle}
               </a>
             </li>
@@ -64,7 +64,7 @@ export function Footer() {
       <div className="border-t border-ivory/10">
         <div className="mx-auto flex max-w-7xl flex-col gap-2 px-4 py-5 text-xs text-ivory/60 sm:flex-row sm:justify-between sm:px-6">
           <span>© {new Date().getFullYear()} {site.name}. All rights reserved.</span>
-          <Link href="/privacy/" className="hover:text-gold">Privacy policy</Link>
+          <Link href="/privacy/" className="inline-flex min-h-11 items-center hover:text-gold">Privacy policy</Link>
         </div>
       </div>
     </footer>

@@ -60,7 +60,7 @@ export function Header() {
         <div className="flex items-center gap-2">
           <button
             type="button"
-            className="rounded-md p-2 text-emerald lg:hidden"
+            className="flex h-11 w-11 items-center justify-center rounded-md text-emerald lg:hidden"
             onClick={() => setOpen((o) => !o)}
             aria-expanded={open}
             aria-label={open ? "Close menu" : "Open menu"}

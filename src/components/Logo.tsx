@@ -32,7 +32,7 @@ export function Logo({ light = false }: { light?: boolean }) {
         >
           MILAN
         </span>
-        <span className={`block text-[0.6rem] font-semibold tracking-[0.45em] ${light ? "text-gold" : "text-gold-600"}`}>
+        <span className={`block text-[0.7rem] font-semibold tracking-[0.4em] ${light ? "text-gold" : "text-gold-700"}`}>
           GROUP
         </span>
       </span>
