@@ -1,0 +1,58 @@
+"use client";
+
+import { MessageCircle, Phone } from "lucide-react";
+import { site, whatsappLink } from "@/lib/data";
+import { track } from "@/lib/analytics";
+
+type Props = {
+  message?: string;
+  location: string;
+  number?: string;
+  callNumber?: string;
+  tone?: "light" | "dark";
+};
+
+export function WhatsAppButton({ message = "Hi Milan Group, I would like to enquire about an event.", location, number }: Props) {
+  return (
+    <a
+      href={whatsappLink(message, number)}
+      target="_blank"
+      rel="noopener"
+      onClick={() => track("whatsapp_click", { location })}
+      className="inline-flex items-center justify-center gap-2 rounded-full bg-whatsapp px-6 py-3 text-sm font-semibold text-white transition hover:brightness-110"
+    >
+      <MessageCircle className="h-4 w-4" /> WhatsApp us
+    </a>
+  );
+}
+
+export function CallButton({ location, callNumber = site.contacts[0].phones[0], tone = "light" }: Props) {
+  return (
+    <a
+      href={`tel:+91${callNumber}`}
+      onClick={() => track("call_click", { location })}
+      className={`inline-flex items-center justify-center gap-2 rounded-full border px-6 py-3 text-sm font-semibold transition-colors ${
+        tone === "dark"
+          ? "border-gold/70 text-ivory hover:bg-ivory/10"
+          : "border-emerald text-emerald hover:bg-emerald hover:text-ivory"
+      }`}
+    >
+      <Phone className="h-4 w-4" /> Call {callNumber}
+    </a>
+  );
+}
+
+export function FloatingWhatsApp() {
+  return (
+    <a
+      href={whatsappLink("Hi Milan Group, I would like to enquire about an event.")}
+      target="_blank"
+      rel="noopener"
+      onClick={() => track("whatsapp_click", { location: "floating" })}
+      aria-label="Chat with Milan Group on WhatsApp"
+      className="fixed bottom-5 right-5 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-whatsapp text-white shadow-lg shadow-black/20 transition-transform hover:scale-105"
+    >
+      <MessageCircle className="h-7 w-7" />
+    </a>
+  );
+}

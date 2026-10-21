@@ -1,0 +1,46 @@
+{
+  "name": "Milan Group",
+  "tagline": "Event Rentals & Supplying Company · Hyderabad",
+  "motto": "We Deliver, You Celebrate",
+  "promise": "The Complete Set-up Solution",
+  "url": "https://milan-group.pages.dev",
+  "hours": "24 Hours Services",
+  "address": {
+    "line1": "Plot No. 479, Phase-II, Road No. 86",
+    "line2": "Jubilee Hills, Hyderabad-500033, Telangana",
+    "street": "Plot No. 479, Phase-II, Road No. 86, Jubilee Hills",
+    "city": "Hyderabad",
+    "region": "Telangana",
+    "postalCode": "500033",
+    "country": "IN"
+  },
+  "geo": { "lat": 17.4080518, "lng": 78.4181941 },
+  "mapUrl": "https://maps.app.goo.gl/7yPNR2mVQcQpzAEs8",
+  "mapEmbed": "https://www.google.com/maps?q=17.4080518,78.4181941&z=16&output=embed",
+  "instagram": "https://www.instagram.com/milan_supplying_company_event",
+  "instagramHandle": "milan_supplying_company_event",
+  "rating": { "value": 4.2, "count": 27, "checked": "2026-10-21" },
+  "since": 1995,
+  "stats": [
+    { "value": "30+", "label": "Years of experience" },
+    { "value": "10,000+", "label": "Events set up", "estimate": true },
+    { "value": "24 hrs", "label": "Service & support" },
+    { "value": "4.2★", "label": "Google rating" }
+  ],
+  "faqs": [
+    { "q": "Which areas do you serve?", "a": "All of Hyderabad and Secunderabad, including Cyberabad and nearby areas. For events outside the city, ask us — we travel for larger orders." },
+    { "q": "How early should I book?", "a": "As early as you can. For weddings in peak season and on popular muhurtham dates, book 3–4 weeks ahead. Smaller functions can often be arranged within a few days." },
+    { "q": "Are delivery, set-up and pick-up included?", "a": "Yes. Our team delivers, sets up at your venue and collects everything after the event. Transport depends on distance and order size and is included in your quote." },
+    { "q": "How do I get a price?", "a": "Prices depend on items, quantity, date and venue. Send your list on WhatsApp and we'll reply with availability and a quote." },
+    { "q": "How do I confirm a booking?", "a": "A small advance confirms your booking and the balance is paid on or before the event day. We accept cash, UPI and bank transfer." }
+  ],
+  "enquiryWhatsApp": "919441361086",
+  "flowerWhatsApp": "919110774085",
+  "contacts": [
+    { "name": "Amjad", "role": "Main contact", "phones": ["9441361086"], "primary": true },
+    { "name": "Asiya Madam", "role": "Main contact", "phones": ["9550838576"], "primary": true },
+    { "name": "Fasi", "role": "Milan Group", "phones": ["7981148733"] },
+    { "name": "Fazal", "role": "Milan Group", "phones": ["8096373015"] },
+    { "name": "Arif", "role": "Wedding Flower Work", "phones": ["9110774085", "8074335046"] }
+  ]
+}

@@ -1,0 +1,269 @@
+[
+  {
+    "slug": "furniture-and-seating",
+    "name": "Furniture & Seating",
+    "icon": "chair",
+    "heroTitle": "Furniture & Seating on Rent in Hyderabad",
+    "promise": "Designer chairs, stage sofas, tables and lounge sets — delivered and arranged at your venue.",
+    "summary": "Designer chairs, stage sofas, banquet tables, lounge sets and carpets.",
+    "description": "From hundreds of banquet chairs for a reception to a single royal sofa for the bride and groom's stage, we supply and arrange all the seating and furniture your event needs.",
+    "image": "services/furniture-and-seating",
+    "imagePlaceholder": true,
+    "imageCredit": "https://images.unsplash.com/photo-1763553113332-800519753e40",
+    "items": [
+      { "name": "Banquet & designer chairs", "text": "Chiavari, ornate, cross-back, acrylic and wooden chairs in many colours.", "image": "products/imperia-front", "href": "/catalog/chairs/" },
+      { "name": "Stage & lounge sofas", "text": "Carved classic and velvet sofas for the wedding stage and VIP seating.", "image": "products/milan-curve", "href": "/catalog/sofas/" },
+      { "name": "Round banquet tables", "text": "Dining tables with linen for receptions and wedding lunches.", "image": "items/f-round-tables", "stock": true },
+      { "name": "Long banquet & buffet tables", "text": "Rectangular tables for buffet counters, head tables and registration desks.", "image": "items/f-banquet-tables", "stock": true },
+      { "name": "Lounge sets", "text": "Sofas with coffee tables for VIP areas, lobbies and photo corners.", "image": "items/f-lounge-sets", "stock": true },
+      { "name": "Carpets & aisle runners", "text": "Red and coloured carpets for entrances, aisles and seating areas.", "image": "items/f-carpets", "stock": true }
+    ],
+    "perfectFor": ["Weddings", "Receptions", "Engagements", "Nikah", "Birthdays", "Corporate events"],
+    "faqs": [
+      { "q": "Can I choose different chair colours for one event?", "a": "Yes. Many of our chair designs come in several frame and seat colours, so you can mix them — for example gold chairs for family and white for guests." },
+      { "q": "Do you arrange the furniture at the venue?", "a": "Yes. Our team delivers, places the tables and chairs to your seating plan, and collects everything after the event." }
+    ],
+    "related": ["catering-and-kitchen", "tents-and-roofing", "lighting-and-electrical"],
+    "catalog": ["chairs", "sofas"]
+  },
+  {
+    "slug": "catering-and-kitchen",
+    "name": "Catering & Kitchen Supplies",
+    "icon": "utensils",
+    "heroTitle": "Catering & Kitchen Supplies on Rent in Hyderabad",
+    "promise": "Crockery, cutlery, buffet ware, cooking vessels and cold storage for small functions to large weddings.",
+    "summary": "Crockery, cutlery, glasses, buffet ware, cooking vessels, freezers and water dispensers.",
+    "description": "Everything your caterer and guests need to cook, serve, chill and drink — cleaned, counted and delivered to your venue.",
+    "image": "services/catering-and-kitchen",
+    "imagePlaceholder": true,
+    "imageCredit": "https://images.unsplash.com/photo-1555244162-803834f70033",
+    "items": [
+      { "name": "Crockery & cutlery", "text": "Dinner plates, bowls, spoons and forks for every guest.", "image": "items/c-crockery", "stock": true },
+      { "name": "Glassware", "text": "Water and juice glasses for dining tables and counters.", "image": "items/c-glassware", "stock": true },
+      { "name": "Buffet & serving ware", "text": "Chafing dishes, serving bowls and spoons for buffet counters.", "image": "items/c-buffet", "stock": true },
+      { "name": "Stainless steel cooking vessels", "text": "Large pots, kadais and utensils for bulk cooking.", "image": "items/c-cooking", "stock": true },
+      { "name": "Brass articles", "text": "Traditional brass ware for poojas, ceremonies and décor.", "image": "items/c-brass", "stock": true },
+      { "name": "Deep freezers & ice boxes", "text": "Keep ice cream, drinks and ingredients cold through the event.", "image": "items/c-icebox", "stock": true },
+      { "name": "Water dispensers", "text": "Clean drinking water stations for guests and staff.", "image": "items/c-water", "stock": true }
+    ],
+    "perfectFor": ["Weddings", "Walima & receptions", "Poojas", "Community functions", "House-warmings", "Corporate lunches"],
+    "faqs": [
+      { "q": "Are the crockery and utensils cleaned before delivery?", "a": "Yes. Everything is washed and checked before it leaves our store, and we count items with you at delivery and pick-up." },
+      { "q": "Can you supply for a large number of guests?", "a": "Yes. Tell us your guest count and menu style (buffet or served) and we'll suggest the right quantities." }
+    ],
+    "related": ["furniture-and-seating", "tents-and-roofing", "season-articles"],
+    "catalog": []
+  },
+  {
+    "slug": "tents-and-roofing",
+    "name": "Tents & Roofing",
+    "icon": "tent",
+    "heroTitle": "Tents & Pandals on Rent in Hyderabad",
+    "promise": "Waterproof German hangers, pagodas, pandals and shamiyanas for any size of outdoor event.",
+    "summary": "German hanger tents, pagodas, pipe pandals, shamiyanas and gazebos.",
+    "description": "Rain or shine, we cover your guests. Choose a large clear-span German hanger hall, an elegant pagoda for the entrance, or a traditional pandal and shamiyana — set up by our own crew.",
+    "image": "services/tents-and-roofing",
+    "imagePlaceholder": true,
+    "imageCredit": "https://images.unsplash.com/photo-1675376616537-c8aa9ddc9977",
+    "items": [
+      { "name": "German hanger (super structure)", "text": "Large waterproof aluminium halls with no centre poles — a banquet hall anywhere.", "image": "products/german-hanger", "href": "/catalog/tents/german-hanger-tent/" },
+      { "name": "Pagoda tents", "text": "Peaked tents for entrances, food counters, lounges and stalls.", "image": "products/german-aluminium-pagoda", "href": "/catalog/tents/" },
+      { "name": "Pipe pandals", "text": "Classic pandals with a waterproof roof option, decorated with drapes.", "image": "items/t-pandal", "stock": true },
+      { "name": "Shamiyana", "text": "Traditional colourful shamiyana for functions and poojas.", "image": "items/t-shamiyana", "stock": true },
+      { "name": "Gazebo tents", "text": "Quick canopy tents for small gatherings and outdoor counters.", "image": "items/t-gazebo", "stock": true }
+    ],
+    "perfectFor": ["Outdoor weddings", "Receptions", "Lawn functions", "Religious gatherings", "Exhibitions", "Corporate events"],
+    "faqs": [
+      { "q": "Are the tents safe in rain?", "a": "Our German hanger and pagoda tents use waterproof, UV-stabilised and fire-retardant fabric. For pipe pandals, choose the waterproof roof option during the monsoon." },
+      { "q": "How long does set-up take?", "a": "Small pagodas and gazebos go up in a few hours. Large German hanger halls and pandals usually need one to two days, depending on size — we plan this with you." }
+    ],
+    "related": ["lighting-and-electrical", "furniture-and-seating", "season-articles"],
+    "catalog": ["tents"]
+  },
+  {
+    "slug": "sound-and-dj",
+    "name": "Sound & DJ",
+    "icon": "speaker",
+    "heroTitle": "Sound System & DJ on Rent in Hyderabad",
+    "promise": "Clear sound for speeches and ceremonies, and a full DJ set-up when it's time to dance.",
+    "summary": "Sound systems, microphones, DJ set-ups, dance floors and live musicians.",
+    "description": "From a simple sound system for a nikah or pooja to a full DJ night with a dance floor, we supply the equipment and an operator to run it.",
+    "image": "services/sound-and-dj",
+    "imagePlaceholder": true,
+    "imageCredit": "https://unsplash.com/photos/YrtFlrLo2DQ",
+    "items": [
+      { "name": "Sound systems", "text": "Speakers and amplifiers sized for your venue and guest count.", "image": "items/s-pa", "stock": true },
+      { "name": "Microphones", "text": "Wired and wireless mics for speeches, nikah and stage programmes.", "image": "items/s-mic", "stock": true },
+      { "name": "DJ set-ups", "text": "Small and large DJ systems with lights for sangeet and parties.", "image": "services/sound-and-dj", "stock": true },
+      { "name": "Dance floor", "text": "A dedicated dance floor for sangeet nights and receptions.", "image": "items/s-dancefloor", "stock": true },
+      { "name": "Musicians", "text": "Live musicians, band and dhol for baraat and celebrations.", "image": "items/s-musicians", "stock": true }
+    ],
+    "perfectFor": ["Sangeet", "Receptions", "Baraat", "Birthdays", "Nikah & speeches", "Corporate events"],
+    "faqs": [
+      { "q": "Does someone operate the sound system?", "a": "Yes. Our technician sets up the system, tests it before the event and stays to run it." },
+      { "q": "Can you play music late at night?", "a": "We follow local sound rules and venue timings. Let us know your programme and we'll plan the volume and timing with you." }
+    ],
+    "related": ["lighting-and-electrical", "theme-functions", "tents-and-roofing"],
+    "catalog": []
+  },
+  {
+    "slug": "lighting-and-electrical",
+    "name": "Lighting & Electrical",
+    "icon": "bulb",
+    "heroTitle": "Event Lighting, LED Screens & Generators in Hyderabad",
+    "promise": "Decorative lights, stage lighting, LED screens and power back-up up to 500 kVA.",
+    "summary": "Fairy lights, stage lights, LED screens, flood lights and generators up to 500 kVA.",
+    "description": "Lighting sets the mood and power keeps the event running. We handle both — decorative and stage lighting, LED screens for live display, and generators so the lights never go out.",
+    "image": "services/lighting-and-electrical",
+    "imagePlaceholder": true,
+    "imageCredit": "https://images.unsplash.com/photo-1513625047154-f390b1b0df20",
+    "items": [
+      { "name": "Decoration & fairy lights", "text": "String and fairy lights for venues, trees, entrances and ceilings.", "image": "items/l-fairy", "stock": true },
+      { "name": "Stage lights (moving heads)", "text": "Beam and spot lights for the stage, sangeet and dance floor.", "image": "items/l-moving", "stock": true },
+      { "name": "LED uplighting (power cans)", "text": "Colour-wash lights for walls, pillars and table areas.", "image": "items/l-uplight", "stock": true },
+      { "name": "Flood lights (daylight)", "text": "Bright white lights for outdoor areas, parking and kitchens.", "image": "items/l-flood", "stock": true },
+      { "name": "LED screens", "text": "Big screens for live display of the stage, slideshows and videos.", "image": "items/l-led", "stock": true },
+      { "name": "Generators 62–500 kVA", "text": "Silent generators with operator for full power back-up.", "image": "items/l-gen", "stock": true }
+    ],
+    "perfectFor": ["Weddings", "Receptions", "Sangeet", "Outdoor events", "Exhibitions", "Corporate events"],
+    "faqs": [
+      { "q": "Which generator size do I need?", "a": "It depends on your lights, sound, AC and kitchen load. Share your set-up and we'll recommend a size between 62 and 500 kVA." },
+      { "q": "Is an electrician available during the event?", "a": "Yes. Our electrician stays on site for the duration of the event." }
+    ],
+    "related": ["sound-and-dj", "tents-and-roofing", "wedding-flower-work"],
+    "catalog": []
+  },
+  {
+    "slug": "calcutta-decoration",
+    "name": "Calcutta Decoration",
+    "icon": "flower",
+    "heroTitle": "Calcutta Flower Decoration in Hyderabad",
+    "promise": "Traditional flower decoration by Calcutta artisans for poojas, homes, offices and shop openings.",
+    "summary": "Pandiri, pooja, marigold and cut-flower decoration for homes, offices and shops.",
+    "description": "Calcutta decoration is the traditional style of flower and garland work made by skilled artisans from Kolkata — marigold strings, flower canopies and colourful entrances. We bring it to religious functions, homes, offices and shop openings, indoors or outdoors.",
+    "image": "services/calcutta-decoration",
+    "imagePlaceholder": true,
+    "imageCredit": "https://unsplash.com/photos/EEeGY0XgNSw",
+    "items": [
+      { "name": "Pandiri (wedding canopy)", "text": "The traditional flower canopy for Telugu wedding rituals.", "image": "items/k-pandiri", "stock": true },
+      { "name": "Marigold (banti) decoration", "text": "Marigold strings and torans for entrances, walls and ceilings.", "image": "services/calcutta-decoration", "stock": true },
+      { "name": "Cut-flower decoration", "text": "Fresh roses, lilies and seasonal flowers in arrangements.", "image": "items/k-cutflower", "stock": true },
+      { "name": "Pooja decoration", "text": "Flowers, diyas and backdrops for poojas and vratams.", "image": "items/k-pooja", "stock": true },
+      { "name": "Home decoration", "text": "Doorways, halls and balconies for family functions and festivals.", "image": "items/k-home", "stock": true },
+      { "name": "Office & shop openings", "text": "Flower entrances for inaugurations, new offices and showrooms.", "image": "items/k-office", "stock": true }
+    ],
+    "perfectFor": ["Poojas & vratams", "Festivals", "House-warmings", "Shop openings", "Office events", "Weddings"],
+    "faqs": [
+      { "q": "What is Calcutta decoration?", "a": "It's a traditional style of flower and garland decoration made by artisans from Kolkata — known for marigold strings, flower canopies and detailed entrances." },
+      { "q": "Are the flowers fresh?", "a": "Yes. Flowers are bought fresh for each event and the decoration is done on the day or the evening before." }
+    ],
+    "related": ["wedding-flower-work", "flower-garlands-and-jewellery", "lighting-and-electrical"],
+    "catalog": []
+  },
+  {
+    "slug": "wedding-flower-work",
+    "name": "Wedding Flower Work",
+    "icon": "rings",
+    "heroTitle": "Wedding Flower Decoration in Hyderabad",
+    "promise": "Mandap, stage, car and home flower décor for every wedding ceremony — by our flower team.",
+    "summary": "Mandap, stage, car and home decoration for every wedding ritual.",
+    "description": "Fresh-flower décor for every ceremony of the wedding — from the mandap and stage to the wedding car, the home and the smaller rituals in between: haldi, mangala snanam, saree and dhoti functions, srimantham and more.",
+    "image": "services/wedding-flower-work",
+    "imagePlaceholder": true,
+    "imageCredit": "https://images.unsplash.com/photo-1762709118823-7fe9c9afa8ff",
+    "contactName": "Arif",
+    "items": [
+      { "name": "Mandap decoration", "text": "Flower mandaps for the pelli (wedding) and nikah ceremony.", "image": "items/k-pandiri", "stock": true },
+      { "name": "Stage & backdrop", "text": "Flower stages and backdrops for engagement and reception.", "image": "items/w-stage", "stock": true },
+      { "name": "Haldi & mangala snanam", "text": "Bright marigold set-ups for haldi, mangala snanam and mehendi.", "image": "items/w-haldi", "stock": true },
+      { "name": "Engagement & reception", "text": "Complete flower décor for the ring ceremony and reception.", "image": "items/w-engagement", "stock": true },
+      { "name": "Saree, dhoti & srimantham", "text": "Traditional décor for half-saree, dhoti and baby-shower functions.", "image": "items/w-dripping", "stock": true },
+      { "name": "Car decoration", "text": "Fresh flowers for the bride and groom's car.", "image": "items/w-car", "stock": true },
+      { "name": "Draping & masking", "text": "Fabric and flower covering for walls, pillars and ceilings.", "image": "items/w-masking", "stock": true },
+      { "name": "Balloon & creative décor", "text": "Balloon arches and themed details to match your colours.", "image": "items/w-balloon", "stock": true }
+    ],
+    "perfectFor": ["Pelli / wedding", "Nikah", "Engagement", "Reception", "Haldi & mehendi", "Srimantham"],
+    "faqs": [
+      { "q": "Who handles wedding flower work?", "a": "Our flower team led by Arif plans and executes all wedding flower décor. You can WhatsApp him directly from this page." },
+      { "q": "Can I choose my own colours and flowers?", "a": "Yes. Share photos or your theme and we'll suggest flowers and a design that fits your budget." }
+    ],
+    "related": ["calcutta-decoration", "flower-garlands-and-jewellery", "furniture-and-seating"],
+    "catalog": []
+  },
+  {
+    "slug": "theme-functions",
+    "name": "Theme Functions",
+    "icon": "balloon",
+    "heroTitle": "Birthday & Theme Party Decoration in Hyderabad",
+    "promise": "Themed décor, balloons, backdrops and seating for birthdays, anniversaries and openings.",
+    "summary": "Birthdays, anniversaries, get-togethers and inaugurations — decorated to a theme.",
+    "description": "Pick a theme and we'll bring it to life — balloons, backdrops, cake table, seating, lighting and sound, all from one team.",
+    "image": "services/theme-functions",
+    "imagePlaceholder": true,
+    "imageCredit": "https://unsplash.com/photos/D31ZvQgI9z8",
+    "items": [
+      { "name": "Kids' birthday themes", "text": "Cartoon, princess and superhero themes with balloons and cake table.", "image": "items/th-kids", "stock": true },
+      { "name": "Balloon décor", "text": "Balloon arches, walls and ceilings in your colours.", "image": "items/w-balloon", "stock": true },
+      { "name": "Backdrops & photo booths", "text": "Name boards, backdrops and photo corners for great pictures.", "image": "items/th-backdrop", "stock": true },
+      { "name": "Anniversaries", "text": "Elegant décor for silver and golden jubilee celebrations.", "image": "items/th-anniversary", "stock": true },
+      { "name": "Get-togethers", "text": "Dinner and lawn set-ups for family and friends.", "image": "items/th-gettogether", "stock": true },
+      { "name": "Inaugurations", "text": "Ribbon-cutting, entrance décor and seating for openings.", "image": "items/th-inauguration", "stock": true }
+    ],
+    "perfectFor": ["Birthdays", "Anniversaries", "Get-togethers", "Inaugurations", "Baby showers", "Office parties"],
+    "faqs": [
+      { "q": "Can you do a theme I saw online?", "a": "Yes. Send us a photo of the theme you like and we'll recreate it with matching colours and props." },
+      { "q": "Do you do small home parties?", "a": "Yes. We decorate everything from a small home birthday to a large banquet celebration." }
+    ],
+    "related": ["sound-and-dj", "furniture-and-seating", "lighting-and-electrical"],
+    "catalog": []
+  },
+  {
+    "slug": "season-articles",
+    "name": "Season Articles",
+    "icon": "fan",
+    "heroTitle": "Coolers, Tower ACs & Heaters on Rent in Hyderabad",
+    "promise": "Keep guests comfortable in Hyderabad summers and winter nights.",
+    "summary": "Tower ACs, jumbo coolers, mist fans, stand fans and heaters.",
+    "description": "Outdoor events get hot in summer and chilly on winter nights. Our cooling and heating equipment keeps your guests comfortable in tents, pandals and halls.",
+    "image": "services/season-articles",
+    "imagePlaceholder": true,
+    "imageCredit": "https://unsplash.com/photos/WAhvUCCbowo",
+    "items": [
+      { "name": "Tower ACs", "text": "Standing air conditioners for tents, stages and VIP areas.", "image": "items/se-towerac", "stock": true },
+      { "name": "Jumbo coolers", "text": "Large air coolers to cool big tents and open halls.", "image": "items/se-cooler", "stock": true },
+      { "name": "Mist fans & stand fans", "text": "Fans with water mist for outdoor areas, and regular stand fans.", "image": "services/season-articles", "stock": true },
+      { "name": "Heaters & warmers", "text": "Patio heaters for open-air winter events.", "image": "items/se-heater", "stock": true }
+    ],
+    "perfectFor": ["Summer weddings", "Outdoor receptions", "Tents & pandals", "Winter night events"],
+    "faqs": [
+      { "q": "How many coolers or ACs do I need?", "a": "It depends on tent size, guest count and season. Tell us your venue and we'll recommend the right number." },
+      { "q": "Do I need a generator for ACs?", "a": "Usually yes for outdoor venues. We can supply a generator sized for your cooling load." }
+    ],
+    "related": ["tents-and-roofing", "lighting-and-electrical", "catering-and-kitchen"],
+    "catalog": []
+  },
+  {
+    "slug": "flower-garlands-and-jewellery",
+    "name": "Flower Garlands & Jewellery",
+    "icon": "gem",
+    "heroTitle": "Flower Garlands & Flower Jewellery in Hyderabad",
+    "promise": "Fresh garlands and floral jewellery for brides, grooms and guests.",
+    "summary": "Wedding garlands, flower jewellery and bridal hair flowers.",
+    "description": "Fresh flower garlands and floral jewellery made to order for haldi, mehendi, engagement and wedding ceremonies — plus welcome garlands for your guests.",
+    "image": "services/jewellery",
+    "imagePlaceholder": true,
+    "imageCredit": "https://unsplash.com/photos/ZwljlN16HE4",
+    "items": [
+      { "name": "Wedding garlands (varmala)", "text": "Rose, jasmine and marigold garlands for the bride and groom.", "image": "items/j-varmala", "stock": true },
+      { "name": "Flower jewellery", "text": "Floral necklaces, earrings and maang tikka for haldi and mehendi.", "image": "items/j-haldi", "stock": true },
+      { "name": "Bridal hair flowers", "text": "Jasmine veni and jada for the bride.", "image": "items/j-hair", "stock": true },
+      { "name": "Welcome garlands", "text": "Garlands to welcome guests and chief guests.", "image": "items/j-welcome", "stock": true }
+    ],
+    "perfectFor": ["Weddings", "Haldi & mehendi", "Engagement", "Felicitations", "Poojas"],
+    "faqs": [
+      { "q": "How early should garlands be ordered?", "a": "Order at least 2–3 days before so we can source the flowers you want. Garlands are made fresh on the event day." }
+    ],
+    "related": ["wedding-flower-work", "calcutta-decoration", "theme-functions"],
+    "catalog": []
+  }
+]

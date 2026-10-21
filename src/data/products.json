@@ -1,0 +1,496 @@
+[
+  {
+    "slug": "ornate-chair",
+    "category": "chairs",
+    "name": "Ornate Chair",
+    "tagline": "Hand-carved medallion back with luxury velvet seat",
+    "description": "Our signature banquet chair with an oval, hand-carved filigree backrest on a Chiavari-style bamboo-joint frame. Available in five frame finishes, each paired with a plush velvet seat cushion.",
+    "featured": true,
+    "variants": [
+      { "name": "Gold", "swatch": "#C9A84C", "images": ["ornate-gold-front", "ornate-gold-side", "ornate-gold-back"] },
+      { "name": "Brown", "swatch": "#4A2C21", "images": ["ornate-brown-front", "ornate-brown-side", "ornate-brown-back"] },
+      { "name": "Black", "swatch": "#151515", "images": ["ornate-black-front", "ornate-black-side", "ornate-black-back"] },
+      { "name": "White", "swatch": "#F4F2EE", "images": ["ornate-white-front", "ornate-white-side", "ornate-white-back"] },
+      { "name": "Acrylic (Clear)", "swatch": "#DDE3E8", "images": ["ornate-acrylic-front", "ornate-acrylic-side", "ornate-acrylic-back"] }
+    ],
+    "seatOptions": ["Royal Blue", "Deep Crimson Red", "Amethyst Purple", "Emerald Green", "Charcoal Gray", "Jet Black", "Ivory", "Blush Pink", "Silver Gray", "Navy Blue"],
+    "seatNote": "White frame pairs with lighter velvets (Ivory, Blush Pink, Silver Gray) as well as Navy Blue, Emerald Green and Jet Black.",
+    "features": [
+      { "title": "Hand-carved backrest", "text": "Oval medallion with ornate filigree detailing." },
+      { "title": "Luxury velvet seat", "text": "Removable velvet cushion in a choice of rich colours." },
+      { "title": "Five frame finishes", "text": "Gold, Brown, Black, White and clear Acrylic." }
+    ],
+    "dimensions": [],
+    "suitedFor": ["Weddings", "Receptions", "Engagements", "Banquets"]
+  },
+  {
+    "slug": "cross-back-chair",
+    "category": "chairs",
+    "name": "Cross Back Chair",
+    "tagline": "European beechwood with an iconic X-back",
+    "description": "A timeless bistro-style chair in hand-selected European beechwood, finished in six colours with a deep-pile velvet seat. Popular for rustic, garden and boho-themed events.",
+    "featured": true,
+    "variants": [
+      { "name": "Lime Green", "swatch": "#9DB82A", "images": ["cross-back-lime-green-front", "cross-back-lime-green-side", "cross-back-lime-green-back"] },
+      { "name": "Brown", "swatch": "#8A5A32", "images": ["cross-back-brown-front", "cross-back-brown-side", "cross-back-brown-back"] },
+      { "name": "Pink", "swatch": "#E7A9B8", "images": ["cross-back-pink-front", "cross-back-pink-side", "cross-back-pink-back"] },
+      { "name": "White", "swatch": "#F4F2EE", "images": ["cross-back-white-front", "cross-back-white-side", "cross-back-white-back"] },
+      { "name": "Amethyst Purple", "swatch": "#4B2366", "images": ["cross-back-amethyst-purple-front", "cross-back-amethyst-purple-side", "cross-back-amethyst-purple-back"] },
+      { "name": "Dark Brown", "swatch": "#2E1D16", "images": ["cross-back-dark-brown-front", "cross-back-dark-brown-side", "cross-back-dark-brown-back"] }
+    ],
+    "seatOptions": ["Royal Blue", "Deep Crimson Red", "Forest Green", "Charcoal Grey", "Teal", "Plum Purple"],
+    "features": [
+      { "title": "Frame", "text": "Colour-coated, hand-selected European beechwood." },
+      { "title": "Upholstery", "text": "Premium deep-pile velvet seat (Amethyst Purple: vibrant pure linen velvet)." },
+      { "title": "Weight capacity", "text": "130 kg." }
+    ],
+    "dimensions": [
+      { "label": "Height", "value": "890 mm" },
+      { "label": "Width", "value": "440 mm" },
+      { "label": "Depth", "value": "450 mm" },
+      { "label": "Seat height", "value": "460 mm" },
+      { "label": "Weight capacity", "value": "130 kg" }
+    ],
+    "suitedFor": ["Weddings", "Garden parties", "Birthday parties", "Get-togethers"]
+  },
+  {
+    "slug": "luna-oval-chair",
+    "category": "chairs",
+    "name": "Luna Oval Chair",
+    "tagline": "Classic elegance. Timeless comfort.",
+    "description": "A dark solid-wood oval-back chair with fluted legs and a beige linen-weave seat. Understated and refined for formal dinners.",
+    "featured": false,
+    "variants": [{ "name": "Dark Wood / Beige", "swatch": "#3B2A22", "images": ["luna-front", "luna-side", "luna-back"] }],
+    "seatOptions": ["Premium Linen Weave – Beige"],
+    "features": [
+      { "title": "Solid wood frame", "text": "Crafted from premium hardwood for exceptional durability and long-lasting elegance." },
+      { "title": "High-density foam cushion", "text": "Superior comfort, shape retention and lasting support." }
+    ],
+    "dimensions": [],
+    "suitedFor": ["Receptions", "Formal dinners", "Engagements"]
+  },
+  {
+    "slug": "regal-flora-chair",
+    "category": "chairs",
+    "name": "Regal Flora Chair",
+    "tagline": "Royal elegance. Timeless grace.",
+    "description": "A baroque, hand-carved gold chair upholstered in luxury gold jacquard damask — ideal for the bride and groom, VIP seating and stage settings.",
+    "featured": true,
+    "variants": [{ "name": "Gold", "swatch": "#C9A84C", "images": ["regal-flora-front", "regal-flora-side", "regal-flora-back"] }],
+    "seatOptions": ["Luxury Jacquard Damask – Gold"],
+    "features": [
+      { "title": "Solid hardwood frame", "text": "Expertly crafted for superior durability and stability." },
+      { "title": "High-density foam cushion", "text": "Exceptional comfort, resilience and support." }
+    ],
+    "dimensions": [],
+    "suitedFor": ["Weddings", "Stage seating", "VIP seating", "Receptions"]
+  },
+  {
+    "slug": "aurora-pure-clear-chair",
+    "category": "chairs",
+    "name": "Aurora Pure Clear Chair",
+    "tagline": "Ultimate transparency, timeless design",
+    "description": "A crystal-clear Chiavari chair in UV-stabilised resin with an exclusive bamboo-joint pattern and a detachable seat cushion.",
+    "featured": false,
+    "variants": [{ "name": "Clear", "swatch": "#DDE3E8", "images": ["aurora-front", "aurora-side", "aurora-back"] }],
+    "seatOptions": ["Ivory Velvet", "Pale Sky Blue Linen", "Champagne Pink Velvet"],
+    "seatNote": "Cushion works with plain linen and velvet seats, available in multiple light colours.",
+    "features": [
+      { "title": "UV-stabilised premium resin", "text": "Superior clarity and longevity, resistant to yellowing and wear." },
+      { "title": "Detachable high-density foam cushion", "text": "Removable cushion for easy colour changes." },
+      { "title": "Chiavari joint pattern", "text": "Elaborate bamboo-joint design." }
+    ],
+    "dimensions": [],
+    "suitedFor": ["Weddings", "Receptions", "Corporate events"]
+  },
+  {
+    "slug": "imperia-chiavari-chair",
+    "category": "chairs",
+    "name": "Imperia Chiavari Chair",
+    "tagline": "Timeless beauty. Supreme comfort.",
+    "description": "The classic gold Chiavari chair — a powder-coated metal frame with a plain velvet seat in your choice of colour.",
+    "featured": true,
+    "variants": [{ "name": "Gold", "swatch": "#C9A84C", "images": ["imperia-front", "imperia-side", "imperia-back"] }],
+    "seatOptions": ["Royal Blue", "Emerald Green", "Wine Red"],
+    "seatNote": "Plain velvet seat — available in multiple colours.",
+    "features": [
+      { "title": "Powder-coated metal frame", "text": "Strong, durable and rust-resistant with an elegant gold finish." },
+      { "title": "High-density foam cushion", "text": "Plain velvet upholstery for a luxurious look and feel." }
+    ],
+    "dimensions": [],
+    "suitedFor": ["Weddings", "Banquets", "Receptions", "Corporate events"]
+  },
+  {
+    "slug": "valerias-crown-chair",
+    "category": "chairs",
+    "name": "Valeria's Crown Chair",
+    "tagline": "Elegance refined. Versatility embraced.",
+    "description": "A one-piece resin chair from the Prestige Collection with a carved crown motif on the seat and an optional cushion. Available in many colours.",
+    "modelName": "Valeria's Crown Seating System – Prestige Collection",
+    "featured": false,
+    "variants": [{ "name": "Lavender", "swatch": "#A9A9E6", "images": ["valeria-front", "valeria-side", "valeria-back"] }],
+    "seatOptions": ["Champagne Silk Velvet", "Soft Sage Linen", "Pale Blue Jacquard"],
+    "seatNote": "Frame available in many colours; three light cushion options shown.",
+    "features": [
+      { "title": "Unified resin chair", "text": "Single moulded piece with a carved crown seat." },
+      { "title": "Optional seat cushion", "text": "Velvet, linen or jacquard." }
+    ],
+    "dimensions": [],
+    "suitedFor": ["Birthday parties", "Bridal showers", "Theme functions"]
+  },
+  {
+    "slug": "elvira-chair",
+    "category": "chairs",
+    "name": "Elvira Chair",
+    "tagline": "Refined. Modern. Timeless.",
+    "description": "A tall-back gold stainless-steel chair with vertical bars and a blue velvet seat — a statement piece for modern décor.",
+    "modelName": "Elvira Collection",
+    "featured": true,
+    "variants": [{ "name": "Gold / Blue", "swatch": "#C9A84C", "images": ["elvira-front", "elvira-side", "elvira-back"] }],
+    "seatOptions": ["Royal Blue Velvet"],
+    "features": [
+      { "title": "Premium stainless steel frame", "text": "Rust-resistant, durable and long-lasting." },
+      { "title": "High-density foam cushion", "text": "Superior comfort with premium upholstery." }
+    ],
+    "dimensions": [],
+    "suitedFor": ["Weddings", "Receptions", "Head tables"]
+  },
+  {
+    "slug": "aurelia-oval-ghost-chair",
+    "category": "chairs",
+    "name": "Aurélia Oval Ghost Chair",
+    "tagline": "Elegance for the most discerning spaces",
+    "description": "A clear polycarbonate chair with a studded oval backrest and classic cabriole legs.",
+    "featured": false,
+    "variants": [{ "name": "Clear", "swatch": "#DDE3E8", "images": ["aurelia-front", "aurelia-side", "aurelia-back"] }],
+    "seatOptions": ["Royal Blue Velvet", "Emerald Green Velvet", "Ruby Red Velvet"],
+    "seatNote": "Compatible with plain velvet, linen and faux-leather cushions in multiple colours.",
+    "features": [
+      { "title": "Premium oval acrylic frame", "text": "High-clarity, scratch-resistant polycarbonate with a studded oval backrest." },
+      { "title": "Cabriole legs", "text": "Classic design for stability and elegance." },
+      { "title": "Ergonomic cushion", "text": "Choice of high-density foam cushions and upholstery." }
+    ],
+    "dimensions": [],
+    "suitedFor": ["Weddings", "Receptions", "Engagements"]
+  },
+  {
+    "slug": "aurelian-gold-chiavari-chair",
+    "category": "chairs",
+    "name": "Aurelian Gold Chiavari Chair",
+    "tagline": "Napoleon-style back, stackable and sturdy",
+    "description": "A gold Chiavari chair with a wave-top Napoleon backrest and a tie-on cushion. Original brocade cushion or plain light colours.",
+    "featured": false,
+    "variants": [{ "name": "Gold", "swatch": "#C9A84C", "images": ["aurelian-front", "aurelian-back"] }],
+    "seatOptions": ["Original Brocade", "Champagne Velvet", "Lite Sky Blue Linen", "Soft Rose Pink Velvet"],
+    "features": [
+      { "title": "UV-protected finish", "text": "Premium gold-metallic finish." },
+      { "title": "Integral reinforcing moulding", "text": "Heavy-duty frame construction." },
+      { "title": "Stackable", "text": "Stacks up to 8 chairs for easy transport." }
+    ],
+    "dimensions": [],
+    "suitedFor": ["Weddings", "Banquets", "Large gatherings"]
+  },
+  {
+    "slug": "lumina-acrylic-chair",
+    "category": "chairs",
+    "name": "Lumina Acrylic Chair",
+    "tagline": "Transparent elegance. Timeless luxury.",
+    "description": "A champagne-tinted acrylic chair with an oval back and plain velvet seat.",
+    "featured": false,
+    "variants": [{ "name": "Champagne Clear", "swatch": "#E6D3A8", "images": ["lumina-front", "lumina-side", "lumina-back"] }],
+    "seatOptions": ["Royal Blue", "Emerald Green", "Wine Red"],
+    "seatNote": "Plain velvet seat — available in multiple colours.",
+    "features": [
+      { "title": "Premium acrylic frame", "text": "Crystal-clear acrylic with a glossy finish." },
+      { "title": "High-density foam cushion", "text": "Plain velvet upholstery, soft and long-lasting." }
+    ],
+    "dimensions": [],
+    "suitedFor": ["Receptions", "Engagements", "Birthday parties"]
+  },
+  {
+    "slug": "lucent-chair",
+    "category": "chairs",
+    "name": "Lucent Chair",
+    "tagline": "Ultimate transparency, minimalist elegance",
+    "description": "A clear baroque-style ghost chair with a carved shell crest. Use as-is or add a premium seat cushion.",
+    "modelName": "The Lucent Chair Collection",
+    "featured": false,
+    "variants": [{ "name": "Clear", "swatch": "#DDE3E8", "images": ["lucent-front", "lucent-side", "lucent-back"] }],
+    "seatOptions": ["Champagne Velvet", "Lite Sky Blue", "Soft Pink"],
+    "features": [
+      { "title": "Clear moulded frame", "text": "Baroque crest with a minimalist transparent body." },
+      { "title": "Premium seat cushions", "text": "Optional cushions in light colours." }
+    ],
+    "dimensions": [],
+    "suitedFor": ["Weddings", "Bridal showers", "Theme functions"]
+  },
+  {
+    "slug": "tonate-chair",
+    "category": "chairs",
+    "name": "Tonate Chair",
+    "tagline": "Elegance. Comfort. Timeless.",
+    "description": "A bentwood chair in natural solid wood with a handcrafted cane-weave seat.",
+    "modelName": "TONATE",
+    "featured": false,
+    "variants": [{ "name": "Tonate (Natural Wood)", "swatch": "#D49A4A", "images": ["tonate"] }],
+    "seatOptions": [],
+    "features": [
+      { "title": "Solid wood construction", "text": "Premium quality solid wood." },
+      { "title": "Cane-weave seat", "text": "Handcrafted for comfort." },
+      { "title": "Bentwood design", "text": "Sturdy and lightweight." }
+    ],
+    "dimensions": [
+      { "label": "Width", "value": "43 cm" },
+      { "label": "Depth", "value": "46 cm" },
+      { "label": "Height", "value": "88 cm" },
+      { "label": "Seat height", "value": "46 cm" }
+    ],
+    "suitedFor": ["Garden parties", "Haldi & mehendi", "Get-togethers"]
+  },
+  {
+    "slug": "acrylic-chair",
+    "category": "chairs",
+    "name": "Acrylic Chair",
+    "tagline": "Elegance. Comfort. Timeless.",
+    "description": "A transparent acrylic Chiavari-style chair with a cushioned, upholstered seat.",
+    "modelName": "ACRYLIC CHAIR",
+    "featured": false,
+    "variants": [{ "name": "Transparent", "swatch": "#DDE3E8", "images": ["acrylic-chiavari"] }],
+    "seatOptions": [],
+    "features": [
+      { "title": "Transparent acrylic", "text": "High-quality, strong and durable." },
+      { "title": "Cushioned seat", "text": "Premium upholstery for extra comfort." },
+      { "title": "Lightweight", "text": "Excellent stability." }
+    ],
+    "dimensions": [
+      { "label": "Width", "value": "43 cm" },
+      { "label": "Depth", "value": "50 cm" },
+      { "label": "Height", "value": "92 cm" },
+      { "label": "Seat height", "value": "48 cm" },
+      { "label": "Seat depth", "value": "45 cm" }
+    ],
+    "suitedFor": ["Weddings", "Receptions", "Corporate events"]
+  },
+  {
+    "slug": "rattan-chair",
+    "category": "chairs",
+    "name": "Rattan Chair",
+    "tagline": "Elegance. Comfort. Timeless.",
+    "description": "A carved natural-wood chair with a handwoven rattan backrest and a soft beige upholstered seat.",
+    "modelName": "RATTAN CHAIR",
+    "featured": false,
+    "variants": [{ "name": "Natural Wood & Beige", "swatch": "#C99A5B", "images": ["rattan"] }],
+    "seatOptions": [],
+    "features": [
+      { "title": "Solid wood construction", "text": "Elegant carved detailing." },
+      { "title": "Handwoven rattan backrest", "text": "Natural and breathable." },
+      { "title": "Upholstered seat", "text": "Soft and comfortable." }
+    ],
+    "dimensions": [
+      { "label": "Width", "value": "48 cm" },
+      { "label": "Depth", "value": "56 cm" },
+      { "label": "Height", "value": "96 cm" },
+      { "label": "Seat height", "value": "48 cm" },
+      { "label": "Seat depth", "value": "45 cm" }
+    ],
+    "suitedFor": ["Receptions", "Engagements", "Garden parties"]
+  },
+  {
+    "slug": "milan-elegance-sofa",
+    "category": "sofas",
+    "name": "Premium Ivory Classic Sofa",
+    "tagline": "Hand-carved frame with cane backrest",
+    "description": "A French-style ivory sofa with a hand-carved wooden frame, cane backrest and velvet upholstery. Perfect for the wedding stage.",
+    "modelName": "MILAN ELEGANCE",
+    "featured": true,
+    "variants": [{ "name": "Ivory", "swatch": "#EFE6D2", "images": ["milan-elegance"] }],
+    "seatOptions": [],
+    "features": [
+      { "title": "Velvet upholstery", "text": "Premium quality velvet." },
+      { "title": "High-density foam", "text": "Extra seating comfort." },
+      { "title": "Hand-carved wooden frame", "text": "With elegant cane backrest." },
+      { "title": "Seating capacity", "text": "3–4 seater." }
+    ],
+    "dimensions": [
+      { "label": "Width", "value": "190 cm" },
+      { "label": "Depth", "value": "72 cm" },
+      { "label": "Height", "value": "100 cm" },
+      { "label": "Seat height", "value": "45 cm" },
+      { "label": "Seat depth", "value": "55 cm" }
+    ],
+    "suitedFor": ["Wedding stage", "Reception stage", "Engagements"]
+  },
+  {
+    "slug": "milan-blush-sofa",
+    "category": "sofas",
+    "name": "Premium Dusty Pink Velvet Sofa",
+    "tagline": "Soft blush velvet on golden legs",
+    "description": "A channel-tufted dusty pink velvet sofa with golden metal legs — a favourite for engagements and bridal lounges.",
+    "modelName": "MILAN BLUSH",
+    "featured": false,
+    "variants": [{ "name": "Dusty Pink", "swatch": "#D99A9E", "images": ["milan-blush"] }],
+    "seatOptions": [],
+    "features": [
+      { "title": "Velvet upholstery", "text": "Premium quality velvet." },
+      { "title": "High-density foam", "text": "Extra seating comfort." },
+      { "title": "Golden metal legs", "text": "With anti-skid protection." },
+      { "title": "Seating capacity", "text": "2–3 seater." }
+    ],
+    "dimensions": [
+      { "label": "Width", "value": "170 cm" },
+      { "label": "Depth", "value": "75 cm" },
+      { "label": "Height", "value": "85 cm" },
+      { "label": "Seat height", "value": "45 cm" },
+      { "label": "Seat depth", "value": "55 cm" }
+    ],
+    "suitedFor": ["Engagements", "Bridal lounge", "Photo corners"]
+  },
+  {
+    "slug": "milan-curve-sofa",
+    "category": "sofas",
+    "name": "Premium Ivory Velvet Sofa – Curve",
+    "tagline": "Curved silhouette with a gold base trim",
+    "description": "A modern curved ivory velvet sofa with a gold base — elegant on stage or in a lounge set-up.",
+    "modelName": "MILAN CURVE",
+    "featured": true,
+    "variants": [{ "name": "Ivory", "swatch": "#EFE6D2", "images": ["milan-curve"] }],
+    "seatOptions": [],
+    "features": [
+      { "title": "Velvet upholstery", "text": "Premium quality velvet." },
+      { "title": "High-density foam", "text": "Extra seating comfort." },
+      { "title": "Reinforced wooden frame", "text": "Elegant curved design." },
+      { "title": "Seating capacity", "text": "2–3 seater." }
+    ],
+    "dimensions": [
+      { "label": "Width", "value": "180 cm" },
+      { "label": "Depth", "value": "75 cm" },
+      { "label": "Height", "value": "80 cm" },
+      { "label": "Seat height", "value": "43 cm" },
+      { "label": "Seat depth", "value": "55 cm" }
+    ],
+    "suitedFor": ["Wedding stage", "Receptions", "Lounges"]
+  },
+  {
+    "slug": "milan-heritage-sofa",
+    "category": "sofas",
+    "name": "Premium Ivory Velvet Sofa – Heritage",
+    "tagline": "Polished solid-wood arms, classic detailing",
+    "description": "A classic ivory velvet sofa framed in polished dark solid wood.",
+    "modelName": "MILAN HERITAGE",
+    "featured": false,
+    "variants": [{ "name": "Ivory", "swatch": "#EFE6D2", "images": ["milan-heritage"] }],
+    "seatOptions": [],
+    "features": [
+      { "title": "Velvet upholstery", "text": "Premium quality velvet." },
+      { "title": "High-density foam", "text": "Extra seating comfort." },
+      { "title": "Polished solid-wood arms", "text": "With classic detailing." },
+      { "title": "Seating capacity", "text": "2–3 seater." }
+    ],
+    "dimensions": [
+      { "label": "Width", "value": "170 cm" },
+      { "label": "Depth", "value": "75 cm" },
+      { "label": "Height", "value": "95 cm" },
+      { "label": "Seat height", "value": "45 cm" },
+      { "label": "Seat depth", "value": "55 cm" }
+    ],
+    "suitedFor": ["Wedding stage", "Nikah", "Receptions"]
+  },
+  {
+    "slug": "premium-velvet-sofa",
+    "category": "sofas",
+    "name": "Premium Velvet Sofa",
+    "tagline": "Channel-tufted velvet in nine colours",
+    "description": "A modern channel-tufted velvet sofa with tapered golden legs, available in nine rich colours to match any theme.",
+    "featured": true,
+    "variants": [
+      { "name": "Sky Blue", "swatch": "#5FA8D3", "images": ["velvet-sofa-sky-blue-1", "velvet-sofa-sky-blue-2"] },
+      { "name": "Emerald Green", "swatch": "#0F6B4C", "images": ["velvet-sofa-emerald-green-1", "velvet-sofa-emerald-green-2"] },
+      { "name": "Bright Orange", "swatch": "#D9631E", "images": ["velvet-sofa-bright-orange-1", "velvet-sofa-bright-orange-2"] },
+      { "name": "Beige", "swatch": "#A89272", "images": ["velvet-sofa-beige-1", "velvet-sofa-beige-2"] },
+      { "name": "Royal Blue", "swatch": "#173E9A", "images": ["velvet-sofa-royal-blue-1", "velvet-sofa-royal-blue-2"] },
+      { "name": "Baby Pink", "swatch": "#D9878F", "images": ["velvet-sofa-baby-pink-1", "velvet-sofa-baby-pink-2"] },
+      { "name": "Royal Black", "swatch": "#141414", "images": ["velvet-sofa-royal-black-1", "velvet-sofa-royal-black-2"] },
+      { "name": "Dusty Rose", "swatch": "#8E3A44", "images": ["velvet-sofa-dusty-rose-1", "velvet-sofa-dusty-rose-2"] },
+      { "name": "Golden", "swatch": "#C2802F", "images": ["velvet-sofa-golden-1", "velvet-sofa-golden-2"] }
+    ],
+    "seatOptions": [],
+    "features": [
+      { "title": "Velvet upholstery", "text": "Premium channel-tufted velvet." },
+      { "title": "Golden legs", "text": "Tapered metal legs." },
+      { "title": "Nine colours", "text": "Match any décor theme." }
+    ],
+    "dimensions": [],
+    "suitedFor": ["Receptions", "Lounges", "Birthday parties", "Corporate events"]
+  },
+  {
+    "slug": "pagoda-tent-3x3",
+    "category": "tents",
+    "name": "Pagoda Tent 3m × 3m",
+    "tagline": "Compact pagoda with clear panel windows",
+    "description": "A compact peaked pagoda tent — ideal for entrances, food counters, registration desks and small stalls.",
+    "featured": false,
+    "variants": [{ "name": "White", "swatch": "#F4F2EE", "images": ["pagoda-3x3"] }],
+    "seatOptions": [],
+    "features": [
+      { "title": "Premium clear panel windows", "text": "Bright, airy interior." },
+      { "title": "UV-stabilised & fire-retardant fabric", "text": "Safe and weatherproof." }
+    ],
+    "dimensions": [{ "label": "Size", "value": "3 m × 3 m" }],
+    "suitedFor": ["Entrances", "Food counters", "Exhibitions", "Stalls"]
+  },
+  {
+    "slug": "pagoda-tent-20x20",
+    "category": "tents",
+    "name": "Pagoda Tent 20ft × 20ft",
+    "tagline": "Spacious pagoda with arched windows",
+    "description": "A 20ft × 20ft pagoda tent with arched window panels and side curtains, for lounges, dining areas and VIP enclosures.",
+    "featured": true,
+    "variants": [{ "name": "White", "swatch": "#F4F2EE", "images": ["pagoda-20x20"] }],
+    "seatOptions": [],
+    "features": [
+      { "title": "Premium clear panel windows", "text": "Arched window panels with curtains." },
+      { "title": "UV-stabilised & fire-retardant fabric", "text": "Safe and weatherproof." }
+    ],
+    "dimensions": [{ "label": "Size", "value": "20 ft × 20 ft (6.1 m × 6.1 m)" }],
+    "suitedFor": ["Dining areas", "VIP lounges", "Garden events"]
+  },
+  {
+    "slug": "german-aluminium-pagoda",
+    "category": "tents",
+    "name": "Imported German Aluminium Pagoda",
+    "tagline": "Premium 6061-T6 aluminium, quick modular set-up",
+    "description": "An imported German aluminium pagoda with a UV-stabilised, fire-retardant PVC canopy and scalloped valance.",
+    "modelName": "Catalogue No. AGP-20ft-001",
+    "featured": true,
+    "variants": [{ "name": "White", "swatch": "#F4F2EE", "images": ["german-aluminium-pagoda"] }],
+    "seatOptions": [],
+    "features": [
+      { "title": "Structure", "text": "Premium German aluminium alloy (6061-T6), corrosion-resistant and reinforced." },
+      { "title": "Canopy", "text": "UV-stabilised & fire-retardant PVC coated fabric — weatherproof, waterproof and easy to clean." },
+      { "title": "Modular design", "text": "Quick set-up." }
+    ],
+    "dimensions": [{ "label": "Size", "value": "20 ft × 20 ft (6.1 m × 6.1 m)" }],
+    "suitedFor": ["Outdoor weddings", "Receptions", "Corporate events"]
+  },
+  {
+    "slug": "german-hanger-tent",
+    "category": "tents",
+    "name": "German Hanger Tent",
+    "tagline": "Large-span hall with arched windows",
+    "description": "A large German hanger (marquee) tent with a high-strength aluminium frame and premium arched window panels — a complete outdoor banquet hall.",
+    "featured": true,
+    "variants": [{ "name": "White", "swatch": "#F4F2EE", "images": ["german-hanger"] }],
+    "seatOptions": [],
+    "features": [
+      { "title": "High-strength aluminium frame", "text": "Clear-span structure, no centre poles." },
+      { "title": "Premium arched window panels", "text": "Elegant natural light." },
+      { "title": "UV-stabilised & fire-retardant fabric", "text": "Safe in all weather." }
+    ],
+    "dimensions": [
+      { "label": "Size shown", "value": "12 m × 30 m" },
+      { "label": "Ridge height", "value": "4.9 m" },
+      { "label": "Side height", "value": "3 m" }
+    ],
+    "suitedFor": ["Weddings", "Receptions", "Large gatherings", "Exhibitions"]
+  }
+]

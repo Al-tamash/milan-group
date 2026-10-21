@@ -1,0 +1,53 @@
+import type { Metadata } from "next";
+import Image from "next/image";
+import { site } from "@/lib/data";
+import { PageHero } from "@/components/ui";
+import { WhatsAppButton } from "@/components/ContactButtons";
+
+export const metadata: Metadata = {
+  title: "Gallery",
+  description: "Photos of tents, stages, seating and décor set up by Milan Group in Hyderabad.",
+};
+
+// Phase 1: the few real set-up photos we have. Add event photos here as the customer sends them (Phase 2).
+const PHOTOS = [
+  { src: "/images/products/german-aluminium-pagoda.webp", caption: "German aluminium pagoda — on-site set-up" },
+  { src: "/images/home/tents.webp", caption: "Garden tent with draped curtains" },
+  { src: "/images/home/stage.webp", caption: "Stage with floral backdrop" },
+  { src: "/images/home/tables.webp", caption: "Round tables with gold Chiavari chairs" },
+  { src: "/images/home/decor.webp", caption: "Fairy-light walkway and floral pillars" },
+  { src: "/images/products/german-hanger.webp", caption: "German hanger tent" },
+];
+
+export default function GalleryPage() {
+  return (
+    <>
+      <PageHero
+        eyebrow="Gallery"
+        title="Our set-ups"
+        intro="A glimpse of the tents, stages and seating we set up. More photos from recent events are coming soon."
+        crumbs={[{ href: "/", label: "Home" }, { href: "/gallery/", label: "Gallery" }]}
+      />
+      <section className="mx-auto max-w-7xl px-4 py-14 sm:px-6">
+        <div className="columns-1 gap-5 sm:columns-2 lg:columns-3">
+          {PHOTOS.map((p) => (
+            <figure key={p.src} className="mb-5 break-inside-avoid overflow-hidden rounded-2xl border border-line bg-white">
+              <Image src={p.src} alt={p.caption} width={900} height={700} sizes="(max-width: 640px) 100vw, 33vw" className="h-auto w-full" />
+              <figcaption className="px-4 py-3 text-sm text-muted">{p.caption}</figcaption>
+            </figure>
+          ))}
+        </div>
+        <div className="mt-10 rounded-2xl border border-line bg-champagne/45 p-8 text-center">
+          <p className="font-display text-3xl text-emerald">See more on Instagram</p>
+          <p className="mt-2 text-sm text-muted">Follow @{site.instagramHandle} for our latest events.</p>
+          <div className="mt-5 flex flex-col justify-center gap-3 sm:flex-row">
+            <a href={site.instagram} target="_blank" rel="noopener" className="inline-flex items-center justify-center rounded-full border border-emerald px-6 py-3 text-sm font-semibold text-emerald hover:bg-emerald hover:text-ivory">
+              Open Instagram
+            </a>
+            <WhatsAppButton location="gallery" />
+          </div>
+        </div>
+      </section>
+    </>
+  );
+}

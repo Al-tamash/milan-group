@@ -1,103 +1,155 @@
 import Image from "next/image";
+import Link from "next/link";
+import { categories, products, productsIn, productImage, services, site } from "@/lib/data";
+import { CallButton, WhatsAppButton } from "@/components/ContactButtons";
+import { HowItWorks, StatsStrip } from "@/components/sections";
+import { ProductCard, RatingBadge, SectionHeading, ServiceCard } from "@/components/ui";
+
+const EVENTS = ["Weddings", "Receptions", "Engagements", "Nikah", "Haldi & Mehendi", "Birthdays", "Get-togethers", "Inaugurations", "Pooja & festivals", "Corporate events"];
+
+const HERO_TILES = [
+  { src: "/images/home/tents.webp", label: "Tents" },
+  { src: "/images/home/stage.webp", label: "Stage" },
+  { src: "/images/home/tables.webp", label: "Tables & Chairs" },
+  { src: "/images/home/decor.webp", label: "Décor & Lighting" },
+];
 
 export default function Home() {
-  return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+  const featured = products.filter((p) => p.featured).slice(0, 8);
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+  return (
+    <>
+      {/* Hero */}
+      <section className="relative overflow-hidden bg-forest text-ivory">
+        <div className="absolute inset-0 opacity-25">
+          <Image src="/images/home/decor.webp" alt="" fill priority sizes="100vw" className="object-cover" />
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+        <div className="absolute inset-0 bg-gradient-to-r from-forest via-forest/90 to-forest/40" />
+        <div className="relative mx-auto grid max-w-7xl items-center gap-12 px-4 py-16 sm:px-6 md:py-24 lg:grid-cols-[1.15fr_1fr]">
+          <div>
+            <p className="eyebrow !text-gold">Event rentals since {site.since} · Jubilee Hills, Hyderabad</p>
+            <h1 className="font-display mt-4 text-5xl leading-[1.05] sm:text-7xl">
+              The complete <span className="text-gold">set-up</span> solution
+            </h1>
+            <p className="mt-6 max-w-xl text-base leading-relaxed text-ivory/80 sm:text-lg">
+              Tents, designer chairs, stage sofas, sound, lighting and flower décor — everything for your wedding or
+              celebration, delivered and set up by one team.
+            </p>
+            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+              <WhatsAppButton location="hero" />
+              <CallButton location="hero" tone="dark" />
+            </div>
+            <div className="mt-8 flex flex-wrap items-center gap-4">
+              <RatingBadge dark />
+              <span className="text-sm text-gold">{site.hours}</span>
+            </div>
+          </div>
+          <div className="grid grid-cols-2 gap-3">
+            {HERO_TILES.map((t, i) => (
+              <figure key={t.label} className={`relative overflow-hidden rounded-t-[999px] rounded-b-xl border border-gold/40 ${i % 2 ? "mt-8" : ""}`}>
+                <div className="relative aspect-[3/4]">
+                  <Image src={t.src} alt={t.label} fill sizes="(max-width: 1024px) 50vw, 22vw" className="object-cover" />
+                </div>
+                <figcaption className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/70 to-transparent p-3 text-center text-xs font-semibold uppercase tracking-[0.2em]">
+                  {t.label}
+                </figcaption>
+              </figure>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Stats (D39) */}
+      <section className="mx-auto -mt-px max-w-7xl px-4 pt-10 sm:px-6">
+        <StatsStrip />
+      </section>
+
+      {/* Services */}
+      <section className="mx-auto max-w-7xl px-4 py-20 sm:px-6">
+        <SectionHeading
+          eyebrow="What we do"
+          title="Everything for your event, under one roof"
+          intro="From the first tent pole to the last flower garland — choose a service to see everything it includes."
+        />
+        <div className="mt-12 grid grid-cols-2 gap-4 sm:gap-5 lg:grid-cols-5">
+          {services.map((s) => <ServiceCard key={s.slug} service={s} compact />)}
+        </div>
+      </section>
+
+      {/* Catalog categories */}
+      <section className="bg-champagne/45 py-20">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6">
+          <SectionHeading eyebrow="Rental catalog" title="Chairs, sofas & tents" intro="See every design with photos, colours and sizes, and add items to your enquiry list." />
+          <div className="mt-12 grid gap-6 md:grid-cols-3">
+            {categories.map((c) => {
+              const cover = productsIn(c.slug).find((p) => p.featured) ?? productsIn(c.slug)[0];
+              return (
+                <Link key={c.slug} href={`/catalog/${c.slug}/`} className="group overflow-hidden rounded-2xl border border-line bg-white">
+                  <div className="relative aspect-[4/3] bg-[#f6f1e7]">
+                    <Image src={productImage(cover.variants[0].images[0])} alt={c.name} fill sizes="(max-width: 768px) 100vw, 33vw" className="object-contain p-4 transition-transform duration-500 group-hover:scale-105" />
+                  </div>
+                  <div className="p-5">
+                    <h3 className="font-display text-3xl text-emerald">{c.name}</h3>
+                    <p className="mt-1 text-sm text-muted">{c.blurb}</p>
+                    <p className="mt-3 text-sm font-semibold text-emerald group-hover:text-gold-600">{productsIn(c.slug).length} designs →</p>
+                  </div>
+                </Link>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* Featured products */}
+      <section className="mx-auto max-w-7xl px-4 py-20 sm:px-6">
+        <SectionHeading eyebrow="Most requested" title="Featured designs" />
+        <div className="mt-12 grid grid-cols-2 gap-4 sm:gap-6 lg:grid-cols-4">
+          {featured.map((p) => <ProductCard key={p.slug} product={p} />)}
+        </div>
+        <div className="mt-10 text-center">
+          <Link href="/catalog/" className="inline-block rounded-full border border-emerald px-6 py-3 text-sm font-semibold text-emerald hover:bg-emerald hover:text-ivory">
+            View full catalog
+          </Link>
+        </div>
+      </section>
+
+      <HowItWorks />
+
+      {/* Events */}
+      <section className="mx-auto max-w-7xl px-4 py-20 sm:px-6">
+        <SectionHeading eyebrow="Occasions" title="Every celebration we set up" />
+        <ul className="mx-auto mt-10 flex max-w-4xl flex-wrap justify-center gap-3">
+          {EVENTS.map((e) => (
+            <li key={e} className="rounded-full border border-line bg-white px-5 py-2 text-sm text-ink">{e}</li>
+          ))}
+        </ul>
+      </section>
+
+      {/* Contact strip */}
+      <section className="border-t border-line bg-champagne/45">
+        <div className="mx-auto grid max-w-7xl gap-10 px-4 py-16 sm:px-6 lg:grid-cols-2">
+          <div>
+            <p className="eyebrow">Visit or call</p>
+            <h2 className="font-display mt-2 text-4xl text-emerald sm:text-5xl">Plan your event with us</h2>
+            <p className="mt-4 text-muted">{site.address.line1}, {site.address.line2}</p>
+            <p className="mt-1 font-semibold text-emerald">{site.hours}</p>
+            <div className="mt-6 flex flex-col gap-3 sm:flex-row">
+              <WhatsAppButton location="home-contact" />
+              <CallButton location="home-contact" />
+            </div>
+            <div className="mt-6"><RatingBadge /></div>
+          </div>
+          <div className="overflow-hidden rounded-2xl border border-line">
+            <iframe
+              title="Milan Group on Google Maps"
+              src={site.mapEmbed}
+              className="h-80 w-full"
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            />
+          </div>
+        </div>
+      </section>
+    </>
   );
 }
