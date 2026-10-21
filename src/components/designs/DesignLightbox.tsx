@@ -61,8 +61,18 @@ export function DesignLightbox({ product, onClose }: { product: Product | null; 
                 <X className="h-5 w-5" />
               </button>
             </div>
+            <p className="mt-1 text-sm font-medium text-ink">{product.tagline}</p>
             {product.modelName && <p className="mt-1 text-xs text-muted">Model: {product.modelName}</p>}
             <p className="mt-3 text-sm leading-relaxed text-muted">{product.description}</p>
+            {product.features.length > 0 && (
+              <ul data-features className="mt-5 space-y-2 text-sm">
+                {product.features.map((f) => (
+                  <li key={f.title}>
+                    <span className="font-semibold text-ink">{f.title}.</span> <span className="text-muted">{f.text}</span>
+                  </li>
+                ))}
+              </ul>
+            )}
             {product.dimensions.length > 0 && (
               <dl className="mt-5 grid grid-cols-2 gap-x-4 gap-y-1.5 text-sm">
                 {product.dimensions.map((d) => (
@@ -76,6 +86,7 @@ export function DesignLightbox({ product, onClose }: { product: Product | null; 
             {product.seatOptions.length > 0 && (
               <p className="mt-5 text-sm"><span className="text-muted">Seat colours:</span> {product.seatOptions.join(", ")}</p>
             )}
+            {product.seatNote && <p className="mt-2 text-xs text-muted">{product.seatNote}</p>}
           </div>
         </div>
       )}

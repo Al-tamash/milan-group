@@ -278,7 +278,7 @@ local voice. Please mark each line **OK** or write the correction.
 | WhatsApp message (designs) | — | Hi Milan Group, I liked these: <designs>. Date: · Venue: · Guests: | |
 | Occasion photos | — | Stock photos, labelled "Some photos are representative" until we have your own | |
 
-### Product short lines (stored with each design for later use; one per design)
+### Product short lines (shown under the design name in the photo popup)
 
 The old lines came from the catalog PDF ("Elegance. Comfort. Timeless."). New lines say what the item is. Please check
 the facts (colours, materials) are right.
