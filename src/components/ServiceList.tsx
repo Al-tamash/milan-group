@@ -1,9 +1,10 @@
+import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { getService, products } from "@/lib/data";
 import { ServiceIcon } from "./ui";
 
-// Ten services read better as three short lists than as ten identical cards.
+// Ten services read better as three short lists than as ten identical cards. A photo per row lets people recognise the service at a glance.
 const GROUPS = [
   { name: "Set-up", slugs: ["tents-and-roofing", "furniture-and-seating", "lighting-and-electrical", "sound-and-dj"] },
   { name: "Décor & flowers", slugs: ["wedding-flower-work", "calcutta-decoration", "theme-functions", "flower-garlands-and-jewellery"] },
@@ -25,8 +26,14 @@ export function ServiceList({ withCounts = true, headingAs: Heading = "h3" }: { 
           <ul>
             {g.slugs.map(getService).filter((s) => s !== undefined).map((s) => (
               <li key={s.slug} className="border-b border-line/70">
-                <Link href={`/services/${s.slug}/`} className="group flex gap-4 py-4">
-                  <ServiceIcon name={s.icon} className="mt-1 h-5 w-5 shrink-0 text-gold-700" />
+                <Link href={`/services/${s.slug}/`} className="group flex items-start gap-4 py-4">
+                  <span className="relative h-[4.5rem] w-24 shrink-0 overflow-hidden rounded-md bg-champagne sm:h-20 sm:w-28">
+                    {s.image ? (
+                      <Image src={`/images/${s.image}.webp`} alt="" fill sizes="112px" className="object-cover" />
+                    ) : (
+                      <ServiceIcon name={s.icon} className="absolute inset-0 m-auto h-6 w-6 text-gold-700" />
+                    )}
+                  </span>
                   <span className="min-w-0 flex-1">
                     <span className="font-display flex items-center gap-2 text-2xl leading-tight text-emerald">
                       {s.name}

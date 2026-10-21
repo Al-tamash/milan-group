@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import { site } from "@/lib/data";
+import gallery from "@/data/gallery.json";
 import { PageHero } from "@/components/ui";
 import { WhatsAppButton } from "@/components/ContactButtons";
 
@@ -9,15 +10,8 @@ export const metadata: Metadata = {
   description: "Photos of tents, stages, seating and décor set up by Milan Group in Hyderabad.",
 };
 
-// Phase 1: the few real set-up photos we have. Add event photos here as the customer sends them (Phase 2).
-const PHOTOS = [
-  { src: "/images/products/german-aluminium-pagoda.webp", caption: "German aluminium pagoda — on-site set-up" },
-  { src: "/images/home/tents.webp", caption: "Garden tent with draped curtains" },
-  { src: "/images/home/stage.webp", caption: "Stage with floral backdrop" },
-  { src: "/images/home/tables.webp", caption: "Round tables with gold Chiavari chairs" },
-  { src: "/images/home/decor.webp", caption: "Fairy-light walkway and floral pillars" },
-  { src: "/images/products/german-hanger.webp", caption: "German hanger tent" },
-];
+// Phase 1: the few real set-up photos we have (shared with the home page). Add event photos to gallery.json as the customer sends them.
+const PHOTOS = gallery;
 
 export default function GalleryPage() {
   return (

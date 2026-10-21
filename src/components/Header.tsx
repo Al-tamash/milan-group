@@ -3,9 +3,9 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
-import { Menu, Phone, X } from "lucide-react";
+import { Menu, Phone, X, MessageCircle } from "lucide-react";
 import { Logo } from "./Logo";
-import { site } from "@/lib/data";
+import { site, whatsappLink } from "@/lib/data";
 import { track } from "@/lib/analytics";
 
 const NAV = [
@@ -58,6 +58,15 @@ export function Header() {
           ))}
         </nav>
         <div className="flex items-center gap-2">
+          <a
+            href={whatsappLink("Hi Milan Group, I would like to enquire about an event.")}
+            target="_blank"
+            rel="noopener"
+            onClick={() => track("whatsapp_click", { location: "header" })}
+            className="hidden min-h-11 items-center gap-2 rounded-full bg-whatsapp px-5 text-sm font-semibold text-white hover:brightness-110 lg:inline-flex"
+          >
+            <MessageCircle className="h-4 w-4" /> WhatsApp us
+          </a>
           <button
             type="button"
             className="flex h-11 w-11 items-center justify-center rounded-md text-emerald lg:hidden"
