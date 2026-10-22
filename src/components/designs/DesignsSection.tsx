@@ -41,10 +41,13 @@ export function DesignsSection({ serviceSlug, serviceName, categories, heading, 
             <h3 className="text-sm font-semibold text-ink">
               {g.label} <span className="font-normal text-muted">· {g.items.length}</span>
             </h3>
-            <ul className="mt-4 grid grid-cols-3 gap-3 sm:grid-cols-4 lg:grid-cols-6">
+            {/* Short groups (tents) get bigger cards; long chair groups keep the dense grid. */}
+            <ul className={`mt-4 grid gap-3 sm:gap-4 ${g.items.length <= 4 ? "grid-cols-2 lg:grid-cols-4" : "grid-cols-3 sm:grid-cols-4 lg:grid-cols-6"}`}>
               {g.items.map((p) => {
                 const on = picked.includes(p.slug);
                 const colours = colourLine(p);
+                // Tent shots are on-site photos and fill the frame; chairs and sofas are cut-outs and stay whole.
+                const photo = p.category === "tents";
                 return (
                   <li key={p.slug} className="relative">
                     <button
@@ -55,23 +58,26 @@ export function DesignsSection({ serviceSlug, serviceName, categories, heading, 
                         on ? "border-emerald ring-2 ring-emerald" : "border-line hover:border-gold"
                       }`}
                     >
-                      <span className="relative block aspect-square bg-[#f6f1e7]">
+                      <span className={`relative block bg-[#f6f1e7] ${photo ? "aspect-[4/3]" : "aspect-square"}`}>
                         <Image
                           src={productImage(p.variants[0].images[0])}
                           alt=""
                           fill
-                          sizes="(max-width: 640px) 33vw, (max-width: 1024px) 25vw, 16vw"
-                          className="object-contain p-2"
+                          sizes={photo ? "(max-width: 1024px) 50vw, 25vw" : "(max-width: 640px) 33vw, (max-width: 1024px) 25vw, 16vw"}
+                          className={photo ? "object-cover" : "object-contain p-2"}
                         />
                         {on && (
-                          <span className="absolute left-2 top-2 flex h-6 w-6 items-center justify-center rounded-full bg-emerald text-ivory">
-                            <Check className="h-4 w-4" />
+                          <span className="absolute left-2 top-2 flex h-7 w-7 items-center justify-center rounded-full bg-emerald text-ivory shadow-sm">
+                            <Check className="h-4 w-4" strokeWidth={2.5} />
                           </span>
                         )}
                       </span>
-                      <span className="block p-2.5">
-                        <span className="block text-[13px] font-semibold leading-snug text-ink">{p.name}</span>
-                        {colours && <span className="mt-0.5 block text-[11px] leading-snug text-muted">{colours}</span>}
+                      <span className="block p-3">
+                        <span className="block text-sm font-semibold leading-snug text-ink">{p.name}</span>
+                        {colours && <span className="mt-0.5 block text-xs leading-snug text-muted">{colours}</span>}
+                        <span className={`mt-1.5 block text-xs font-semibold ${on ? "text-emerald" : "text-gold-700"}`}>
+                          {on ? "Added" : "Tap to add"}
+                        </span>
                       </span>
                     </button>
                     <button

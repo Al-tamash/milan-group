@@ -38,6 +38,8 @@ export type ServiceItem = {
 
 export type Faq = { q: string; a: string };
 
+export type HeroPhoto = { src: string; alt: string; label?: string };
+
 export type Service = {
   slug: string;
   name: string;
@@ -47,6 +49,10 @@ export type Service = {
   summary: string;
   description: string;
   image: string | null;
+  /** Real Milan set-up photo for the hero, used instead of the stock `image` where we have one */
+  heroImage?: HeroPhoto;
+  /** Optional second real photo shown beside the hero image (cropped from the bottom, so catalog titles fall away) */
+  heroInset?: HeroPhoto;
   /** true = temporary stock photo (D10), swap for the customer's own photo */
   imagePlaceholder: boolean;
   imageCredit?: string;

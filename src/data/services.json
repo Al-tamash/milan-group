@@ -65,6 +65,8 @@
     "summary": "German hanger tents, pagodas, pipe pandals, shamiyanas and gazebos.",
     "description": "Rain or sun, your guests stay covered. A big German hanger hall with no poles in the middle, a pagoda for the entrance, or a regular pandal and shamiyana — our own crew puts it up.",
     "image": "services/tents-and-roofing",
+    "heroImage": { "src": "home/tents", "alt": "Garden tent with draped curtains, set up by Milan Group", "label": "Garden tent" },
+    "heroInset": { "src": "products/german-aluminium-pagoda", "alt": "German aluminium pagoda set up on site", "label": "Aluminium pagoda" },
     "imagePlaceholder": true,
     "imageCredit": "https://images.unsplash.com/photo-1675376616537-c8aa9ddc9977",
     "items": [

@@ -42,6 +42,21 @@ export function CallButton({ location, callNumber = site.contacts[0].phones[0], 
   );
 }
 
+// Quiet text link for a single item, so a card gets one light action instead of another green button.
+export function AskLink({ message, location, number }: { message: string; location: string; number?: string }) {
+  return (
+    <a
+      href={whatsappLink(message, number)}
+      target="_blank"
+      rel="noopener"
+      onClick={() => track("whatsapp_click", { location })}
+      className="mt-2 inline-flex min-h-11 items-center gap-1.5 text-sm font-semibold text-emerald hover:text-gold-700"
+    >
+      <MessageCircle className="h-4 w-4" /> Ask about this
+    </a>
+  );
+}
+
 export function FloatingWhatsApp() {
   return (
     <a
