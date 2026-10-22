@@ -65,8 +65,12 @@ export type Service = {
   designsHeading?: string;
 };
 
+import galleryJson from "@/data/gallery.json";
+import { type GalleryItem } from "./gallery";
+
 export const products = productsJson as Product[];
 export const services = servicesJson as Service[];
+export const gallery = galleryJson as GalleryItem[];
 export const site = siteJson;
 
 export const getService = (slug: string) => services.find((s) => s.slug === slug);
@@ -78,3 +82,5 @@ export const formatPhone = (n: string) => `${n.slice(0, 5)} ${n.slice(5)}`;
 export function whatsappLink(text: string, number = site.enquiryWhatsApp) {
   return `https://wa.me/${number}?text=${encodeURIComponent(text)}`;
 }
+
+export { type GalleryItem } from "./gallery";

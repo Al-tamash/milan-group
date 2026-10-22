@@ -1,8 +1,152 @@
 [
-  { "src": "/images/home/decor.webp", "caption": "Fairy-light walkway and floral pillars" },
-  { "src": "/images/home/stage.webp", "caption": "Stage with floral backdrop" },
-  { "src": "/images/home/tents.webp", "caption": "Garden tent with draped curtains" },
-  { "src": "/images/home/tables.webp", "caption": "Round tables with gold Chiavari chairs" },
-  { "src": "/images/products/german-aluminium-pagoda.webp", "caption": "German aluminium pagoda — on-site set-up" },
-  { "src": "/images/products/german-hanger.webp", "caption": "German hanger tent" }
+  {
+    "id": "tents-german-hanger",
+    "src": "/images/products/german-hanger.webp",
+    "caption": "German Hanger Tent with Waterproof Canopy",
+    "service": "tents-and-roofing"
+  },
+  {
+    "id": "flowers-stage-backdrop",
+    "src": "/images/home/stage.webp",
+    "caption": "Wedding Stage with Handcrafted Floral Backdrop",
+    "service": "wedding-flower-work"
+  },
+  {
+    "id": "furniture-banquet-setup",
+    "src": "/images/home/tables.webp",
+    "caption": "Round Banquet Tables with Gold Chiavari Chairs",
+    "service": "furniture-and-seating"
+  },
+  {
+    "id": "decor-fairy-light-walkway",
+    "src": "/images/home/decor.webp",
+    "caption": "Fairy-Light Walkway and Floral Entrance Pillars",
+    "service": "wedding-flower-work"
+  },
+  {
+    "id": "tents-aluminium-pagoda",
+    "src": "/images/products/german-aluminium-pagoda.webp",
+    "caption": "German Aluminium Pagoda Tent on Site",
+    "service": "tents-and-roofing"
+  },
+  {
+    "id": "furniture-royal-blue-sofa",
+    "src": "/images/products/velvet-sofa-royal-blue-1.webp",
+    "caption": "Royal Blue Velvet Wedding Stage Sofa",
+    "service": "furniture-and-seating"
+  },
+  {
+    "id": "lighting-chandeliers-ambience",
+    "src": "/images/services/lighting-and-electrical.webp",
+    "caption": "Warm Event Ambient Lighting with Chandeliers",
+    "service": "lighting-and-electrical"
+  },
+  {
+    "id": "tents-garden-draped",
+    "src": "/images/home/tents.webp",
+    "caption": "Garden Tent with Draped Curtains and Ceiling Liners",
+    "service": "tents-and-roofing"
+  },
+  {
+    "id": "calcutta-floral-art",
+    "src": "/images/services/calcutta-decoration.webp",
+    "caption": "Calcutta Handcrafted Floral and Fabric Décor",
+    "service": "calcutta-decoration"
+  },
+  {
+    "id": "theme-birthday-reception",
+    "src": "/images/services/theme-functions.webp",
+    "caption": "Themed Reception and Celebration Backdrop",
+    "service": "theme-functions"
+  },
+  {
+    "id": "furniture-milan-elegance-sofa",
+    "src": "/images/products/milan-elegance.webp",
+    "caption": "Milan Elegance Carved Royal Stage Throne",
+    "service": "furniture-and-seating"
+  },
+  {
+    "id": "tents-pagoda-20x20",
+    "src": "/images/products/pagoda-20x20.webp",
+    "caption": "20x20 ft Heavy Duty Pagoda Tent",
+    "service": "tents-and-roofing"
+  },
+  {
+    "id": "furniture-acrylic-chairs",
+    "src": "/images/products/acrylic-chiavari.webp",
+    "caption": "Crystal Clear Acrylic Chiavari Banquet Chairs",
+    "service": "furniture-and-seating"
+  },
+  {
+    "id": "flowers-traditional-mandap",
+    "src": "/images/services/wedding-flower-work.webp",
+    "caption": "Fresh Flower Mandap and Stage Arrangement",
+    "service": "wedding-flower-work"
+  },
+  {
+    "id": "furniture-velvet-beige-sofa",
+    "src": "/images/products/velvet-sofa-beige-1.webp",
+    "caption": "Beige Luxury Velvet Stage Sofa",
+    "service": "furniture-and-seating"
+  },
+  {
+    "id": "catering-buffet-setup",
+    "src": "/images/services/catering-and-kitchen.webp",
+    "caption": "Complete Banquet Catering, Crockery & Buffet Setup",
+    "service": "catering-and-kitchen"
+  },
+  {
+    "id": "sound-dj-audio-console",
+    "src": "/images/services/sound-and-dj.webp",
+    "caption": "Professional Audio Console and Live Event Sound Setup",
+    "service": "sound-and-dj"
+  },
+  {
+    "id": "season-cooling-fans",
+    "src": "/images/services/season-articles.webp",
+    "caption": "High-Capacity Misting Fans and Venue Air Coolers",
+    "service": "season-articles"
+  },
+  {
+    "id": "jewellery-stage-props",
+    "src": "/images/services/jewellery.webp",
+    "caption": "Traditional Wedding Stage Jewellery and Royal Accessories",
+    "service": "jewellery"
+  },
+  {
+    "id": "furniture-hall-seating",
+    "src": "/images/services/furniture-and-seating.webp",
+    "caption": "Grand Venue Seating with Draped Banquet Chairs",
+    "service": "furniture-and-seating"
+  },
+  {
+    "id": "furniture-emerald-sofa",
+    "src": "/images/products/velvet-sofa-emerald-green-1.webp",
+    "caption": "Emerald Green Velvet Stage Lounge Sofa",
+    "service": "furniture-and-seating"
+  },
+  {
+    "id": "tents-roofing-shamiyana",
+    "src": "/images/services/tents-and-roofing.webp",
+    "caption": "Large Scale Shamiyana & Outdoor Waterproof Roofing",
+    "service": "tents-and-roofing"
+  },
+  {
+    "id": "furniture-milan-curve-sofa",
+    "src": "/images/products/milan-curve.webp",
+    "caption": "Milan Curve Contemporary Stage Sofa",
+    "service": "furniture-and-seating"
+  },
+  {
+    "id": "furniture-imperia-gold-chair",
+    "src": "/images/products/imperia-front.webp",
+    "caption": "Imperia Gold Banquet Chairs with Cushioned Seats",
+    "service": "furniture-and-seating"
+  },
+  {
+    "id": "tents-pagoda-3x3",
+    "src": "/images/products/pagoda-3x3.webp",
+    "caption": "Compact 3x3 m Canopy Tent for Stalls and Counters",
+    "service": "tents-and-roofing"
+  }
 ]
