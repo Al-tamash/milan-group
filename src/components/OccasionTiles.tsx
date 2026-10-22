@@ -24,8 +24,8 @@ export function OccasionTiles() {
             </span>
             <span className="flex flex-1 flex-col p-3 sm:p-4">
               <span className="font-display text-xl leading-tight text-emerald sm:text-2xl">{o.name}</span>
-              <span className="mt-1 text-xs leading-relaxed text-muted sm:text-sm">Usually: {o.includes}</span>
-              <span className="mt-auto inline-flex items-center gap-1.5 pt-3 text-xs font-semibold text-whatsapp sm:text-sm">
+              <span className="mt-1 text-[0.8125rem] leading-relaxed text-muted sm:text-sm">Usually: {o.includes}</span>
+              <span className="mt-auto inline-flex items-center gap-1.5 pt-3 text-[0.8125rem] font-semibold text-whatsapp sm:text-sm">
                 <MessageCircle className="h-4 w-4" /> Ask on WhatsApp
               </span>
             </span>

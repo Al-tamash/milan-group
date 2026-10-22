@@ -20,7 +20,8 @@ export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title: {
     default: "Milan Group | Event Rentals & Supplying Company in Hyderabad",
-    template: "%s | Milan Group Hyderabad",
+    // Page titles already name Hyderabad where it matters, so the suffix doesn't repeat it.
+    template: "%s | Milan Group",
   },
   description:
     "Milan Group, Jubilee Hills: tents, designer chairs, stage sofas, sound, lighting, Calcutta and wedding flower decoration. We bring it, set it up and clear it after. Open 24 hours.",

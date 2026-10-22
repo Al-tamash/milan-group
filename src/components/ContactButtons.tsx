@@ -57,6 +57,25 @@ export function AskLink({ message, location, number }: { message: string; locati
   );
 }
 
+// Compact call / WhatsApp pill for a named person on the contact list.
+export function ContactPill({ kind, phone, label, name, location }: { kind: "call" | "whatsapp"; phone: string; label: string; name: string; location: string }) {
+  const call = kind === "call";
+  return (
+    <a
+      href={call ? `tel:+91${phone}` : whatsappLink("Hi Milan Group, I would like to enquire about an event.", `91${phone}`)}
+      target={call ? undefined : "_blank"}
+      rel={call ? undefined : "noopener"}
+      onClick={() => track(call ? "call_click" : "whatsapp_click", { location })}
+      aria-label={`${label} ${name}`}
+      className={`inline-flex min-h-11 items-center gap-1.5 whitespace-nowrap rounded-full px-4 text-sm font-semibold transition-colors ${
+        call ? "border border-emerald text-emerald hover:bg-emerald hover:text-ivory" : "bg-whatsapp text-white hover:brightness-110"
+      }`}
+    >
+      {call ? <Phone className="h-3.5 w-3.5" /> : <MessageCircle className="h-3.5 w-3.5" />} {label}
+    </a>
+  );
+}
+
 export function FloatingWhatsApp() {
   return (
     <a

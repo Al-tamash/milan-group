@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
@@ -9,6 +10,8 @@ import { RatingBadge } from "@/components/ui";
 import { ServiceList } from "@/components/ServiceList";
 import { OccasionTiles } from "@/components/OccasionTiles";
 import { Testimonials } from "@/components/Testimonials";
+
+export const metadata: Metadata = { alternates: { canonical: "/" } };
 
 // Hero uses the stage photo; the other real set-up photos go to the gallery band below. Catalog shots (with
 // printed titles or dimension labels) stay on the service pages.
@@ -26,7 +29,7 @@ export default function Home() {
               Tents, chairs, lights, flowers. <span className="text-gold">One call</span>, we set it all up.
             </h1>
             <p className="mt-5 max-w-lg text-base leading-relaxed text-ivory/80">
-              Weddings, Nikahs, poojas, birthdays — tell us the date and the venue, and our team brings everything and
+              Weddings, Nikahs, poojas, birthdays. Tell us the date and the venue, and our team brings everything and
               puts it up before your guests arrive.
             </p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
@@ -120,7 +123,8 @@ export default function Home() {
               src={site.mapEmbed}
               className="h-80 w-full"
               loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
+              referrerPolicy="strict-origin-when-cross-origin"
+              allowFullScreen
             />
           </div>
         </div>

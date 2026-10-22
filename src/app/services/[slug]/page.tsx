@@ -5,7 +5,7 @@ import { notFound } from "next/navigation";
 import { ArrowRight } from "lucide-react";
 import { getService, products, services, site, type Feature } from "@/lib/data";
 import { AskLink, CallButton, WhatsAppButton } from "@/components/ContactButtons";
-import { DesignsSection } from "@/components/designs/DesignsSection";
+import { RecentWorkSection } from "@/components/RecentWorkSection";
 import { FaqList, HowItWorks } from "@/components/sections";
 import { ServiceIcon } from "@/components/ui";
 
@@ -43,8 +43,7 @@ export async function generateMetadata({ params }: PageProps<"/services/[slug]">
   };
 }
 
-// Section flow (D40): hero (with who it's for) → what you get → sizes (tents) → designs → how it works → FAQ → enquiry
-// → often booked together.
+// Section flow: 1. Hero → 2. What you get → 3. Sizes at a glance → 4. Recent Setups & Real Events → 5. How booking works → 6. Questions people ask (FAQ) → 7. Usually booked with this (cross-sell) → 8. Final Enquiry band (Closing CTA).
 export default async function ServicePage({ params }: PageProps<"/services/[slug]">) {
   const service = getService((await params).slug);
   if (!service) notFound();
@@ -73,7 +72,7 @@ export default async function ServicePage({ params }: PageProps<"/services/[slug
       <section className="bg-forest text-ivory">
         <div className="mx-auto grid max-w-7xl items-center gap-8 px-4 pb-12 pt-6 sm:px-6 sm:pb-16 lg:grid-cols-[1.2fr_1fr] lg:gap-16 lg:pb-20 lg:pt-8">
           <div>
-            <nav aria-label="Breadcrumb" className="text-xs text-ivory/70">
+            <nav aria-label="Breadcrumb" className="text-[0.8125rem] text-ivory/70">
               <Link href="/" className="hover:text-gold">Home</Link><span className="mx-2 text-gold">/</span>
               <Link href="/services/" className="hover:text-gold">Services</Link><span className="mx-2 text-gold">/</span>
               <span aria-current="page" className="text-ivory">{service.name}</span>
@@ -165,7 +164,7 @@ export default async function ServicePage({ params }: PageProps<"/services/[slug
           <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20">
             <h2 id="sizes" className="font-display text-4xl text-emerald sm:text-5xl">Sizes at a glance</h2>
             <p className="mt-3 max-w-xl text-muted">
-              From our catalog sheets. Pipe pandal, shamiyana and gazebo sizes aren&rsquo;t listed yet, so ask us on WhatsApp.
+              For pipe pandal, shamiyana and gazebo sizes, ask us on WhatsApp.
             </p>
             {/* Phones: one swipeable card per tent (the four stacked rows ran past 1,500px). From md up: a plain table. */}
             <ul className="review-rail -mx-4 mt-8 flex snap-x snap-mandatory gap-3 overflow-x-auto px-4 pb-3 md:hidden">
@@ -225,57 +224,35 @@ export default async function ServicePage({ params }: PageProps<"/services/[slug
                 </tbody>
               </table>
             </div>
+            <p className="mt-4 text-xs leading-relaxed text-muted sm:text-sm">
+              * Rates depend on total square footage, venue location and event duration. WhatsApp us your ground dimensions for an estimate.
+            </p>
           </div>
         </section>
       )}
 
-      {/* 3. Designs we have (catalog-backed services only) */}
-      {service.catalog.length > 0 && (
-        <DesignsSection
-          serviceSlug={service.slug}
-          serviceName={service.name}
-          categories={service.catalog}
-          heading={service.designsHeading ?? `${service.name} designs`}
-          whatsappNumber={whatsappNumber}
-        />
-      )}
+      {/* 4. Real Setups & Recent Work */}
+      <RecentWorkSection
+        serviceSlug={service.slug}
+        serviceName={service.name}
+        whatsappNumber={whatsappNumber}
+      />
 
       {/* 5. How it works */}
       <HowItWorks photo={false} />
 
-      {/* 6. Real set-up photos — Phase 2, once the customer sends them */}
-
-      {/* 7. FAQ */}
-      <section className="mx-auto grid max-w-7xl gap-10 px-4 py-16 sm:px-6 sm:py-20 lg:grid-cols-[1fr_1.4fr] lg:gap-16">
+      {/* 6. FAQ */}
+      <section className="mx-auto grid max-w-7xl gap-10 border-t border-line px-4 py-16 sm:px-6 sm:py-20 lg:grid-cols-[1fr_1.4fr] lg:gap-16">
         <div>
           <h2 className="font-display text-4xl text-emerald sm:text-5xl">Questions people ask</h2>
-          <p className="mt-4 text-muted">Can&rsquo;t find your answer? Ask us on WhatsApp — we reply quickly.</p>
+          <p className="mt-4 text-muted">Something else on your mind? Ask us on WhatsApp or call.</p>
         </div>
         <FaqList faqs={faqs} />
       </section>
 
-      {/* 8. Enquiry band */}
-      <section className="mx-auto max-w-7xl px-4 pb-16 sm:px-6 sm:pb-20">
-        <div className="flex flex-col items-start justify-between gap-6 rounded-xl bg-emerald px-6 py-10 text-ivory sm:px-10 lg:flex-row lg:items-center">
-          <div>
-            <h2 className="font-display text-3xl sm:text-4xl">Need {service.name.toLowerCase()} for your event?</h2>
-            <p className="mt-2 text-sm text-ivory/80">
-              {flowerContact
-                ? `Our flower work is handled by ${flowerContact.name}. Call or WhatsApp him directly.`
-                : "Send us your date and venue — we'll reply with availability and a quote."}
-            </p>
-          </div>
-          <div className="flex w-full flex-col gap-3 sm:w-auto sm:flex-row">
-            <WhatsAppButton location={`service-band-${service.slug}`} number={whatsappNumber} message={message} />
-            <CallButton location={`service-band-${service.slug}`} callNumber={flowerContact?.phones[0]} tone="dark" />
-          </div>
-        </div>
-      </section>
-
-      {/* 9. Often booked together: photo + one line each, so people can tell the services apart before clicking.
-          Compact rows on phones, photo-on-top cards from md up. */}
+      {/* 7. Usually booked with this (Cross-sell: positioned right before the closing CTA) */}
       {related.length > 0 && (
-        <section aria-labelledby="related" className="border-t border-line bg-champagne/45 py-14 sm:py-16">
+        <section aria-labelledby="related" className="border-t border-line bg-champagne/35 py-14 sm:py-16">
           <div className="mx-auto max-w-7xl px-4 sm:px-6">
             <div className="flex flex-wrap items-end justify-between gap-x-6 gap-y-2">
               <div>
@@ -323,6 +300,25 @@ export default async function ServicePage({ params }: PageProps<"/services/[slug
           </div>
         </section>
       )}
+
+      {/* 8. Final Enquiry band (Closing CTA) */}
+      <section className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20">
+        <div className="flex flex-col items-start justify-between gap-6 rounded-xl bg-emerald px-6 py-10 text-ivory sm:px-10 lg:flex-row lg:items-center">
+          <div>
+            {/* Service names are proper nouns (Sound & DJ, Calcutta Decoration), so they keep their capitals here. */}
+            <h2 className="font-display text-3xl sm:text-4xl">Ask for a rate on {service.name}</h2>
+            <p className="mt-2 text-[0.9375rem] text-ivory/80">
+              {flowerContact
+                ? `Flower work is handled by ${flowerContact.name}. Call or WhatsApp ${flowerContact.name} directly.`
+                : "Send us your date and venue. We'll reply with availability and a rate."}
+            </p>
+          </div>
+          <div className="flex w-full flex-col gap-3 sm:w-auto sm:flex-row">
+            <WhatsAppButton location={`service-band-${service.slug}`} number={whatsappNumber} message={message} />
+            <CallButton location={`service-band-${service.slug}`} callNumber={flowerContact?.phones[0]} tone="dark" />
+          </div>
+        </div>
+      </section>
     </>
   );
 }

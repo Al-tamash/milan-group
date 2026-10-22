@@ -16,7 +16,7 @@
   },
   "geo": { "lat": 17.4080518, "lng": 78.4181941 },
   "mapUrl": "https://maps.app.goo.gl/7yPNR2mVQcQpzAEs8",
-  "mapEmbed": "https://www.google.com/maps?q=17.4080518,78.4181941&z=16&output=embed",
+  "mapEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3807.0777314003612!2d78.41561917462742!3d17.40805690221046!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb96b4fc43b6c9%3A0xa77733b1494c5c09!2sMilan%20Group!5e0!3m2!1sen!2sus!4v1792665346079!5m2!1sen!2sus",
   "instagram": "https://www.instagram.com/milan_supplying_company_event",
   "instagramHandle": "milan_supplying_company_event",
   "rating": { "value": 4.2, "count": 27, "checked": "2026-10-21" },
@@ -28,7 +28,7 @@
     { "value": "4.2★", "label": "Google rating" }
   ],
   "faqs": [
-    { "q": "Which areas do you serve?", "a": "All of Hyderabad and Secunderabad, including Cyberabad and nearby areas. For events outside the city, ask us — we travel for larger orders." },
+    { "q": "Which areas do you serve?", "a": "All of Hyderabad and Secunderabad, including Cyberabad and nearby areas. For events outside the city, ask us. We travel for larger orders." },
     { "q": "How early should I book?", "a": "As early as you can. For weddings in peak season and on popular muhurtham dates, book 3–4 weeks ahead. Smaller functions can often be arranged within a few days." },
     { "q": "Are delivery, set-up and pick-up included?", "a": "Yes. Our team delivers, sets up at your venue and collects everything after the event. Transport depends on distance and order size and is included in your quote." },
     { "q": "How do I get a price?", "a": "Prices depend on items, quantity, date and venue. Send your list on WhatsApp and we'll reply with availability and a quote." },

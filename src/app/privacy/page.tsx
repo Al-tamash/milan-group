@@ -2,7 +2,11 @@ import type { Metadata } from "next";
 import { site } from "@/lib/data";
 import { PageHero } from "@/components/ui";
 
-export const metadata: Metadata = { title: "Privacy Policy", description: "How Milan Group's website handles your information." };
+export const metadata: Metadata = {
+  title: "Privacy Policy",
+  description: "How Milan Group's website handles your information.",
+  alternates: { canonical: "/privacy/" },
+};
 
 // D32: short disclosure covering GA4 and the WhatsApp enquiry flow.
 export default function PrivacyPage() {
@@ -21,7 +25,7 @@ export default function PrivacyPage() {
         <div>
           <h2 className="font-display text-3xl text-emerald">Analytics</h2>
           <p className="mt-2">
-            We use Google Analytics to understand how visitors use this site — for example, which pages are viewed and how
+            We use Google Analytics to understand how visitors use this site, for example which pages are viewed and how
             often the WhatsApp and call buttons are pressed. Google Analytics uses cookies and collects information such as
             your approximate location, device and browser.
             You can opt out using Google&rsquo;s browser add-on at tools.google.com/dlpage/gaoptout.

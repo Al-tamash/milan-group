@@ -32,8 +32,8 @@ export function Footer() {
         <div>
           <h2 className="text-sm font-semibold text-gold">Designs & more</h2>
           <ul className="mt-3 text-sm [&_a]:flex [&_a]:min-h-11 [&_a]:items-center [&_a]:py-1 lg:[&_a]:min-h-9">
-            <li><Link href="/services/furniture-and-seating/#designs" className="hover:text-gold">Chairs & sofas</Link></li>
-            <li><Link href="/services/tents-and-roofing/#designs" className="hover:text-gold">Tents</Link></li>
+            <li><Link href="/services/furniture-and-seating/#recent-work" className="hover:text-gold">Chairs & sofas</Link></li>
+            <li><Link href="/services/tents-and-roofing/#recent-work" className="hover:text-gold">Tents</Link></li>
             <li><Link href="/gallery/" className="hover:text-gold">Gallery</Link></li>
             <li><Link href="/about/" className="hover:text-gold">About us</Link></li>
           </ul>
@@ -77,7 +77,7 @@ export function Footer() {
         </div>
       </div>
       <div className="border-t border-ivory/10">
-        <div className="mx-auto flex max-w-7xl flex-col gap-1 px-4 py-4 text-xs text-ivory/60 sm:flex-row sm:items-center sm:justify-between sm:px-6">
+        <div className="mx-auto flex max-w-7xl flex-col gap-1 px-4 py-4 text-[0.8125rem] text-ivory/65 sm:flex-row sm:items-center sm:justify-between sm:px-6">
           <span className="py-2">© {new Date().getFullYear()} {site.name}. All rights reserved.</span>
           <Link href="/privacy/" className="inline-flex min-h-11 items-center hover:text-gold">Privacy policy</Link>
         </div>

@@ -7,7 +7,7 @@ import { CallButton, WhatsAppButton } from "@/components/ContactButtons";
 import { FaqList } from "@/components/sections";
 
 export const metadata: Metadata = {
-  title: "Services",
+  title: "Event Rental Services in Hyderabad",
   description: "Furniture, catering supplies, tents, sound, lighting, Calcutta and wedding flower decoration, theme functions, season articles and flower garlands for events in Hyderabad.",
   alternates: { canonical: "/services/" },
   openGraph: { images: ["/images/home/tents.webp"] },
@@ -59,7 +59,7 @@ function ServiceCard({ service }: { service: Service }) {
         <div className="flex flex-1 flex-col p-5 sm:p-6">
           <h3 className="font-display text-[1.75rem] leading-tight text-emerald">{service.name}</h3>
           <p className="mt-2 text-sm leading-relaxed text-muted">{service.promise}</p>
-          <p className="mt-4 border-t border-line pt-3 text-xs leading-relaxed text-ink/80">
+          <p className="mt-4 border-t border-line pt-3 text-[0.8125rem] leading-relaxed text-ink/80">
             <span className="font-semibold text-gold-700">Includes </span>
             {items.join(" · ")}
             {service.items.length > 3 && ` + ${service.items.length - 3} more`}
@@ -82,7 +82,7 @@ export default function ServicesPage() {
       <section className="border-b border-line bg-champagne/45">
         <div className="mx-auto grid max-w-7xl items-center gap-10 px-4 py-10 sm:px-6 sm:py-14 lg:grid-cols-[1fr_1.25fr] lg:gap-12">
           <div>
-            <nav aria-label="Breadcrumb" className="text-xs text-muted">
+            <nav aria-label="Breadcrumb" className="text-[0.8125rem] text-muted">
               <Link href="/" className="hover:text-emerald">Home</Link>
               <span className="mx-2 text-gold">/</span>
               <span aria-current="page">Services</span>
@@ -153,7 +153,7 @@ export default function ServicesPage() {
         <div className="mx-auto grid max-w-7xl gap-10 px-4 py-16 sm:px-6 sm:py-20 lg:grid-cols-2 lg:gap-16">
           <div>
             <h2 className="font-display text-4xl sm:text-5xl">Comes with every booking</h2>
-            <p className="mt-3 max-w-md text-ivory/75">Whether it&rsquo;s fifty chairs or a full wedding, getting it there and putting it up is part of the job.</p>
+            <p className="mt-3 max-w-md text-ivory/75">Fifty chairs or a full wedding, getting it there and putting it up is part of the job.</p>
             <ul className="mt-8 space-y-4">
               {INCLUDED.map((line) => (
                 <li key={line} className="flex items-start gap-3">

@@ -5,7 +5,7 @@ import { getService, products } from "@/lib/data";
 import { ServiceIcon } from "./ui";
 
 // Ten services read better as three short lists than as ten identical cards. A photo per row lets people recognise the service at a glance.
-const GROUPS = [
+export const SERVICE_GROUPS = [
   { name: "Set-up", slugs: ["tents-and-roofing", "furniture-and-seating", "lighting-and-electrical", "sound-and-dj"] },
   { name: "Décor & flowers", slugs: ["wedding-flower-work", "calcutta-decoration", "theme-functions", "flower-garlands-and-jewellery"] },
   { name: "Supplies", slugs: ["catering-and-kitchen", "season-articles"] },
@@ -20,7 +20,7 @@ const EXTRA: Record<string, string> = {
 export function ServiceList({ withCounts = true, headingAs: Heading = "h3" }: { withCounts?: boolean; headingAs?: "h2" | "h3" }) {
   return (
     <div className="grid gap-x-12 gap-y-10 lg:grid-cols-3">
-      {GROUPS.map((g) => (
+      {SERVICE_GROUPS.map((g) => (
         <div key={g.name}>
           <Heading className="border-b border-line pb-3 text-sm font-semibold text-ink">{g.name}</Heading>
           <ul>

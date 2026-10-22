@@ -54,7 +54,7 @@ export function HowItWorks({ cta = false, photo = true }: { cta?: boolean; photo
                   <div className="pt-2">
                     <h3 className="flex flex-wrap items-baseline gap-x-2.5 text-lg font-semibold text-ink">
                       {s.title}
-                      <span className="text-xs font-medium text-gold-700">{s.when}</span>
+                      <span className="text-[0.8125rem] font-medium text-gold-700">{s.when}</span>
                     </h3>
                     <p className="mt-1.5 max-w-md text-[0.9375rem] leading-relaxed text-muted">{s.text}</p>
                   </div>

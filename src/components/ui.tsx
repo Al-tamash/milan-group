@@ -34,7 +34,7 @@ export function PageHero({ eyebrow, title, intro, crumbs }: { eyebrow?: string; 
     <section className="border-b border-line bg-champagne/45">
       <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 sm:py-16">
         {crumbs && (
-          <nav aria-label="Breadcrumb" className="mb-4 text-xs text-muted">
+          <nav aria-label="Breadcrumb" className="mb-4 text-[0.8125rem] text-muted">
             {crumbs.map((c, i) => (
               <span key={c.href}>
                 <Link href={c.href} className="hover:text-emerald">{c.label}</Link>
