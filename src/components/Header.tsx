@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { Menu, Phone, X, MessageCircle } from "lucide-react";
 import { Logo } from "./Logo";
 import { site, whatsappLink } from "@/lib/data";
@@ -19,8 +19,13 @@ const NAV = [
 export function Header() {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
+  const [lastPath, setLastPath] = useState(pathname);
 
-  useEffect(() => setOpen(false), [pathname]);
+  // Close the menu on navigation, during render rather than in an effect.
+  if (pathname !== lastPath) {
+    setLastPath(pathname);
+    setOpen(false);
+  }
 
   const isActive = (href: string) => (href === "/" ? pathname === "/" : pathname.startsWith(href));
 

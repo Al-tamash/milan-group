@@ -50,9 +50,9 @@ const localBusiness = {
   sameAs: [site.instagram],
 };
 
-export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
+export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="en-IN" className={`${cormorant.variable} ${montserrat.variable}`}>
+    <html lang="en-IN" data-scroll-behavior="smooth" className={`${cormorant.variable} ${montserrat.variable}`}>
       <body>
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusiness) }} />
         

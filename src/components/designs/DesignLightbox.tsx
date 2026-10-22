@@ -9,6 +9,13 @@ import { productImage, type Product } from "@/lib/data";
 export function DesignLightbox({ product, onClose }: { product: Product | null; onClose: () => void }) {
   const ref = useRef<HTMLDialogElement>(null);
   const [i, setI] = useState(0);
+  const [lastProduct, setLastProduct] = useState(product);
+
+  // Start each newly opened design at its first photo.
+  if (product !== lastProduct) {
+    setLastProduct(product);
+    setI(0);
+  }
 
   const shots = product?.variants.flatMap((v) => v.images.map((img) => ({ img, colour: v.name }))) ?? [];
 
@@ -16,7 +23,6 @@ export function DesignLightbox({ product, onClose }: { product: Product | null; 
     const d = ref.current;
     if (!d) return;
     if (product) {
-      setI(0);
       if (!d.open) d.showModal();
     } else if (d.open) {
       d.close();

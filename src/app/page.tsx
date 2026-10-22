@@ -37,7 +37,7 @@ export default function Home() {
             </div>
           </div>
           <figure className="relative aspect-[4/3] overflow-hidden rounded-xl lg:aspect-[5/4]">
-            <Image src={HERO.src} alt={HERO.caption} fill priority sizes="(max-width: 1024px) 100vw, 50vw" className="object-cover" />
+            <Image src={HERO.src} alt={HERO.caption} fill preload sizes="(max-width: 1024px) 100vw, 50vw" className="object-cover" />
           </figure>
         </div>
       </section>

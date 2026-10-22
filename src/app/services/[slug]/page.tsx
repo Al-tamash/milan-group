@@ -9,12 +9,10 @@ import { DesignsSection } from "@/components/designs/DesignsSection";
 import { FaqList, HowItWorks } from "@/components/sections";
 import { ServiceIcon } from "@/components/ui";
 
-type Params = { params: Promise<{ slug: string }> };
-
 export const dynamicParams = false;
 export const generateStaticParams = () => services.map((s) => ({ slug: s.slug }));
 
-export async function generateMetadata({ params }: Params): Promise<Metadata> {
+export async function generateMetadata({ params }: PageProps<"/services/[slug]">): Promise<Metadata> {
   const service = getService((await params).slug);
   if (!service) return {};
   return {
@@ -25,7 +23,7 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
 }
 
 // Section flow (D40): hero → what you get → for rent → perfect for → how it works → FAQ → enquiry → often booked together.
-export default async function ServicePage({ params }: Params) {
+export default async function ServicePage({ params }: PageProps<"/services/[slug]">) {
   const service = getService((await params).slug);
   if (!service) notFound();
 
@@ -48,7 +46,7 @@ export default async function ServicePage({ params }: Params) {
       {/* 1. Hero */}
       <section className="relative isolate overflow-hidden bg-forest text-ivory">
         {service.image && (
-          <Image src={`/images/${service.image}.webp`} alt={service.name} fill priority sizes="100vw" className="-z-20 object-cover" />
+          <Image src={`/images/${service.image}.webp`} alt={service.name} fill preload sizes="100vw" className="-z-20 object-cover" />
         )}
         <div className="absolute inset-0 -z-10 bg-gradient-to-r from-forest via-forest/85 to-forest/30" />
         <div className="mx-auto max-w-7xl px-4 pb-14 pt-8 sm:px-6 sm:pb-20">
