@@ -4,7 +4,7 @@ import { useMemo, useState } from "react";
 import Image from "next/image";
 import { Maximize2, Sparkles } from "lucide-react";
 import type { Service } from "@/lib/data";
-import { filterGallery, getServiceCounts, type GalleryItem } from "@/lib/gallery";
+import { filterGallery, type GalleryItem } from "@/lib/gallery";
 import { GalleryLightbox } from "./GalleryLightbox";
 
 export function GalleryView({
@@ -17,8 +17,6 @@ export function GalleryView({
   const [activeTab, setActiveTab] = useState<string>("all");
   const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
 
-  const counts = useMemo(() => getServiceCounts(items, services), [items, services]);
-
   const tabs = useMemo(() => {
     return [{ slug: "all", name: "All Set-ups" }, ...services];
   }, [services]);
@@ -29,21 +27,14 @@ export function GalleryView({
 
   return (
     <div>
-      {/* Sticky 10 Services Filter Rail */}
+      {/* Sticky Single-Row Services Filter Rail (No multi-line gaps, no redundant numbers) */}
       <div className="sticky top-[68px] sm:top-[92px] z-30 -mx-4 px-4 sm:-mx-6 sm:px-6 bg-ivory/95 backdrop-blur-md pt-2 pb-3 mb-8 border-b border-line/60">
-        <div className="flex items-center justify-between pb-2.5 text-xs text-muted font-medium">
-          <span className="font-semibold text-emerald">Browse by Service</span>
-          <span>Showing {filteredItems.length} photos</span>
-        </div>
-
-        {/* Scrollable pill rail on mobile, wrapping pills on larger screens */}
         <div
           role="tablist"
           aria-label="Gallery service filters"
-          className="review-rail flex gap-2 overflow-x-auto pb-1 sm:flex-wrap"
+          className="review-rail flex gap-2.5 overflow-x-auto pb-1 scroll-smooth"
         >
           {tabs.map((tab) => {
-            const count = counts[tab.slug] ?? 0;
             const isActive = activeTab === tab.slug;
 
             return (
@@ -56,29 +47,20 @@ export function GalleryView({
                   setActiveTab(tab.slug);
                   setLightboxIndex(null);
                 }}
-                className={`inline-flex min-h-10 shrink-0 items-center gap-2 rounded-full border px-3.5 py-1.5 text-xs sm:text-sm font-medium transition-all focus-visible:outline-gold ${
+                className={`inline-flex min-h-10 shrink-0 items-center rounded-full border px-4 py-2 text-xs sm:text-sm font-medium transition-all focus-visible:outline-gold ${
                   isActive
                     ? "border-emerald bg-emerald text-ivory shadow-sm"
                     : "border-line bg-white text-ink hover:border-gold hover:text-emerald"
                 }`}
               >
-                <span>{tab.name}</span>
-                <span
-                  className={`rounded-full px-2 py-0.5 text-[0.6875rem] font-semibold transition-colors ${
-                    isActive
-                      ? "bg-gold text-forest"
-                      : "bg-champagne/60 text-muted"
-                  }`}
-                >
-                  {count}
-                </span>
+                {tab.name}
               </button>
             );
           })}
         </div>
       </div>
 
-      {/* Gallery Masonry Grid — Photo First Luxury Presentation */}
+      {/* Gallery Masonry Grid — 100% Pure Clean Photography (No text overlays) */}
       {filteredItems.length === 0 ? (
         <div className="rounded-2xl border border-line bg-champagne/30 p-12 text-center">
           <p className="text-muted">No set-up photos available for this category yet.</p>
@@ -93,8 +75,6 @@ export function GalleryView({
       ) : (
         <div className="columns-1 gap-5 sm:columns-2 lg:columns-3">
           {filteredItems.map((photo, index) => {
-            const service = services.find((s) => s.slug === photo.service);
-
             return (
               <div
                 key={photo.id || photo.src}
@@ -110,7 +90,7 @@ export function GalleryView({
                 tabIndex={0}
                 aria-label={`View ${photo.caption} in fullscreen`}
               >
-                {/* Photo itself */}
+                {/* Pure Photo Presentation */}
                 <div className="relative overflow-hidden bg-champagne/20">
                   <Image
                     src={photo.src}
@@ -121,32 +101,10 @@ export function GalleryView({
                     className="h-auto w-full object-cover transition-transform duration-500 group-hover:scale-105"
                   />
 
-                  {/* Desktop Hover Gradient Overlay */}
-                  <div className="absolute inset-0 hidden sm:flex flex-col justify-between p-4 bg-gradient-to-t from-black/85 via-black/25 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-                    <div className="self-end">
-                      <span className="flex h-9 w-9 items-center justify-center rounded-full bg-white/25 text-white backdrop-blur-md shadow-sm transition-transform duration-200 group-hover:scale-110">
-                        <Maximize2 className="h-4 w-4" />
-                      </span>
-                    </div>
-                    <div>
-                      <p className="font-display text-lg text-white leading-snug drop-shadow-md">
-                        {photo.caption}
-                      </p>
-                      {service && (
-                        <p className="mt-1 text-xs font-semibold text-champagne drop-shadow-sm">
-                          {service.name}
-                        </p>
-                      )}
-                    </div>
-                  </div>
-
-                  {/* Mobile Discreet Floating Title Chip (No bulky white card) */}
-                  <div className="absolute bottom-2.5 left-2.5 right-2.5 sm:hidden flex items-end justify-between gap-2 pointer-events-none">
-                    <span className="inline-block max-w-[85%] truncate rounded-lg bg-black/65 px-2.5 py-1 text-xs font-medium text-white backdrop-blur-md shadow-sm">
-                      {photo.caption}
-                    </span>
-                    <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-black/65 text-white backdrop-blur-md shadow-sm">
-                      <Maximize2 className="h-3.5 w-3.5" />
+                  {/* Clean Hover Cue — Subtle zoom icon only (No text overlay) */}
+                  <div className="absolute inset-0 flex items-center justify-center bg-black/20 opacity-0 transition-opacity duration-200 group-hover:opacity-100">
+                    <span className="flex h-11 w-11 items-center justify-center rounded-full bg-ivory/95 text-emerald shadow-lg transition-transform duration-200 group-hover:scale-110">
+                      <Maximize2 className="h-5 w-5" />
                     </span>
                   </div>
                 </div>
@@ -156,7 +114,7 @@ export function GalleryView({
         </div>
       )}
 
-      {/* Fullscreen Lightbox Modal */}
+      {/* Fullscreen Lightbox Modal (Carries caption, service link & WhatsApp enquiry) */}
       <GalleryLightbox
         photos={filteredItems}
         activeIndex={lightboxIndex}
