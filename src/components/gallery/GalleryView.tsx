@@ -29,10 +29,10 @@ export function GalleryView({
 
   return (
     <div>
-      {/* 10 Services Filter Rail */}
-      <div className="mb-10">
-        <div className="flex items-center justify-between pb-3 text-xs text-muted font-medium">
-          <span>Filter by Service</span>
+      {/* Sticky 10 Services Filter Rail */}
+      <div className="sticky top-[68px] sm:top-[92px] z-30 -mx-4 px-4 sm:-mx-6 sm:px-6 bg-ivory/95 backdrop-blur-md pt-2 pb-3 mb-8 border-b border-line/60">
+        <div className="flex items-center justify-between pb-2.5 text-xs text-muted font-medium">
+          <span className="font-semibold text-emerald">Browse by Service</span>
           <span>Showing {filteredItems.length} photos</span>
         </div>
 
@@ -40,7 +40,7 @@ export function GalleryView({
         <div
           role="tablist"
           aria-label="Gallery service filters"
-          className="review-rail flex gap-2 overflow-x-auto pb-3 sm:flex-wrap"
+          className="review-rail flex gap-2 overflow-x-auto pb-1 sm:flex-wrap"
         >
           {tabs.map((tab) => {
             const count = counts[tab.slug] ?? 0;
@@ -56,7 +56,7 @@ export function GalleryView({
                   setActiveTab(tab.slug);
                   setLightboxIndex(null);
                 }}
-                className={`inline-flex min-h-11 shrink-0 items-center gap-2 rounded-full border px-4 py-2 text-xs sm:text-sm font-medium transition-all focus-visible:outline-gold ${
+                className={`inline-flex min-h-10 shrink-0 items-center gap-2 rounded-full border px-3.5 py-1.5 text-xs sm:text-sm font-medium transition-all focus-visible:outline-gold ${
                   isActive
                     ? "border-emerald bg-emerald text-ivory shadow-sm"
                     : "border-line bg-white text-ink hover:border-gold hover:text-emerald"
@@ -78,7 +78,7 @@ export function GalleryView({
         </div>
       </div>
 
-      {/* Gallery Masonry Grid */}
+      {/* Gallery Masonry Grid — Photo First Luxury Presentation */}
       {filteredItems.length === 0 ? (
         <div className="rounded-2xl border border-line bg-champagne/30 p-12 text-center">
           <p className="text-muted">No set-up photos available for this category yet.</p>
@@ -98,7 +98,7 @@ export function GalleryView({
             return (
               <div
                 key={photo.id || photo.src}
-                className="group relative mb-5 break-inside-avoid overflow-hidden rounded-xl border border-line bg-white shadow-xs transition-all hover:border-gold hover:shadow-md cursor-pointer"
+                className="group relative mb-5 break-inside-avoid overflow-hidden rounded-2xl border border-line/70 bg-[#171e1a] shadow-xs transition-all duration-300 hover:border-gold hover:shadow-xl cursor-pointer"
                 onClick={() => setLightboxIndex(index)}
                 onKeyDown={(e) => {
                   if (e.key === "Enter" || e.key === " ") {
@@ -110,6 +110,7 @@ export function GalleryView({
                 tabIndex={0}
                 aria-label={`View ${photo.caption} in fullscreen`}
               >
+                {/* Photo itself */}
                 <div className="relative overflow-hidden bg-champagne/20">
                   <Image
                     src={photo.src}
@@ -117,25 +118,37 @@ export function GalleryView({
                     width={900}
                     height={700}
                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                    className="h-auto w-full object-cover transition-transform duration-300 group-hover:scale-[1.03]"
+                    className="h-auto w-full object-cover transition-transform duration-500 group-hover:scale-105"
                   />
-                  {/* Subtle hover icon overlay */}
-                  <div className="absolute inset-0 flex items-center justify-center bg-black/25 opacity-0 transition-opacity duration-200 group-hover:opacity-100">
-                    <span className="flex h-10 w-10 items-center justify-center rounded-full bg-ivory/95 text-emerald shadow-md">
-                      <Maximize2 className="h-5 w-5" />
+
+                  {/* Desktop Hover Gradient Overlay */}
+                  <div className="absolute inset-0 hidden sm:flex flex-col justify-between p-4 bg-gradient-to-t from-black/85 via-black/25 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                    <div className="self-end">
+                      <span className="flex h-9 w-9 items-center justify-center rounded-full bg-white/25 text-white backdrop-blur-md shadow-sm transition-transform duration-200 group-hover:scale-110">
+                        <Maximize2 className="h-4 w-4" />
+                      </span>
+                    </div>
+                    <div>
+                      <p className="font-display text-lg text-white leading-snug drop-shadow-md">
+                        {photo.caption}
+                      </p>
+                      {service && (
+                        <p className="mt-1 text-xs font-semibold text-champagne drop-shadow-sm">
+                          {service.name}
+                        </p>
+                      )}
+                    </div>
+                  </div>
+
+                  {/* Mobile Discreet Floating Title Chip (No bulky white card) */}
+                  <div className="absolute bottom-2.5 left-2.5 right-2.5 sm:hidden flex items-end justify-between gap-2 pointer-events-none">
+                    <span className="inline-block max-w-[85%] truncate rounded-lg bg-black/65 px-2.5 py-1 text-xs font-medium text-white backdrop-blur-md shadow-sm">
+                      {photo.caption}
+                    </span>
+                    <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-black/65 text-white backdrop-blur-md shadow-sm">
+                      <Maximize2 className="h-3.5 w-3.5" />
                     </span>
                   </div>
-                </div>
-
-                <div className="flex flex-col gap-1 p-3.5">
-                  <p className="font-medium text-sm text-ink group-hover:text-emerald transition-colors">
-                    {photo.caption}
-                  </p>
-                  {service && (
-                    <p className="text-xs text-gold-700 font-medium">
-                      {service.name}
-                    </p>
-                  )}
                 </div>
               </div>
             );
