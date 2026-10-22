@@ -315,3 +315,23 @@ the facts (colours, materials) are right.
 Designer & banquet chairs (8): Ornate, Cross Back, Luna Oval, Regal Flora, Imperia Chiavari, Valeria's Crown, Elvira,
 Aurelian Gold Chiavari · Clear / acrylic chairs (5): Aurora, Aurélia, Lumina, Lucent, Acrylic · Wooden chairs (2):
 Tonate, Rattan · Stage sofas (5) · Tents (4). | OK / Correction: |
+
+## Sample reviews on the Home page (2026-10-22) — must be replaced before launch
+
+The Home page reviews section shows 8 **sample** reviews so the layout can be checked. They are not from real
+customers and the section shows one note saying so. Before go-live, replace them in `src/data/reviews.json` with real
+Google reviews (reviewer name as shown on Google, text, star rating, occasion, area) and set `"sample": false`,
+or remove the entry (D23). The name shows with an initial avatar once `name` is filled in.
+
+| # | Occasion · Area | Sample text (to replace) | Real review: |
+| --- | --- | --- | --- |
+| 1 | Wedding · Banjara Hills | Tents, chairs and lighting, ready by morning, two boys stayed till the end | |
+| 2 | Reception · Gachibowli | Gold Chiavari chairs and round tables for 300 | |
+| 3 | Nikah · Tolichowki | Stage and sofa at two days' notice | |
+| 4 | Engagement · Kondapur | Mandap flower work, on-time pick-up | |
+| 5 | Birthday · Madhapur | Sound system and DJ, fair rates | |
+| 6 | Office function · Hitec City | Diwali function, pagodas, lights, catering counters | |
+| 7 | Griha pravesh · Jubilee Hills | Chairs and shamiana for a small pooja | |
+| 8 | Haldi · Mehdipatnam | Calcutta decoration matched the WhatsApp photo | |
+
+New step labels in "How booking works": Any time · Before guests arrive · On the day · Day or night. | OK / Correction: |

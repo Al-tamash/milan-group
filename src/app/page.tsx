@@ -8,10 +8,12 @@ import { FaqList, HowItWorks, StatsLine } from "@/components/sections";
 import { RatingBadge } from "@/components/ui";
 import { ServiceList } from "@/components/ServiceList";
 import { OccasionTiles } from "@/components/OccasionTiles";
+import { Testimonials } from "@/components/Testimonials";
 
-// Hero uses the stage photo; the rest of the real set-up photos go to the gallery band below.
+// Hero uses the stage photo; the other real set-up photos go to the gallery band below. Catalog shots (with
+// printed titles or dimension labels) stay on the service pages.
 const HERO = gallery[1];
-const GALLERY = gallery.filter((g) => g !== HERO).slice(0, 5);
+const GALLERY = gallery.filter((g) => g !== HERO && g.src.startsWith("/images/home/"));
 
 export default function Home() {
   return (
@@ -63,13 +65,13 @@ export default function Home() {
               See the gallery <ArrowRight className="h-4 w-4" />
             </Link>
           </div>
-          <div className="mt-8 grid grid-cols-2 gap-3 lg:grid-cols-4 lg:grid-rows-2">
+          <div className="mt-8 grid grid-cols-2 gap-3 lg:grid-cols-3">
             {GALLERY.map((g, i) => (
               <figure
                 key={g.src}
-                className={`relative overflow-hidden rounded-lg ${i === 0 ? "col-span-2 aspect-[4/3] lg:row-span-2 lg:aspect-auto" : "aspect-square"}`}
+                className={`relative overflow-hidden rounded-lg ${i === 0 ? "col-span-2 aspect-[4/3] lg:col-span-1 lg:aspect-[3/4]" : "aspect-[3/4]"}`}
               >
-                <Image src={g.src} alt={g.caption} fill sizes={i === 0 ? "(max-width: 1024px) 100vw, 50vw" : "(max-width: 1024px) 50vw, 25vw"} className="object-cover" />
+                <Image src={g.src} alt={g.caption} fill sizes={i === 0 ? "(max-width: 1024px) 100vw, 33vw" : "(max-width: 1024px) 50vw, 33vw"} className="object-cover" />
               </figure>
             ))}
           </div>
@@ -87,7 +89,9 @@ export default function Home() {
         </div>
       </section>
 
-      <HowItWorks />
+      <HowItWorks cta />
+
+      <Testimonials />
 
       {/* FAQ */}
       <section className="mx-auto grid max-w-7xl gap-8 px-4 py-16 sm:px-6 lg:grid-cols-[1fr_1.6fr] lg:gap-12">
