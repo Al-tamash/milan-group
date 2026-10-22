@@ -110,8 +110,20 @@
   {
     "id": "jewellery-stage-props",
     "src": "/images/services/jewellery.webp",
-    "caption": "Traditional Wedding Stage Jewellery and Royal Accessories",
-    "service": "jewellery"
+    "caption": "Traditional Wedding Stage Jewellery & Accessories",
+    "service": "flower-garlands-and-jewellery"
+  },
+  {
+    "id": "flower-garlands-varmala",
+    "src": "/images/items/j-varmala.webp",
+    "caption": "Fresh Rose and Jasmine Wedding Varmala Garlands",
+    "service": "flower-garlands-and-jewellery"
+  },
+  {
+    "id": "floral-jewellery-haldi",
+    "src": "/images/items/j-haldi.webp",
+    "caption": "Handmade Floral Jewellery Set for Haldi and Mehendi",
+    "service": "flower-garlands-and-jewellery"
   },
   {
     "id": "furniture-hall-seating",
