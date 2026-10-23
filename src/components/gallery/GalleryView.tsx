@@ -4,7 +4,7 @@ import { useMemo, useState } from "react";
 import Image from "next/image";
 import { Maximize2, Sparkles } from "lucide-react";
 import type { Service } from "@/lib/data";
-import { filterGallery, type GalleryItem } from "@/lib/gallery";
+import { filterGallery, galleryTabs, type GalleryItem } from "@/lib/gallery";
 import { GalleryLightbox } from "./GalleryLightbox";
 
 export function GalleryView({
@@ -17,9 +17,7 @@ export function GalleryView({
   const [activeTab, setActiveTab] = useState<string>("all");
   const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
 
-  const tabs = useMemo(() => {
-    return [{ slug: "all", name: "All Set-ups" }, ...services];
-  }, [services]);
+  const tabs = useMemo(() => galleryTabs(services), [services]);
 
   const filteredItems = useMemo(() => {
     return filterGallery(items, activeTab);

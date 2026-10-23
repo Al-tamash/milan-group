@@ -15,7 +15,8 @@
     "id": "furniture-banquet-setup",
     "src": "/images/home/tables.webp",
     "caption": "Round Banquet Tables with Gold Chiavari Chairs",
-    "service": "furniture-and-seating"
+    "service": "furniture-and-seating",
+    "category": "chairs-and-tables"
   },
   {
     "id": "decor-fairy-light-walkway",
@@ -33,7 +34,8 @@
     "id": "furniture-royal-blue-sofa",
     "src": "/images/products/velvet-sofa-royal-blue-1.webp",
     "caption": "Royal Blue Velvet Wedding Stage Sofa",
-    "service": "furniture-and-seating"
+    "service": "furniture-and-seating",
+    "category": "sofas"
   },
   {
     "id": "lighting-chandeliers-ambience",
@@ -63,7 +65,8 @@
     "id": "furniture-milan-elegance-sofa",
     "src": "/images/products/milan-elegance.webp",
     "caption": "Milan Elegance Carved Royal Stage Throne",
-    "service": "furniture-and-seating"
+    "service": "furniture-and-seating",
+    "category": "sofas"
   },
   {
     "id": "tents-pagoda-20x20",
@@ -75,7 +78,8 @@
     "id": "furniture-acrylic-chairs",
     "src": "/images/products/acrylic-chiavari.webp",
     "caption": "Crystal Clear Acrylic Chiavari Banquet Chairs",
-    "service": "furniture-and-seating"
+    "service": "furniture-and-seating",
+    "category": "chairs-and-tables"
   },
   {
     "id": "flowers-traditional-mandap",
@@ -87,7 +91,8 @@
     "id": "furniture-velvet-beige-sofa",
     "src": "/images/products/velvet-sofa-beige-1.webp",
     "caption": "Beige Luxury Velvet Stage Sofa",
-    "service": "furniture-and-seating"
+    "service": "furniture-and-seating",
+    "category": "sofas"
   },
   {
     "id": "catering-buffet-setup",
@@ -129,13 +134,15 @@
     "id": "furniture-hall-seating",
     "src": "/images/services/furniture-and-seating.webp",
     "caption": "Grand Venue Seating with Draped Banquet Chairs",
-    "service": "furniture-and-seating"
+    "service": "furniture-and-seating",
+    "category": "chairs-and-tables"
   },
   {
     "id": "furniture-emerald-sofa",
     "src": "/images/products/velvet-sofa-emerald-green-1.webp",
     "caption": "Emerald Green Velvet Stage Lounge Sofa",
-    "service": "furniture-and-seating"
+    "service": "furniture-and-seating",
+    "category": "sofas"
   },
   {
     "id": "tents-roofing-shamiyana",
@@ -147,13 +154,15 @@
     "id": "furniture-milan-curve-sofa",
     "src": "/images/products/milan-curve.webp",
     "caption": "Milan Curve Contemporary Stage Sofa",
-    "service": "furniture-and-seating"
+    "service": "furniture-and-seating",
+    "category": "sofas"
   },
   {
     "id": "furniture-imperia-gold-chair",
     "src": "/images/products/imperia-front.webp",
     "caption": "Imperia Gold Banquet Chairs with Cushioned Seats",
-    "service": "furniture-and-seating"
+    "service": "furniture-and-seating",
+    "category": "chairs-and-tables"
   },
   {
     "id": "tents-pagoda-3x3",

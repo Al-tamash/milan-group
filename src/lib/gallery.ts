@@ -3,40 +3,36 @@ export type GalleryItem = {
   src: string;
   caption: string;
   service: string;
+  /** Gallery tab within a split service (see GALLERY_SPLITS) */
+  category?: string;
   alt?: string;
 };
 
-/**
- * Filter gallery items by service slug.
- * "all" returns all items.
- */
-export function filterGallery(items: GalleryItem[], serviceSlug: string): GalleryItem[] {
-  if (serviceSlug === "all") return items;
-  return items.filter((item) => item.service === serviceSlug);
+export type GalleryTab = { slug: string; name: string };
+
+/** Services shown as more than one gallery tab. Items in these services carry a matching `category`. */
+export const GALLERY_SPLITS: Record<string, GalleryTab[]> = {
+  "furniture-and-seating": [
+    { slug: "sofas", name: "Sofas" },
+    { slug: "chairs-and-tables", name: "Chairs & Tables" },
+  ],
+};
+
+/** "All Set-ups" first, then one tab per service, with split services replaced by their split tabs in place. */
+export function galleryTabs(services: { slug: string; name: string }[]): GalleryTab[] {
+  return [
+    { slug: "all", name: "All Set-ups" },
+    ...services.flatMap((s) => GALLERY_SPLITS[s.slug] ?? [{ slug: s.slug, name: s.name }]),
+  ];
 }
 
 /**
- * Calculate count of photos per service, plus the "all" total.
+ * Filter gallery items by tab: an item's `category` if it has one, otherwise its service slug.
+ * "all" returns all items.
  */
-export function getServiceCounts(
-  items: GalleryItem[],
-  services: { slug: string; name: string }[],
-): Record<string, number> {
-  const counts: Record<string, number> = {
-    all: items.length,
-  };
-
-  for (const s of services) {
-    counts[s.slug] = 0;
-  }
-
-  for (const item of items) {
-    if (counts[item.service] !== undefined) {
-      counts[item.service]++;
-    }
-  }
-
-  return counts;
+export function filterGallery(items: GalleryItem[], tab: string): GalleryItem[] {
+  if (tab === "all") return items;
+  return items.filter((item) => (item.category ?? item.service) === tab);
 }
 
 /**
