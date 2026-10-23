@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
-import { Instagram } from "lucide-react";
-import { gallery, services, site } from "@/lib/data";
+import { gallery, services } from "@/lib/data";
 import { PageHero } from "@/components/ui";
 import { WhatsAppButton } from "@/components/ContactButtons";
 import { GalleryView } from "@/components/gallery/GalleryView";
+import { SocialLinks } from "@/components/SocialLinks";
 
 export const metadata: Metadata = {
   title: "Gallery — Event Set-ups & Décor in Hyderabad",
@@ -34,18 +34,11 @@ export default function GalleryPage() {
                 Looking for photos from our newest events?
               </h2>
               <p className="mt-1 text-sm text-muted">
-                Follow @{site.instagramHandle} on Instagram for live stories and recent function photos.
+                Follow us on Instagram, Facebook and YouTube for recent function photos.
               </p>
             </div>
-            <div className="flex flex-col sm:flex-row gap-3">
-              <a
-                href={site.instagram}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex min-h-11 items-center justify-center gap-2 rounded-full border border-emerald px-6 py-2.5 text-sm font-semibold text-emerald hover:bg-emerald hover:text-ivory transition-colors"
-              >
-                <Instagram className="h-4 w-4" /> Open Instagram
-              </a>
+            <div className="flex flex-col sm:flex-row sm:items-center gap-3">
+              <SocialLinks tone="light" />
               <WhatsAppButton
                 location="gallery"
                 message="Hi Milan Group, I saw your gallery and would like to enquire about setup availability for an event."

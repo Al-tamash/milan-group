@@ -48,7 +48,7 @@ const localBusiness = {
   geo: { "@type": "GeoCoordinates", latitude: site.geo.lat, longitude: site.geo.lng },
   hasMap: site.mapUrl,
   openingHours: "Mo-Su 08:00-22:00",
-  sameAs: [site.instagram],
+  sameAs: site.socials.map((s) => s.url),
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

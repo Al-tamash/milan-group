@@ -1,6 +1,7 @@
 import Link from "next/link";
-import { Clock, Instagram, MapPin, Phone } from "lucide-react";
+import { Clock, MapPin, Phone } from "lucide-react";
 import { Logo } from "./Logo";
+import { SocialLinks } from "./SocialLinks";
 import { services, site } from "@/lib/data";
 
 // Address parts never break mid-phrase ("Road No. 86" stays together); lines wrap only between parts.
@@ -66,16 +67,8 @@ export function Footer() {
                 </a>
               </li>
             ))}
-            <li>
-              <a
-                href={site.instagram}
-                target="_blank"
-                rel="noopener"
-                title={`@${site.instagramHandle}`}
-                className="flex min-h-11 items-center gap-2.5 hover:text-gold lg:min-h-9"
-              >
-                <Instagram className="h-4 w-4 shrink-0 text-gold" /> Follow us on Instagram
-              </a>
+            <li className="-ml-3 pt-2">
+              <SocialLinks tone="dark" />
             </li>
           </ul>
         </div>
