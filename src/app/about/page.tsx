@@ -93,6 +93,9 @@ export default function AboutPage() {
               Our team plans with you, brings everything and sets it up at your venue, stays till the function ends, and
               clears up afterwards.
             </p>
+            <p className="border-t border-gold/50 pt-4 text-ink/80">
+              Founded in {site.since} by Late Mr. Mohammad Amjad.
+            </p>
           </div>
           <div className="mt-7 flex flex-col gap-3 sm:flex-row">
             <WhatsAppButton location="about" />

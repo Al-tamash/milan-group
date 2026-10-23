@@ -1,6 +1,6 @@
 import Link from "next/link";
 import {
-  Armchair, Fan, Flower2, Gem, Lightbulb, PartyPopper, Speaker, Star, Tent, Heart, UtensilsCrossed, type LucideIcon,
+  Armchair, BadgeCheck, Fan, Flower2, Gem, Lightbulb, PartyPopper, Speaker, Star, Tent, Heart, UtensilsCrossed, type LucideIcon,
 } from "lucide-react";
 import { site } from "@/lib/data";
 
@@ -68,6 +68,9 @@ export function RatingBadge({ dark = false }: { dark?: boolean }) {
       </span>
       <span>
         <strong>{site.rating.value}</strong> · {site.rating.count} Google reviews
+        <span className={`flex items-center gap-1 text-xs font-semibold ${dark ? "text-gold" : "text-emerald"}`}>
+          <BadgeCheck className="h-3.5 w-3.5" aria-hidden="true" /> Verified on Google
+        </span>
       </span>
     </a>
   );
