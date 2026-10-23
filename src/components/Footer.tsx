@@ -53,7 +53,11 @@ export function Footer() {
               </span>
             </li>
             <li className="flex gap-2.5 py-1">
-              <Clock className="mt-1 h-4 w-4 shrink-0 text-gold" /> {site.hours}
+              <Clock className="mt-1 h-4 w-4 shrink-0 text-gold" />
+              <span>
+                {site.hours}
+                <span className="block text-ivory/60">{site.emergency}</span>
+              </span>
             </li>
             {site.contacts.filter((c) => c.primary).map((c) => (
               <li key={c.name}>

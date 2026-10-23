@@ -78,7 +78,7 @@ export function HowItWorks({ cta = false, photo = true }: { cta?: boolean; photo
 export function StatsLine({ dark = false }: { dark?: boolean }) {
   return (
     <p className={`text-sm ${dark ? "text-ivory/80" : "text-muted"}`}>
-      Since {site.since} · Jubilee Hills, Hyderabad · Open 24 hours
+      Since {site.since} · Jubilee Hills, Hyderabad · {site.hours}
     </p>
   );
 }

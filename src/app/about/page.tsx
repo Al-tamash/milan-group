@@ -24,8 +24,8 @@ const COUNT_ON = [
     text: "They deliver, set everything up before your guests arrive, stay till the function ends and clear up after.",
   },
   {
-    title: "Open 24 hours",
-    text: "Call any time, day or night: before the booking, on the day, or when something comes up.",
+    title: "Here when it matters",
+    text: "The office is open every day from 8 am to 10 pm. If something goes wrong at your function after hours, our emergency service runs 24 hours.",
   },
   {
     title: `In Jubilee Hills since ${site.since}`,
@@ -35,7 +35,7 @@ const COUNT_ON = [
 
 // Names and roles as on the business card. Numbers stay hidden; the buttons dial or open WhatsApp directly.
 const PEOPLE = [
-  { name: "Amjad", role: site.contacts[0].role, phone: site.contacts[0].phones[0], whatsapp: site.enquiryWhatsApp },
+  { name: site.contacts[0].name, role: site.contacts[0].role, phone: site.contacts[0].phones[0], whatsapp: site.enquiryWhatsApp },
   { name: "Asiya Madam", role: site.contacts[1].role, phone: site.contacts[1].phones[0] },
   { name: "Arif", role: site.contacts[4].role, phone: site.contacts[4].phones[0], whatsapp: site.flowerWhatsApp, topic: "wedding flower work" },
 ];
@@ -158,7 +158,7 @@ export default function AboutPage() {
           <div>
             <h2 id="people" className="font-display text-4xl text-emerald sm:text-5xl">Who you&rsquo;ll talk to</h2>
             <p className="mt-4 max-w-md text-[0.9375rem] leading-relaxed text-muted sm:text-base">
-              Ask for Amjad or Asiya Madam for bookings. Wedding flower work is handled by Arif directly.
+              Call Milan Group or Asiya Madam for bookings. Wedding flower work is handled by Arif directly.
             </p>
             <ul className="mt-8 space-y-3 text-[0.9375rem] text-ink/85">
               <li className="flex gap-3">
@@ -172,7 +172,11 @@ export default function AboutPage() {
                 </span>
               </li>
               <li className="flex gap-3">
-                <Clock className="mt-0.5 h-5 w-5 shrink-0 text-gold-700" /> {site.hours}, every day
+                <Clock className="mt-0.5 h-5 w-5 shrink-0 text-gold-700" />
+                <span>
+                  {site.hours}
+                  <span className="block text-muted">{site.emergency}</span>
+                </span>
               </li>
             </ul>
           </div>

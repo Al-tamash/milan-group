@@ -24,7 +24,7 @@ const SEND_US = [
 // Contacts as on the business card, grouped so the first people to call are obvious.
 const contact = (name: string) => site.contacts.find((c) => c.name === name)!;
 const GROUPS = [
-  { title: "Bookings and enquiries", people: [contact("Amjad"), contact("Asiya Madam")] },
+  { title: "Bookings and enquiries", people: [contact("Milan Group"), contact("Asiya Madam")] },
   { title: "Wedding flower work", people: [contact("Arif")] },
   { title: "Also at the office", people: [contact("Fasi"), contact("Fazal")], compact: true },
 ];
@@ -43,8 +43,8 @@ export default function ContactPage() {
             </nav>
             <h1 className="font-display mt-5 text-balance text-[2.6rem] leading-[1.05] text-emerald sm:text-5xl xl:text-[3.5rem]">Call or WhatsApp us</h1>
             <p className="mt-5 max-w-lg text-[1.0625rem] leading-relaxed text-ink/80 sm:text-lg">
-              We&rsquo;re open {site.hours.toLowerCase().replace("open ", "")}, every day. Send us the details and we&rsquo;ll
-              reply with availability and a rate.
+              We&rsquo;re open daily from 8 am to 10 pm. Send us the details and we&rsquo;ll reply with availability and
+              a rate.
             </p>
             <div className="mt-7 flex flex-col gap-3 sm:flex-row">
               <WhatsAppButton location="contact-hero" message={QUOTE_MESSAGE} />
@@ -137,7 +137,11 @@ export default function ContactPage() {
                 <span>{site.address.line1},<br />{site.address.line2}</span>
               </p>
               <p className="flex gap-3">
-                <Clock className="mt-0.5 h-5 w-5 shrink-0 text-gold-700" /> {site.hours}, every day
+                <Clock className="mt-0.5 h-5 w-5 shrink-0 text-gold-700" />
+                <span>
+                  {site.hours}
+                  <span className="block text-muted">{site.emergency}</span>
+                </span>
               </p>
             </div>
           </div>

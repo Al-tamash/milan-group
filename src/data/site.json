@@ -4,7 +4,8 @@
   "motto": "We Deliver, You Celebrate",
   "promise": "The Complete Set-up Solution",
   "url": "https://milan-group.pages.dev",
-  "hours": "Open 24 hours",
+  "hours": "Open daily, 8 am – 10 pm",
+  "emergency": "Emergency service 24 hours",
   "address": {
     "line1": "Plot No. 479, Phase-II, Road No. 86",
     "line2": "Jubilee Hills, Hyderabad-500033, Telangana",
@@ -17,14 +18,20 @@
   "geo": { "lat": 17.4080518, "lng": 78.4181941 },
   "mapUrl": "https://maps.app.goo.gl/7yPNR2mVQcQpzAEs8",
   "mapEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3807.0777314003612!2d78.41561917462742!3d17.40805690221046!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb96b4fc43b6c9%3A0xa77733b1494c5c09!2sMilan%20Group!5e0!3m2!1sen!2sus!4v1792665346079!5m2!1sen!2sus",
-  "instagram": "https://www.instagram.com/milan_supplying_company_event",
-  "instagramHandle": "milan_supplying_company_event",
+  "socials": [
+    { "key": "instagram", "label": "Instagram", "url": "https://www.instagram.com/milan_s_co_group/" },
+    { "key": "facebook", "label": "Facebook", "url": "https://www.facebook.com/milansupplyingcompany1218" },
+    { "key": "youtube", "label": "YouTube", "url": "https://www.youtube.com/@Milanscogroup" },
+    { "key": "x", "label": "X", "url": "https://x.com/CoSupplying" },
+    { "key": "whatsapp-channel", "label": "WhatsApp Channel", "url": "https://whatsapp.com/channel/0029Va6JZStL2ATy7zUn2r14" }
+  ],
+  "tour360": "",
   "rating": { "value": 4.2, "count": 27, "checked": "2026-10-21" },
   "since": 1995,
   "stats": [
     { "value": "30+", "label": "Years of experience" },
     { "value": "10,000+", "label": "Events set up", "estimate": true },
-    { "value": "24 hrs", "label": "Service & support" },
+    { "value": "24 hrs", "label": "Emergency service" },
     { "value": "4.2★", "label": "Google rating" }
   ],
   "faqs": [
@@ -37,7 +44,7 @@
   "enquiryWhatsApp": "919441361086",
   "flowerWhatsApp": "919110774085",
   "contacts": [
-    { "name": "Amjad", "role": "Main contact", "phones": ["9441361086"], "primary": true },
+    { "name": "Milan Group", "role": "Bookings & enquiries", "phones": ["9441361086"], "primary": true },
     { "name": "Asiya Madam", "role": "Main contact", "phones": ["9550838576"], "primary": true },
     { "name": "Fasi", "role": "Milan Group", "phones": ["7981148733"] },
     { "name": "Fazal", "role": "Milan Group", "phones": ["8096373015"] },

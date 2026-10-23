@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     template: "%s | Milan Group",
   },
   description:
-    "Milan Group, Jubilee Hills: tents, designer chairs, stage sofas, sound, lighting, Calcutta and wedding flower decoration. We bring it, set it up and clear it after. Open 24 hours.",
+    "Milan Group, Jubilee Hills: tents, designer chairs, stage sofas, sound, lighting, Calcutta and wedding flower decoration. We bring it, set it up and clear it after. Open daily 8 am – 10 pm.",
   openGraph: { type: "website", siteName: site.name, locale: "en_IN", images: ["/images/home/stage.webp"] },
 };
 
@@ -47,7 +47,7 @@ const localBusiness = {
   },
   geo: { "@type": "GeoCoordinates", latitude: site.geo.lat, longitude: site.geo.lng },
   hasMap: site.mapUrl,
-  openingHours: "Mo-Su 00:00-23:59",
+  openingHours: "Mo-Su 08:00-22:00",
   sameAs: [site.instagram],
 };
 

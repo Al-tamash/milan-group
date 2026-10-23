@@ -111,7 +111,7 @@ export default function Home() {
           <div>
             <h2 className="font-display text-4xl text-emerald sm:text-5xl">Come and see us, or just call</h2>
             <p className="mt-4 text-muted">{site.address.line1}, {site.address.line2}</p>
-            <p className="mt-1 text-muted">Open 24 hours. Ask for Amjad or Asiya Madam.</p>
+            <p className="mt-1 text-muted">{site.hours}. Emergency service 24 hours. Ask for Asiya Madam.</p>
             <div className="mt-6 flex flex-col gap-3 sm:flex-row">
               <WhatsAppButton location="home-contact" />
               <CallButton location="home-contact" />
