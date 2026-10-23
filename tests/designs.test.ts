@@ -20,9 +20,9 @@ test("groups furniture designs in label order and skips other categories", () =>
   assert.equal(g[0].label, "Designer & banquet chairs");
 });
 
-test("tents page gets one Tents group of 4", () => {
+test("tents page gets one Tents group of 5", () => {
   const g = groupDesigns(products, ["tents"]);
-  assert.deepEqual(g.map((x) => [x.group, x.items.length]), [["tents", 4]]);
+  assert.deepEqual(g.map((x) => [x.group, x.items.length]), [["tents", 5]]);
 });
 
 test("colourLine lists colours only when there is a choice", () => {

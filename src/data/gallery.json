@@ -1,5 +1,60 @@
 [
   {
+    "id": "real-hall-tent",
+    "src": "/images/home/real-hall-tent.webp",
+    "caption": "Large covered hall with green flooring, ready for guests",
+    "service": "tents-and-roofing"
+  },
+  {
+    "id": "real-palace-tent",
+    "src": "/images/home/real-palace-tent.webp",
+    "caption": "Covered lawn set-up with tables and chairs at a heritage venue",
+    "service": "tents-and-roofing"
+  },
+  {
+    "id": "real-lawn-banquet",
+    "src": "/images/items/f-banquet-tables.webp",
+    "caption": "Round tables with covered chairs on a lawn",
+    "service": "furniture-and-seating",
+    "category": "chairs-and-tables"
+  },
+  {
+    "id": "real-night-decor",
+    "src": "/images/home/real-night-decor.webp",
+    "caption": "Evening function under hanging lights and red decor",
+    "service": "lighting-and-electrical"
+  },
+  {
+    "id": "tents-super-structure",
+    "src": "/images/products/super-structure-2.webp",
+    "caption": "Super structure steel frame going up on open ground",
+    "service": "tents-and-roofing"
+  },
+  {
+    "id": "real-german-hanger",
+    "src": "/images/home/real-german-hanger.webp",
+    "caption": "German hanger tent set up on open ground",
+    "service": "tents-and-roofing"
+  },
+  {
+    "id": "real-entrance-gate",
+    "src": "/images/home/real-entrance-gate.webp",
+    "caption": "Decorated entrance gate with a red carpet welcome",
+    "service": "theme-functions"
+  },
+  {
+    "id": "real-lawn-tent",
+    "src": "/images/home/real-lawn-tent.webp",
+    "caption": "Long tent along a lawn, open on one side",
+    "service": "tents-and-roofing"
+  },
+  {
+    "id": "real-tent-interior",
+    "src": "/images/home/real-tent-interior.webp",
+    "caption": "Tent with white side walls and red carpet flooring",
+    "service": "tents-and-roofing"
+  },
+  {
     "id": "tents-german-hanger",
     "src": "/images/products/german-hanger.webp",
     "caption": "German Hanger Tent with Waterproof Canopy",

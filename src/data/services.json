@@ -15,7 +15,7 @@
       { "name": "Banquet & designer chairs", "text": "Chiavari, ornate, cross-back, acrylic and wooden chairs in many colours.", "image": "products/imperia-front" },
       { "name": "Stage & lounge sofas", "text": "Carved classic and velvet sofas for the wedding stage and VIP seating.", "image": "products/milan-curve" },
       { "name": "Round banquet tables", "text": "Dining tables with linen for receptions and wedding lunches.", "image": "items/f-round-tables", "stock": true },
-      { "name": "Long banquet & buffet tables", "text": "Rectangular tables for buffet counters, head tables and registration desks.", "image": "items/f-banquet-tables", "stock": true },
+      { "name": "Long banquet & buffet tables", "text": "Rectangular tables for buffet counters, head tables and registration desks.", "image": "items/f-banquet-tables" },
       { "name": "Lounge sets", "text": "Sofas with coffee tables for VIP areas, lobbies and photo corners.", "image": "items/f-lounge-sets", "stock": true },
       { "name": "Carpets & aisle runners", "text": "Red and coloured carpets for entrances, aisles and seating areas.", "image": "items/f-carpets", "stock": true }
     ],
@@ -70,11 +70,12 @@
     "imagePlaceholder": true,
     "imageCredit": "https://images.unsplash.com/photo-1675376616537-c8aa9ddc9977",
     "items": [
-      { "name": "German hanger (super structure)", "text": "Large waterproof aluminium halls with no centre poles. A banquet hall on any open ground.", "image": "products/german-hanger" },
+      { "name": "German hanger", "text": "Large waterproof aluminium halls with no centre poles. A banquet hall on any open ground.", "image": "products/german-hanger" },
+      { "name": "Super structure", "text": "A steel frame structure put up on open ground and covered over, for big gatherings.", "image": "products/super-structure-1" },
       { "name": "Pagoda tents", "text": "Peaked tents for entrances, food counters, lounges and stalls.", "image": "products/german-aluminium-pagoda" },
-      { "name": "Pipe pandals", "text": "Classic pandals with a waterproof roof option, decorated with drapes.", "image": "items/t-pandal", "stock": true },
+      { "name": "Pipe pandals", "text": "Classic pandals with a waterproof roof option, decorated with drapes.", "image": "items/t-pandal" },
       { "name": "Shamiyana", "text": "Traditional colourful shamiyana for functions and poojas.", "image": "items/t-shamiyana", "stock": true },
-      { "name": "Gazebo tents", "text": "Quick canopy tents for small gatherings and outdoor counters.", "image": "items/t-gazebo", "stock": true }
+      { "name": "Gazebo tents", "text": "Quick canopy tents for small gatherings and outdoor counters.", "image": "items/t-gazebo" }
     ],
     "perfectFor": ["Outdoor weddings", "Receptions", "Lawn functions", "Religious gatherings", "Exhibitions", "Corporate events"],
     "faqs": [

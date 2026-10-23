@@ -516,5 +516,22 @@
       { "label": "Side height", "value": "3 m" }
     ],
     "suitedFor": ["Weddings", "Receptions", "Large gatherings", "Exhibitions"]
+  },
+  {
+    "slug": "super-structure",
+    "category": "tents",
+    "group": "tents",
+    "name": "Super Structure",
+    "tagline": "Steel-frame cover for big open-ground functions",
+    "description": "A steel frame structure we put up on open ground and cover over, for large gatherings that need a big roof without a building.",
+    "featured": false,
+    "variants": [{ "name": "White", "swatch": "#F4F2EE", "images": ["super-structure-1", "super-structure-2", "super-structure-3"] }],
+    "seatOptions": [],
+    "features": [
+      { "title": "Steel frame", "text": "Put up by our own crew on your ground." },
+      { "title": "Large covered span", "text": "One big roof over the whole gathering." }
+    ],
+    "dimensions": [],
+    "suitedFor": ["Weddings", "Receptions", "Large gatherings"]
   }
 ]

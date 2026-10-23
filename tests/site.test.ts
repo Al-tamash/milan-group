@@ -41,3 +41,22 @@ test("socials are the five verified accounts", () => {
 test("tour360 is empty until the customer sends it", () => {
   assert.equal(site.tour360, "");
 });
+
+type ProductLite = { slug: string; category: string; dimensions: unknown[]; variants: { images: string[] }[] };
+type ServiceLite = { slug: string; items: { name: string }[] };
+const products = JSON.parse(readFileSync("src/data/products.json", "utf8")) as ProductLite[];
+const services = JSON.parse(readFileSync("src/data/services.json", "utf8")) as ServiceLite[];
+
+test("super structure is its own tents product with real photos", () => {
+  const p = products.find((x) => x.slug === "super-structure")!;
+  assert.ok(p, "super-structure product missing");
+  assert.equal(p.category, "tents");
+  assert.deepEqual(p.dimensions, []);
+  assert.deepEqual(p.variants[0].images, ["super-structure-1", "super-structure-2", "super-structure-3"]);
+});
+
+test("tents service lists German hanger and Super structure separately", () => {
+  const names = services.find((s) => s.slug === "tents-and-roofing")!.items.map((i) => i.name);
+  assert.ok(names.includes("German hanger") && names.includes("Super structure"));
+  assert.ok(!names.some((n) => /german hanger \(super structure\)/i.test(n)));
+});
