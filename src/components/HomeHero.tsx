@@ -62,7 +62,7 @@ function SideScroll({ className }: { className: string }) {
       strokeWidth="9"
       strokeLinecap="round"
       aria-hidden="true"
-      className={`absolute top-[calc(50%-6px)] -mt-[35px] hidden h-[70px] w-[58px] md:block ${className}`}
+      className={`absolute top-[calc(50%-6px)] -mt-[35px] hidden h-[70px] w-[58px] min-[900px]:block ${className}`}
     >
       {SCROLL_HALF}
       <g transform="matrix(1 0 0 -1 0 610)">{SCROLL_HALF}</g>
@@ -78,10 +78,10 @@ function OrnamentFrame({ children }: { children: React.ReactNode }) {
       <span aria-hidden="true" className={`${line} left-5 right-5 top-[1.2px] h-[1.3px]`} />
       <span aria-hidden="true" className={`${line} bottom-[1.2px] left-5 right-5 h-[1.3px]`} />
       {/* Side edges break around the middle where the scroll sits; on mobile the scroll is hidden and the edge is whole. */}
-      <span aria-hidden="true" className={`${line} bottom-5 left-[1.2px] top-5 w-[1.3px] md:bottom-[calc(50%+22px)]`} />
-      <span aria-hidden="true" className={`${line} bottom-5 left-[1.2px] top-[calc(50%+10px)] hidden w-[1.3px] md:block`} />
-      <span aria-hidden="true" className={`${line} bottom-5 right-[1.2px] top-5 w-[1.3px] md:bottom-[calc(50%+22px)]`} />
-      <span aria-hidden="true" className={`${line} bottom-5 right-[1.2px] top-[calc(50%+10px)] hidden w-[1.3px] md:block`} />
+      <span aria-hidden="true" className={`${line} bottom-5 left-[1.2px] top-5 w-[1.3px] min-[900px]:bottom-[calc(50%+22px)]`} />
+      <span aria-hidden="true" className={`${line} bottom-5 left-[1.2px] top-[calc(50%+10px)] hidden w-[1.3px] min-[900px]:block`} />
+      <span aria-hidden="true" className={`${line} bottom-5 right-[1.2px] top-5 w-[1.3px] min-[900px]:bottom-[calc(50%+22px)]`} />
+      <span aria-hidden="true" className={`${line} bottom-5 right-[1.2px] top-[calc(50%+10px)] hidden w-[1.3px] min-[900px]:block`} />
       <Corner className="left-0 top-0" />
       <Corner className="right-0 top-0 -scale-x-100" />
       <Corner className="bottom-0 left-0 -scale-y-100" />

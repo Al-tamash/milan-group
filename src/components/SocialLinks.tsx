@@ -15,11 +15,12 @@ const ICONS: Record<string, string> = {
 
 // Verified accounts (D-round-1). The WhatsApp Channel carries its name as text so nobody mistakes it for the
 // enquiry chat button.
-export function SocialLinks({ tone = "light" }: { tone?: "light" | "dark" }) {
+// `exclude` drops accounts by key, e.g. the WhatsApp Channel next to an enquiry button.
+export function SocialLinks({ tone = "light", exclude = [] }: { tone?: "light" | "dark"; exclude?: string[] }) {
   const colour = tone === "dark" ? "text-gold hover:text-ivory" : "text-emerald hover:text-gold-700";
   return (
     <ul className="flex flex-wrap items-center gap-x-1 gap-y-1">
-      {site.socials.map((s) => (
+      {site.socials.filter((s) => !exclude.includes(s.key)).map((s) => (
         <li key={s.key}>
           <a
             href={s.url}

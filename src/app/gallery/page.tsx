@@ -38,7 +38,7 @@ export default function GalleryPage() {
               </p>
             </div>
             <div className="flex flex-col sm:flex-row sm:items-center gap-3">
-              <SocialLinks tone="light" />
+              <SocialLinks tone="light" exclude={["whatsapp-channel"]} />
               <WhatsAppButton
                 location="gallery"
                 message="Hi Milan Group, I saw your gallery and would like to enquire about setup availability for an event."
