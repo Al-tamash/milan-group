@@ -145,6 +145,22 @@ export default function ContactPage() {
               </p>
             </div>
           </div>
+          {/* 360° Street View tour: hidden until the customer's tour is published and the link is in site.json */}
+          {site.tour360 && (
+            <div className="mt-10">
+              <h2 className="font-display text-3xl text-emerald sm:text-4xl">Take a look around</h2>
+              <div className="mt-5 overflow-hidden rounded-xl border border-line bg-white">
+                <iframe
+                  title="360° view of Milan Group"
+                  src={site.tour360}
+                  className="block h-64 w-full sm:h-80"
+                  loading="lazy"
+                  referrerPolicy="strict-origin-when-cross-origin"
+                  allowFullScreen
+                />
+              </div>
+            </div>
+          )}
         </section>
       </div>
     </>
