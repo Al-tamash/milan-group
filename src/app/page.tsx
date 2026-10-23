@@ -10,42 +10,33 @@ import { RatingBadge } from "@/components/ui";
 import { ServiceList } from "@/components/ServiceList";
 import { OccasionTiles } from "@/components/OccasionTiles";
 import { Testimonials } from "@/components/Testimonials";
+import { HomeHero } from "@/components/HomeHero";
 
 export const metadata: Metadata = { alternates: { canonical: "/" } };
 
-// Hero uses the stage photo; the other real set-up photos go to the gallery band below. Catalog shots (with
-// printed titles or dimension labels) stay on the service pages.
-const HERO = gallery[1];
-const GALLERY = gallery.filter((g) => g !== HERO && g.src.startsWith("/images/home/"));
+// Real Milan set-up photos for the band under "What we supply". The hero has its own flyer tiles (HomeHero).
+const HOME_BAND_IDS = [
+  "real-hall-tent",
+  "flowers-stage-backdrop",
+  "real-palace-tent",
+  "real-night-decor",
+  "real-lawn-banquet",
+  "real-german-hanger",
+];
+const GALLERY = HOME_BAND_IDS.map((id) => gallery.find((g) => g.id === id)!);
 
 export default function Home() {
   return (
     <>
-      {/* Hero */}
-      <section className="bg-forest text-ivory">
-        <div className="mx-auto grid max-w-7xl items-center gap-10 px-4 py-12 sm:px-6 md:py-16 lg:grid-cols-2 lg:gap-14">
-          <div>
-            <h1 className="font-display text-[2.6rem] leading-[1.06] sm:text-5xl xl:text-[3.5rem]">
-              Tents, chairs, lights, flowers. <span className="text-gold">One call</span>, we set it all up.
-            </h1>
-            <p className="mt-5 max-w-lg text-base leading-relaxed text-ivory/80">
-              Weddings, Nikahs, poojas, birthdays. Tell us the date and the venue, and our team brings everything and
-              puts it up before your guests arrive.
-            </p>
-            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-              <WhatsAppButton location="hero" />
-              <CallButton location="hero" tone="dark" />
-            </div>
-            <div className="mt-8 flex flex-col items-start gap-3">
-              <RatingBadge dark />
-              <StatsLine dark />
-            </div>
-          </div>
-          <figure className="relative aspect-[4/3] overflow-hidden rounded-xl lg:aspect-[5/4]">
-            <Image src={HERO.src} alt={HERO.caption} fill preload sizes="(max-width: 1024px) 100vw, 50vw" className="object-cover" />
-          </figure>
+      <HomeHero />
+
+      {/* Proof right under the hero: Google rating and how long we've been doing this */}
+      <div className="border-y border-line">
+        <div className="mx-auto flex max-w-7xl flex-col items-center justify-center gap-3 px-4 py-4 sm:flex-row sm:gap-6 sm:px-6">
+          <RatingBadge />
+          <StatsLine />
         </div>
-      </section>
+      </div>
 
       {/* What we supply */}
       <section className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20">

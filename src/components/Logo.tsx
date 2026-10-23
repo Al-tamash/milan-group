@@ -1,10 +1,17 @@
 // Recreated SVG logo (D31): handshake in an oval ring + wordmark.
 // Replace with the customer's original artwork if they send it.
-export function LogoMark({ className = "h-10 w-14" }: { className?: string }) {
+// `single`: one emerald ring, as on the printed flyer (used by the home hero). The header keeps the double ring.
+export function LogoMark({ className = "h-10 w-14", single = false }: { className?: string; single?: boolean }) {
   return (
     <svg viewBox="0 0 56 40" className={className} aria-hidden="true" fill="none">
-      <ellipse cx="28" cy="20" rx="26" ry="18" stroke="#C9A84C" strokeWidth="2" />
-      <ellipse cx="28" cy="20" rx="22.5" ry="14.8" stroke="#134E3A" strokeWidth="1" />
+      {single ? (
+        <ellipse cx="28" cy="20" rx="26" ry="18" stroke="#134E3A" strokeWidth="1.6" />
+      ) : (
+        <>
+          <ellipse cx="28" cy="20" rx="26" ry="18" stroke="#C9A84C" strokeWidth="2" />
+          <ellipse cx="28" cy="20" rx="22.5" ry="14.8" stroke="#134E3A" strokeWidth="1" />
+        </>
+      )}
       <g
         transform="translate(16 8) scale(1)"
         stroke="#134E3A"
