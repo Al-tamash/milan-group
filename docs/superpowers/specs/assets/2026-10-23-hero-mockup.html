@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant:wght@500;600&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{--emerald:#134e3a;--forest:#0e2e22;--gold:#c9a84c;--gold7:#86691f;--ivory:#fdf8f0;--champ:#f5e6c8;--ink:#1f2a24;--line:#e8dcc2;--muted:#5b665f}
+*{box-sizing:border-box}body{margin:0;background:#e9e4da;font-family:Montserrat,system-ui,sans-serif;color:var(--ink)}
+.wrap{max-width:1180px;margin:0 auto;padding:24px 16px 60px}
+h1.q{font:600 30px Cormorant,serif;margin:8px 0 4px}.sub{color:var(--muted);margin:0 0 20px;font-size:14px;line-height:1.6}
+.disp{font-family:Cormorant,serif;font-weight:600}
+.hero{position:relative;overflow:hidden;background:var(--ivory);color:var(--emerald);padding:44px 20px 40px;text-align:center;border-radius:14px}
+.ribbon{position:absolute;width:320px;height:320px;pointer-events:none}
+.rule{display:flex;align-items:center;gap:14px;justify-content:center}
+.rule:before,.rule:after{content:"";height:1px;width:80px;background:var(--gold)}
+.frame{position:relative;max-width:760px;margin:22px auto 0;padding:30px 34px 40px;color:var(--gold)}
+.frame .ln{position:absolute;background:currentColor}
+.frame .c{position:absolute;width:22px;height:22px;overflow:visible}
+.flour{position:absolute;top:calc(50% - 6px);width:58px;height:70px;margin-top:-35px}
+.pill{display:inline-block;border-radius:99px;padding:8px 30px;font-family:Cormorant,serif;font-weight:600;letter-spacing:.14em;font-size:clamp(15px,2.2vw,22px);text-transform:uppercase;background:var(--emerald);color:var(--ivory);border:1.5px solid var(--gold)}
+.under{position:absolute;left:50%;bottom:0;transform:translate(-50%,50%);background:var(--ivory);padding:0 18px;white-space:nowrap;font-family:Cormorant,serif;font-weight:600;letter-spacing:.2em;font-size:clamp(16px,2.4vw,24px);color:var(--emerald)}
+.phones{display:flex;justify-content:center;align-items:center;gap:22px;margin-top:22px;flex-wrap:wrap}
+.phones a{display:inline-flex;align-items:center;gap:8px;font-weight:600;font-size:20px;color:var(--ink);text-decoration:none;letter-spacing:.03em}
+.phones .sep{width:1px;height:26px;background:var(--gold)}
+.btns{display:flex;gap:12px;flex-wrap:wrap;justify-content:center;margin-top:20px}
+.wa{background:#15803d;color:#fff;border-radius:99px;padding:12px 22px;font-weight:600;font-size:13px}
+.call{border:1px solid var(--emerald);color:var(--emerald);border-radius:99px;padding:12px 22px;font-weight:600;font-size:13px}
+.tiles{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;max-width:900px;margin:34px auto 0;color:var(--ink)}
+.tiles figure{margin:0}.tiles img{width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:120px 120px 8px 8px;display:block;border:1px solid var(--gold);padding:3px;background:#fff}
+.tiles figcaption{font-size:11px;letter-spacing:.2em;margin-top:9px;text-transform:uppercase}
+.strip{max-width:900px;margin:26px auto 0;border-top:1px solid var(--gold);border-bottom:1px solid var(--gold);padding:12px 8px;font-size:12px;letter-spacing:.2em;text-transform:uppercase;line-height:2}
+.strip i{color:var(--gold);font-style:normal;margin:0 8px}
+.motto{margin-top:18px;letter-spacing:.3em;font-size:12px;font-weight:600;color:var(--gold7);text-transform:uppercase}
+.notes{background:#fff;border-radius:12px;padding:16px 20px;margin-top:24px;font-size:14px;line-height:1.7}
+@media(max-width:700px){.tiles{grid-template-columns:repeat(2,1fr)}.phones .sep{display:none}.ribbon{width:180px;height:180px}.flour{display:none}.flour+.flour{right:-44px!important;left:auto!important;transform:scale(-.6,.6)!important}}
+</style></head><body><div class="wrap">
+<h1 class="q">Option C, frame client ke zoom screenshot se milaya</h1>
+<p class="sub">Kone ka curl, side ka scroll, aur "UNDER THE MILAN" bottom line par, sab client ke frame se trace karke banaya.</p>
+
+<section class="hero">
+ <!-- corner ribbons, like the flyer's green + gold swoosh -->
+ <svg class="ribbon" style="top:-40px;left:-60px" viewBox="0 0 300 300" fill="none"><path d="M0 260 C 60 140, 140 60, 300 0" stroke="#134e3a" stroke-width="22" opacity=".9"/><path d="M0 290 C 70 160, 160 70, 300 26" stroke="#c9a84c" stroke-width="6"/></svg>
+ <svg class="ribbon" style="bottom:-40px;right:-60px;transform:rotate(180deg)" viewBox="0 0 300 300" fill="none"><path d="M0 260 C 60 140, 140 60, 300 0" stroke="#134e3a" stroke-width="22" opacity=".9"/><path d="M0 290 C 70 160, 160 70, 300 26" stroke="#c9a84c" stroke-width="6"/></svg>
+
+ <div style="position:relative">
+  <div class="disp" style="font-size:clamp(58px,10vw,108px);letter-spacing:.14em;line-height:1">MILAN</div>
+  <div class="rule" style="letter-spacing:.5em;font-weight:600;font-size:15px;margin-top:6px">GROUP</div>
+  <svg viewBox="0 0 56 40" width="78" height="56" fill="none" style="margin-top:14px"><ellipse cx="28" cy="20" rx="26" ry="18" stroke="#134E3A" stroke-width="1.6"/><g transform="translate(16 8)" stroke="#134E3A" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="m11 17 2 2a1 1 0 1 0 3-3"/><path d="m14 14 2.5 2.5a1 1 0 1 0 3-3l-3.88-3.88a3 3 0 0 0-4.24 0l-.88.88a1 1 0 1 1-3-3l2.81-2.81a5.79 5.79 0 0 1 7.06-.87l.47.28a2 2 0 0 0 1.42.25L21 4"/><path d="m21 3 1 11h-2"/><path d="M3 3 2 14l6.5 6.5a1 1 0 1 0 3-3"/><path d="M3 4h8"/></g></svg>
+
+  <div class="frame">
+   <span class="ln" style="top:1.2px;left:20px;right:20px;height:1.3px"></span>
+   <span class="ln" style="bottom:1.2px;left:20px;right:20px;height:1.3px"></span>
+   <span class="ln" style="left:1.2px;top:20px;bottom:calc(50% + 16px + 6px);width:1.3px"></span>
+   <span class="ln" style="left:1.2px;bottom:20px;top:calc(50% + 16px - 6px);width:1.3px"></span>
+   <span class="ln" style="right:1.2px;top:20px;bottom:calc(50% + 16px + 6px);width:1.3px"></span>
+   <span class="ln" style="right:1.2px;bottom:20px;top:calc(50% + 16px - 6px);width:1.3px"></span>
+   <svg class="c" style="top:0;left:0" viewBox="50 50 120 120" fill="none" stroke="currentColor" stroke-width="7" stroke-linecap="round"><path d="M180 60H158L142 76C116 74 92 94 94 118C96 138 118 146 132 134C138 128 132 120 126 124"/><path d="M60 180V162L70 154H96"/></svg><svg class="c" style="top:0;right:0;transform:scaleX(-1)" viewBox="50 50 120 120" fill="none" stroke="currentColor" stroke-width="7" stroke-linecap="round"><path d="M180 60H158L142 76C116 74 92 94 94 118C96 138 118 146 132 134C138 128 132 120 126 124"/><path d="M60 180V162L70 154H96"/></svg><svg class="c" style="bottom:0;left:0;transform:scaleY(-1)" viewBox="50 50 120 120" fill="none" stroke="currentColor" stroke-width="7" stroke-linecap="round"><path d="M180 60H158L142 76C116 74 92 94 94 118C96 138 118 146 132 134C138 128 132 120 126 124"/><path d="M60 180V162L70 154H96"/></svg><svg class="c" style="bottom:0;right:0;transform:scale(-1)" viewBox="50 50 120 120" fill="none" stroke="currentColor" stroke-width="7" stroke-linecap="round"><path d="M180 60H158L142 76C116 74 92 94 94 118C96 138 118 146 132 134C138 128 132 120 126 124"/><path d="M60 180V162L70 154H96"/></svg>
+   <svg class="flour" style="left:-50px" viewBox="40 90 360 430" fill="none" stroke="currentColor" stroke-width="9" stroke-linecap="round"><path d="M352 258C340 252 348 236 362 238C384 240 392 262 384 280C376 296 352 302 330 304"/><path d="M62 304C120 292 182 272 202 232C226 182 210 120 168 110C134 104 120 140 140 150C155 158 165 142 152 136"/><path d="M196 268C172 254 144 240 132 248C122 256 132 264 140 258"/><g transform="matrix(1 0 0 -1 0 610)"><path d="M352 258C340 252 348 236 362 238C384 240 392 262 384 280C376 296 352 302 330 304"/><path d="M62 304C120 292 182 272 202 232C226 182 210 120 168 110C134 104 120 140 140 150C155 158 165 142 152 136"/><path d="M196 268C172 254 144 240 132 248C122 256 132 264 140 258"/></g><path d="M330 305C300 278 240 278 190 305C240 332 300 332 330 305ZM196 305H318"/></svg><svg class="flour" style="right:-50px;transform:scaleX(-1)" viewBox="40 90 360 430" fill="none" stroke="currentColor" stroke-width="9" stroke-linecap="round"><path d="M352 258C340 252 348 236 362 238C384 240 392 262 384 280C376 296 352 302 330 304"/><path d="M62 304C120 292 182 272 202 232C226 182 210 120 168 110C134 104 120 140 140 150C155 158 165 142 152 136"/><path d="M196 268C172 254 144 240 132 248C122 256 132 264 140 258"/><g transform="matrix(1 0 0 -1 0 610)"><path d="M352 258C340 252 348 236 362 238C384 240 392 262 384 280C376 296 352 302 330 304"/><path d="M62 304C120 292 182 272 202 232C226 182 210 120 168 110C134 104 120 140 140 150C155 158 165 142 152 136"/><path d="M196 268C172 254 144 240 132 248C122 256 132 264 140 258"/></g><path d="M330 305C300 278 240 278 190 305C240 332 300 332 330 305ZM196 305H318"/></svg>
+   <div class="disp" style="font-size:clamp(42px,8vw,84px);font-variant:small-caps;letter-spacing:.03em;line-height:1;color:var(--emerald)">Event Rentals</div>
+   <div class="pill" style="margin-top:18px">The Complete Set-up Solution</div>
+   <div class="under">UNDER THE MILAN</div>
+  </div>
+
+  <div class="phones" style="margin-top:34px">
+   <a href="#"><svg width="22" height="22" viewBox="0 0 24 24" fill="#134e3a"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.5-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.8s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.4.6-.4.4c-.1.2-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.4 2.4 1.5.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.6-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.1 1.3Z"/></svg>94413 61086</a>
+   <span class="sep"></span>
+   <a href="#"><svg width="22" height="22" viewBox="0 0 24 24" fill="#134e3a"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.5-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.8s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.4.6-.4.4c-.1.2-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.4 2.4 1.5.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.6-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.1 1.3Z"/></svg>95508 38576</a>
+  </div>
+  
+  <div class="tiles">
+   <figure><img src="../../../../public/images/home/tents.webp"><figcaption>Tents</figcaption></figure>
+   <figure><img src="../../../../public/images/home/stage.webp"><figcaption>Stage</figcaption></figure>
+   <figure><img src="../../../../public/images/home/tables.webp"><figcaption>Tables &amp; Chairs</figcaption></figure>
+   <figure><img src="../../../../public/images/home/decor.webp"><figcaption>Decor &amp; Lighting</figcaption></figure>
+  </div>
+  <div class="strip">Tents<i>•</i>Stages<i>•</i>Tables<i>•</i>Chairs<i>•</i>Decor<i>•</i>Lighting<i>•</i>Flooring<i>•</i>Sound System<i>•</i>Accessories &amp; More</div>
+  <div class="motto">We Deliver, You Celebrate</div>
+ </div>
+</section>
+
+<div class="notes"><b>Is version mein:</b><br>
+1. Kone: line chhota step leke gol curl banati hai, andar spiral ke saath, phir tirchhi hoke upar ki line se milti hai (client ke frame jaisa).<br>
+2. Side scroll: line ke paas "3" jaisa double curl, beech mein lens jo bahar nukeela hai, upar-neeche bade C curl aur chhote hook.<br>
+3. "UNDER THE MILAN" ab frame ki neeche wali line ke upar hai, line ko beech mein todta hai.<br>
+4. Pill ka text ab serif (Cormorant) capitals mein, flyer jaisa, patle gold border ke saath.<br>
+5. Mobile par side scroll chhupa diya, kyunki jagah kam hai. Kone aur baaki frame wahi rahenge.<br></div>
+</div></body></html>
